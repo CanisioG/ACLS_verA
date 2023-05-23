@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Canisio."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="Canisio" />
+<meta name="dc:title" content="Advanced Cardiovascular Life Support Exam Version A" />
+
+
+
+<title>
+Advanced Cardiovascular Life Support Exam Version A 
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontSize:       medium;
+	--strTextColor:      #000000;
+	--strTitleColor:     #000000;
+
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #0000FF;
+	--strVLinkColor:     #0000CC;
+	
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #C0C0C0;
+	--strExBGColor:      #FFFFFF;
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+//	RefreshImages();
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JQUIZ CORE JAVASCRIPT CODE
+
+var CurrQNum = 0;
+var CorrectIndicator = '&#x2714;';
+var IncorrectIndicator = '&#x2718;';
+var YourScoreIs = 'Your score is ';
+
+//New for 6.2.2.0
+var CompletedSoFar = 'Questions completed so far: ';
+var ExerciseCompleted = 'You have completed the exercise.';
+var ShowCompletedSoFar = true;
+
+var ContinuousScoring = true;
+var CorrectFirstTime = 'Questions answered correctly first time: ';
+var ShowCorrectFirstTime = true;
+var ShuffleQs = false;
+var ShuffleAs = false;
+var DefaultRight = 'Correct!';
+var DefaultWrong = 'Sorry! Try again.';
+var QsToShow = 50;
+var Score = 0;
+var Finished = false;
+var Qs = null;
+var QArray = new Array();
+var ShowingAllQuestions = false;
+var ShowAllQuestionsCaption = 'Show all questions';
+var ShowOneByOneCaption = 'Show questions one by one';
+var State = new Array();
+var Feedback = '';
+var TimeOver = false;
+var strInstructions = '';
+var Locked = false;
+
+//The following variable can be used to add a message explaining that
+//the question is finished, so no further marking will take place.
+var strQuestionFinished = '';
+
+function CompleteEmptyFeedback(){
+	var QNum, ANum;
+	for (QNum=0; QNum<I.length; QNum++){
+//Only do this if not multi-select
+		if (I[QNum][2] != '3'){
+  		for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+  			if (I[QNum][3][ANum][1].length < 1){
+  				if (I[QNum][3][ANum][2] > 0){
+  					I[QNum][3][ANum][1] = DefaultRight;
+  				}
+  				else{
+  					I[QNum][3][ANum][1] = DefaultWrong;
+  				}
+  			}
+  		}
+		}
+	}
+}
+
+function SetUpQuestions(){
+	var AList = new Array(); 
+	var QList = new Array();
+	var i, j;
+	Qs = document.getElementById('Questions');
+	while (Qs.getElementsByTagName('li').length > 0){
+		QList.push(Qs.removeChild(Qs.getElementsByTagName('li')[0]));
+	}
+	var DumpItem = 0;
+	if (QsToShow > QList.length){
+		QsToShow = QList.length;
+	}
+	while (QsToShow < QList.length){
+		DumpItem = Math.floor(QList.length*Math.random());
+		for (j=DumpItem; j<(QList.length-1); j++){
+			QList[j] = QList[j+1];
+		}
+		QList.length = QList.length-1;
+	}
+	if (ShuffleQs == true){
+		QList = Shuffle(QList);
+	}
+	if (ShuffleAs == true){
+		var As;
+		for (var i=0; i<QList.length; i++){
+			As = QList[i].getElementsByTagName('ol')[0];
+			if (As != null){
+  			AList.length = 0;
+				while (As.getElementsByTagName('li').length > 0){
+					AList.push(As.removeChild(As.getElementsByTagName('li')[0]));
+				}
+				AList = Shuffle(AList);
+				for (j=0; j<AList.length; j++){
+					As.appendChild(AList[j]);
+				}
+			}
+		}
+	}
+	
+	for (i=0; i<QList.length; i++){
+		Qs.appendChild(QList[i]);
+		QArray[QArray.length] = QList[i];
+	}
+
+//Show the first item
+	QArray[0].style.display = '';
+	
+//Now hide all except the first item
+	for (i=1; i<QArray.length; i++){
+		QArray[i].style.display = 'none';
+	}		
+	SetQNumReadout();
+	
+	SetFocusToTextbox();
+}
+
+function SetFocusToTextbox(){
+//if there's a textbox, set the focus in it
+	if (QArray[CurrQNum].getElementsByTagName('input')[0] != null){
+		QArray[CurrQNum].getElementsByTagName('input')[0].focus();
+//and show a keypad if there is one
+		if (document.getElementById('CharacterKeypad') != null){
+			document.getElementById('CharacterKeypad').style.display = 'block';
+		}
+	}
+	else{
+  	if (QArray[CurrQNum].getElementsByTagName('textarea')[0] != null){
+  		QArray[CurrQNum].getElementsByTagName('textarea')[0].focus();	
+//and show a keypad if there is one
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'block';
+			}
+		}
+//This added for 6.0.4.11: hide accented character buttons if no textbox
+		else{
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'none';
+			}
+		}
+	}
+}
+
+function ChangeQ(ChangeBy){
+//The following line prevents moving to another question until the current
+//question is answered correctly. Uncomment it to enable this behaviour. 
+//	if (State[CurrQNum][0] == -1){return;}
+	if (((CurrQNum + ChangeBy) < 0)||((CurrQNum + ChangeBy) >= QArray.length)){return;}
+	QArray[CurrQNum].style.display = 'none';
+	CurrQNum += ChangeBy;
+	QArray[CurrQNum].style.display = '';
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+	SetQNumReadout();
+	SetFocusToTextbox();
+}
+
+var HiddenReadingShown = false;
+function ShowSpecialReadingForQuestion(){
+//Undocumented function for showing specific reading text elements which change with each question
+//Added on 10/12/2004
+	if (document.getElementById('ReadingDiv') != null){
+		if (HiddenReadingShown == true){
+			document.getElementById('ReadingDiv').innerHTML = '';
+		}
+		if (QArray[CurrQNum] != null){
+//Fix for 6.0.4.25
+			var Children = QArray[CurrQNum].getElementsByTagName('div');
+			for (var i=0; i<Children.length; i++){
+			if (Children[i].className=="HiddenReading"){
+					document.getElementById('ReadingDiv').innerHTML = Children[i].innerHTML;
+					HiddenReadingShown = true;
+//Hide the ShowAllQuestions button to avoid confusion
+					if (document.getElementById('ShowMethodButton') != null){
+						document.getElementById('ShowMethodButton').style.display = 'none';
+					}
+				}
+			}	
+		}
+	}
+}
+
+function SetQNumReadout(){
+	document.getElementById('QNumReadout').innerHTML = (CurrQNum+1) + ' / ' + QArray.length;
+	if ((CurrQNum+1) >= QArray.length){
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'visible';
+		}
+	}
+	if (CurrQNum <= 0){
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'visible';
+		}
+	}
+}
+
+var I=new Array();
+I[0]=new Array();I[0][0]=100;
+I[0][1]='';
+I[0][2]='0';
+I[0][3]=new Array();
+I[0][3][0]=new Array('Open the airway with a head tilt-chin lift.','',0,0,1);
+I[0][3][1]=new Array('Administer epinephrine at a dose of 1 mg/kg.','',0,0,1);
+I[0][3][2]=new Array('Deliver 2 rescue breaths each over 1 second.','',0,0,1);
+I[0][3][3]=new Array('Start chest compressions at a rate of at least 100/min.','',1,100,1);
+I[1]=new Array();I[1][0]=100;
+I[1][1]='';
+I[1][2]='0';
+I[1][3]=new Array();
+I[1][3][0]=new Array('PETCO2','',0,0,1);
+I[1][3][1]=new Array('Chest x-ray','',0,0,1);
+I[1][3][2]=new Array('Laboratory testing','',0,0,1);
+I[1][3][3]=new Array('Obtaining a 12-lead ECG','',1,100,1);
+I[2]=new Array();I[2][0]=100;
+I[2][1]='';
+I[2][2]='0';
+I[2][3]=new Array();
+I[2][3][0]=new Array('lntraosseous','',0,0,1);
+I[2][3][1]=new Array('Endotracheal','',0,0,1);
+I[2][3][2]=new Array('Central intravenous','',0,0,1);
+I[2][3][3]=new Array('Peripheral intravenous','',1,100,1);
+I[3]=new Array();I[3][0]=100;
+I[3][1]='';
+I[3][2]='0';
+I[3][3]=new Array();
+I[3][3][0]=new Array('Begin chest compressions.','',1,100,1);
+I[3][3][1]=new Array('Discontinue the resuscitation attempt.','',0,0,1);
+I[3][3][2]=new Array('Check all AED connections and reanalyze.','',0,0,1);
+I[3][3][3]=new Array('Rotate AED electrodes to an alternate position.','',0,0,1);
+I[4]=new Array();I[4][0]=100;
+I[4][1]='';
+I[4][2]='0';
+I[4][3]=new Array();
+I[4][3][0]=new Array('Give 0.5 mg of atropine.','',0,0,1);
+I[4][3][1]=new Array('Insert an advanced airway.','',0,0,1);
+I[4][3][2]=new Array('Administer 1 mg of epinephrine.','',1,100,1);
+I[4][3][3]=new Array('Administer a dopamine infusion.','',0,0,1);
+I[5]=new Array();I[5][0]=100;
+I[5][1]='';
+I[5][2]='0';
+I[5][3]=new Array();
+I[5][3][0]=new Array('Establish vascular access.','',0,0,1);
+I[5][3][1]=new Array('Obtain the patient\'s history.','',0,0,1);
+I[5][3][2]=new Array('Resume chest compressions.','',1,100,1);
+I[5][3][3]=new Array('Terminate the resuscitative effort.','',0,0,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='0';
+I[6][3]=new Array();
+I[6][3][0]=new Array('Failure to obtain vascular access','',0,0,1);
+I[6][3][1]=new Array('Prolonged periods of no ventilations','',0,0,1);
+I[6][3][2]=new Array('Failure to perform endotracheal intubation','',0,0,1);
+I[6][3][3]=new Array('Prolonged interruptions in chest compressions','',1,100,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('Allowing complete chest recoil','',1,100,1);
+I[7][3][1]=new Array('Chest compressions without ventilation','',0,0,1);
+I[7][3][2]=new Array('60 to 100 compressions per minute with a 15:2 ratio','',0,0,1);
+I[7][3][3]=new Array('Uninterrupted compressions at a depth of 1\u00BD inches','',0,0,1);
+I[8]=new Array();I[8][0]=100;
+I[8][1]='';
+I[8][2]='0';
+I[8][3]=new Array();
+I[8][3][0]=new Array('Pausing chest compressions immediately after a defibrillation attempt','',0,0,1);
+I[8][3][1]=new Array('Administering 4 quick ventilations immediately before a defibrillation attempt','',0,0,1);
+I[8][3][2]=new Array('Using manual defibrillator paddles with light pressure against the chest','',0,0,1);
+I[8][3][3]=new Array('Providing quality compressions immediately before a defibrillation attempt','',1,100,1);
+I[9]=new Array();I[9][0]=100;
+I[9][1]='';
+I[9][2]='0';
+I[9][3]=new Array();
+I[9][3][0]=new Array('Asystole without a pulse','',0,0,1);
+I[9][3][1]=new Array('Sinus rhythm without a pulse','',1,100,1);
+I[9][3][2]=new Array('Torsades de pointes with a pulse','',0,0,1);
+I[9][3][3]=new Array('Ventricular tachycardia with a pulse','',0,0,1);
+I[10]=new Array();I[10][0]=100;
+I[10][1]='';
+I[10][2]='0';
+I[10][3]=new Array();
+I[10][3][0]=new Array('Provide compressions and ventilations with a 15:2 ratio.','',0,0,1);
+I[10][3][1]=new Array('Provide compressions and ventilations with a 30:2 ratio.','',0,0,1);
+I[10][3][2]=new Array('Provide a single ventilation every 6 seconds during the compression pause.','',0,0,1);
+I[10][3][3]=new Array('Provide continuous chest compressions without pauses and 10 ventilations per minute.','',1,100,1);
+I[11]=new Array();I[11][0]=100;
+I[11][1]='';
+I[11][2]='0';
+I[11][3]=new Array();
+I[11][3][0]=new Array('Chest compressions may not be effective.','',1,100,1);
+I[11][3][1]=new Array('The endotracheal tube is no longer in the trachea.','',0,0,1);
+I[11][3][2]=new Array('The patient meets the criteria for termination of efforts.','',0,0,1);
+I[11][3][3]=new Array('The team is ventilating the patient too often (hyperventilation).','',0,0,1);
+I[12]=new Array();I[12][0]=100;
+I[12][1]='';
+I[12][2]='0';
+I[12][3]=new Array();
+I[12][3][0]=new Array('allows for monitoring of CPR quality.','',1,100,1);
+I[12][3][1]=new Array('measures oxygen levels at the alveoli level.','',0,0,1);
+I[12][3][2]=new Array('determines inspired carbon dioxide relating to cardiac output.','',0,0,1);
+I[12][3][3]=new Array('detects electrolyte abnormalities early in code management.','',0,0,1);
+I[13]=new Array();I[13][0]=100;
+I[13][1]='';
+I[13][2]='0';
+I[13][3]=new Array();
+I[13][3][0]=new Array('Apply a transcutaneous pacemaker.','',0,0,1);
+I[13][3][1]=new Array('Administer 1 mg of intravenous atropine.','',0,0,1);
+I[13][3][2]=new Array('Administer 40 units of intravenous vasopressin.','',0,0,1);
+I[13][3][3]=new Array('Consider terminating resuscitative efforts after consulting medical control.','',1,100,1);
+I[14]=new Array();I[14][0]=100;
+I[14][1]='';
+I[14][2]='0';
+I[14][3]=new Array();
+I[14][3][0]=new Array('Stop chest compressions as you charge the defibrillator.','',0,0,1);
+I[14][3][1]=new Array('Be sure oxygen is not blowing over the patient\'s chest during the shock.','',1,100,1);
+I[14][3][2]=new Array('Assess for the presence of a pulse immediately after the shock.','',0,0,1);
+I[14][3][3]=new Array('Commandingly announce "clear" after you deliver the defibrillation shock.','',0,0,1);
+I[15]=new Array();I[15][0]=100;
+I[15][1]='';
+I[15][2]='0';
+I[15][3]=new Array();
+I[15][3][0]=new Array('Leave and get an AED.','',0,0,1);
+I[15][3][1]=new Array('Begin chest compressions.','',1,100,1);
+I[15][3][2]=new Array('Deliver 2 quick ventilations.','',0,0,1);
+I[15][3][3]=new Array('Check the patient\'s mouth for the presence of a foreign body.','',0,0,1);
+I[16]=new Array();I[16][0]=100;
+I[16][1]='';
+I[16][2]='0';
+I[16][3]=new Array();
+I[16][3][0]=new Array('Hands-free pads deliver more energy than paddles.','',0,0,1);
+I[16][3][1]=new Array('Hands-free pads increase electrical arc.','',0,0,1);
+I[16][3][2]=new Array('Hands-free pads allow for a more rapid defibrillation.','',1,100,1);
+I[16][3][3]=new Array('Hands-free pads have universal adaptors that can work with any machine.','',0,0,1);
+I[17]=new Array();I[17][0]=100;
+I[17][1]='';
+I[17][2]='0';
+I[17][3]=new Array();
+I[17][3][0]=new Array('Continue CPR while charging the defibrillator.','',1,100,1);
+I[17][3][1]=new Array('Perform pulse checks immediately after defibrillation.','',0,0,1);
+I[17][3][2]=new Array('Administer IV medications only when delivering breaths.','',0,0,1);
+I[17][3][3]=new Array('Continue to use an AED even after the arrival of a manual defibrillator.','',0,0,1);
+I[18]=new Array();I[18][0]=100;
+I[18][1]='';
+I[18][2]='0';
+I[18][3]=new Array();
+I[18][3][0]=new Array('Early defibrillation','',1,100,1);
+I[18][3][1]=new Array('Advanced airway management','',0,0,1);
+I[18][3][2]=new Array('Rapid medication administration','',0,0,1);
+I[18][3][3]=new Array('Preparation for therapeutic hypothermia','',0,0,1);
+I[19]=new Array();I[19][0]=100;
+I[19][1]='';
+I[19][2]='0';
+I[19][3]=new Array();
+I[19][3][0]=new Array('Atropine 2 mg','',0,0,1);
+I[19][3][1]=new Array('Amiodarone 300 mg','',1,100,1);
+I[19][3][2]=new Array('Vasopressin 1 mg/kg','',0,0,1);
+I[19][3][3]=new Array('Dopamine 2 mg/kg per minute','',0,0,1);
+I[20]=new Array();I[20][0]=100;
+I[20][1]='';
+I[20][2]='0';
+I[20][3]=new Array();
+I[20][3][0]=new Array('10 seconds or less','',1,100,1);
+I[20][3][1]=new Array('10 to 15 seconds','',0,0,1);
+I[20][3][2]=new Array('15 to 20 seconds','',0,0,1);
+I[20][3][3]=new Array('Interruptions are never acceptable','',0,0,1);
+I[21]=new Array();I[21][0]=100;
+I[21][1]='';
+I[21][2]='0';
+I[21][3]=new Array();
+I[21][3][0]=new Array('PETC02 \u2265 10 mm Hg','',1,100,1);
+I[21][3][1]=new Array('Measured urine output of 1 ml/kg per hour','',0,0,1);
+I[21][3][2]=new Array('Patient temperature >32\u00B0C (89.6\u00B0F)','',0,0,1);
+I[21][3][3]=new Array('Diastolic intra-arterial pressure <20 mm Hg','',0,0,1);
+I[22]=new Array();I[22][0]=100;
+I[22][1]='';
+I[22][2]='0';
+I[22][3]=new Array();
+I[22][3][0]=new Array('Identifying and treating early clinical deterioration','',1,100,1);
+I[22][3][1]=new Array('Rapidly intervening with patients admitted through emergency department triage','',0,0,1);
+I[22][3][2]=new Array('Responding to patients during a disaster or multiple-patient situation','',0,0,1);
+I[22][3][3]=new Array('Responding to patients after activation of the emergency response system','',0,0,1);
+I[23]=new Array();I[23][0]=100;
+I[23][1]='';
+I[23][2]='0';
+I[23][3]=new Array();
+I[23][3][0]=new Array('0bserve ECG rhythm to determine depth of compressions.','',0,0,1);
+I[23][3][1]=new Array('Do not allow the chest to fully recoil with each compression.','',0,0,1);
+I[23][3][2]=new Array('Compress the upper half of the sternum at a rate of 150 compressions per minute.','',0,0,1);
+I[23][3][3]=new Array('Switch providers about every 2 minutes or every 5 compression cycles.','',1,100,1);
+I[24]=new Array();I[24][0]=100;
+I[24][1]='';
+I[24][2]='0';
+I[24][3]=new Array();
+I[24][3][0]=new Array('1 breath every 3 to 4 seconds','',0,0,1);
+I[24][3][1]=new Array('1 breath every 5 to 6 seconds','',1,100,1);
+I[24][3][2]=new Array('2 breaths every 5 to 6 seconds','',0,0,1);
+I[24][3][3]=new Array('2 breaths every 6 to 8 seconds','',0,0,1);
+I[25]=new Array();I[25][0]=100;
+I[25][1]='';
+I[25][2]='0';
+I[25][3]=new Array();
+I[25][3][0]=new Array('Atropine 0.5 mg','',1,100,1);
+I[25][3][1]=new Array('Oxygen 12 to 15 L/min','',0,0,1);
+I[25][3][2]=new Array('Epinephrine 0.5 mg','',0,0,1);
+I[25][3][3]=new Array('Aspirin 160 mg chewed','',0,0,1);
+I[26]=new Array();I[26][0]=100;
+I[26][1]='';
+I[26][2]='0';
+I[26][3]=new Array();
+I[26][3][0]=new Array('2 to 10 mg/min','',0,0,1);
+I[26][3][1]=new Array('2 to 10 mcg/kg per minute','',1,100,1);
+I[26][3][2]=new Array('10 to 15 mg/min','',0,0,1);
+I[26][3][3]=new Array('10 to 15 mcg/kg per minute','',0,0,1);
+I[27]=new Array();I[27][0]=100;
+I[27][1]='';
+I[27][2]='0';
+I[27][3]=new Array();
+I[27][3][0]=new Array('Vagal maneuvers','',1,100,1);
+I[27][3][1]=new Array('Metoprolol 5 mg IV','',0,0,1);
+I[27][3][2]=new Array('Adenosine 6 mg IV','',0,0,1);
+I[27][3][3]=new Array('Normal saline 1 L bolus','',0,0,1);
+I[28]=new Array();I[28][0]=100;
+I[28][1]='';
+I[28][2]='0';
+I[28][3]=new Array();
+I[28][3][0]=new Array('Adenosine 6 mg IV push','',1,100,1);
+I[28][3][1]=new Array('Amiodarone 300 mg IV push','',0,0,1);
+I[28][3][2]=new Array('Synchronized cardioversion at 50 J','',0,0,1);
+I[28][3][3]=new Array('Synchronized cardioversion at 200 J','',0,0,1);
+I[29]=new Array();I[29][0]=100;
+I[29][1]='';
+I[29][2]='0';
+I[29][3]=new Array();
+I[29][3][0]=new Array('Contact the patient\'s family to see what they would prefer.','',0,0,1);
+I[29][3][1]=new Array('Have the EMS crew choose an appropriate patient disposition.','',0,0,1);
+I[29][3][2]=new Array('Accept the report and provide care within your present capability.','',0,0,1);
+I[29][3][3]=new Array('Divert the patient to a hospital 15 minutes away with CT capabilities.','',1,100,1);
+I[30]=new Array();I[30][0]=100;
+I[30][1]='';
+I[30][2]='0';
+I[30][3]=new Array();
+I[30][3][0]=new Array('Arrest not witnessed','',0,0,1);
+I[30][3][1]=new Array('Evidence of rigor mortis','',1,100,1);
+I[30][3][2]=new Array('Patient age greater than 85 years','',0,0,1);
+I[30][3][3]=new Array('No return of spontaneous circulation after 10 minutes of CPR','',0,0,1);
+I[31]=new Array();I[31][0]=100;
+I[31][1]='';
+I[31][2]='0';
+I[31][3]=new Array();
+I[31][3][0]=new Array('Administer oxygen.','',0,0,1);
+I[31][3][1]=new Array('Obtain a 12-lead ECG.','',1,100,1);
+I[31][3][2]=new Array('Evaluate for fibrinolytic eligibility.','',0,0,1);
+I[31][3][3]=new Array('Administer sublingual nitroglycerin.','',0,0,1);
+I[32]=new Array();I[32][0]=100;
+I[32][1]='';
+I[32][2]='0';
+I[32][3]=new Array();
+I[32][3][0]=new Array('Atropine IV push','',0,0,1);
+I[32][3][1]=new Array('Epinephrine IV infusion','',0,0,1);
+I[32][3][2]=new Array('Application of a transcutaneous pacemaker','',0,0,1);
+I[32][3][3]=new Array('Simple airway maneuvers and assisted ventilation','',1,100,1);
+I[33]=new Array();I[33][0]=100;
+I[33][1]='';
+I[33][2]='0';
+I[33][3]=new Array();
+I[33][3][0]=new Array('Suction during insertion but for no longer than 30 seconds.','',0,0,1);
+I[33][3][1]=new Array('Suction the mouth and nose for no longer than 30 seconds.','',0,0,1);
+I[33][3][2]=new Array('Suction during withdrawal but for no longer than 10 seconds.','',1,100,1);
+I[33][3][3]=new Array('Hyperventilate before catheter insertion, and then suction during withdrawal.','',0,0,1);
+I[34]=new Array();I[34][0]=100;
+I[34][1]='';
+I[34][2]='0';
+I[34][3]=new Array();
+I[34][3][0]=new Array('Aspirin','',0,0,1);
+I[34][3][1]=new Array('Atropine','',1,100,1);
+I[34][3][2]=new Array('Lidocaine','',0,0,1);
+I[34][3][3]=new Array('Nitroglycerin','',0,0,1);
+I[35]=new Array();I[35][0]=100;
+I[35][1]='';
+I[35][2]='0';
+I[35][3]=new Array();
+I[35][3][0]=new Array('12-lead ECG assessment','',0,0,1);
+I[35][3][1]=new Array('Administration of 100% supplementary oxygen','',0,0,1);
+I[35][3][2]=new Array('Cincinnati Prehospital Stroke Scale assessment','',1,100,1);
+I[35][3][3]=new Array('Administration of a low-dose aspirin','',0,0,1);
+I[36]=new Array();I[36][0]=100;
+I[36][1]='';
+I[36][2]='0';
+I[36][3]=new Array();
+I[36][3][0]=new Array('Head CT scan','',0,0,1);
+I[36][3][1]=new Array('Transfer to the stroke unit','',1,100,1);
+I[36][3][2]=new Array('Immediate rtPA administration','',0,0,1);
+I[36][3][3]=new Array('Administration of 100% oxygen','',0,0,1);
+I[37]=new Array();I[37][0]=100;
+I[37][1]='';
+I[37][2]='0';
+I[37][3]=new Array();
+I[37][3][0]=new Array('4 to 6 breaths per minute','',0,0,1);
+I[37][3][1]=new Array('8 to 10 breaths per minute','',1,100,1);
+I[37][3][2]=new Array('12 to 14 breaths per minute','',0,0,1);
+I[37][3][3]=new Array('16 to 18 breaths per minute','',0,0,1);
+I[38]=new Array();I[38][0]=100;
+I[38][1]='';
+I[38][2]='0';
+I[38][3]=new Array();
+I[38][3][0]=new Array('Obtain a 12-lead ECG.','',1,100,1);
+I[38][3][1]=new Array('Give 150 mg of amiodarone.','',0,0,1);
+I[38][3][2]=new Array('Administer 160 mg of aspirin.','',0,0,1);
+I[38][3][3]=new Array('Administer 6 mg of adenosine.','',0,0,1);
+I[39]=new Array();I[39][0]=100;
+I[39][1]='';
+I[39][2]='0';
+I[39][3]=new Array();
+I[39][3][0]=new Array('Procedural sedation','',0,0,1);
+I[39][3][1]=new Array('12-lead ECG','',0,0,1);
+I[39][3][2]=new Array('Amiodarone administration','',0,0,1);
+I[39][3][3]=new Array('Synchronized cardioversion','',1,100,1);
+I[40]=new Array();I[40][0]=100;
+I[40][1]='';
+I[40][2]='0';
+I[40][3]=new Array();
+I[40][3][0]=new Array('Review the patient\'s home medications.','',0,0,1);
+I[40][3][1]=new Array('Evaluate the breath sounds.','',0,0,1);
+I[40][3][2]=new Array('Determine whether pulses are present.','',1,100,1);
+I[40][3][3]=new Array('Administer sedative drugs.','',0,0,1);
+I[41]=new Array();I[41][0]=100;
+I[41][1]='';
+I[41][2]='0';
+I[41][3]=new Array();
+I[41][3][0]=new Array('Unstable supraventricular tachycardia','',1,100,1);
+I[41][3][1]=new Array('Atrial fibrillation','',0,0,1);
+I[41][3][2]=new Array('Sinus tachycardia','',0,0,1);
+I[41][3][3]=new Array('NSR on monitor but no pulse','',0,0,1);
+I[42]=new Array();I[42][0]=100;
+I[42][1]='';
+I[42][2]='0';
+I[42][3]=new Array();
+I[42][3][0]=new Array('3 mg','',0,0,1);
+I[42][3][1]=new Array('6 mg','',0,0,1);
+I[42][3][2]=new Array('9 mg','',0,0,1);
+I[42][3][3]=new Array('12 mg','',1,100,1);
+I[43]=new Array();I[43][0]=100;
+I[43][1]='';
+I[43][2]='0';
+I[43][3]=new Array();
+I[43][3][0]=new Array('30 to 35 mm Hg','',0,0,1);
+I[43][3][1]=new Array('35 to 40 mm Hg','',1,100,1);
+I[43][3][2]=new Array('40 to 45 mm Hg','',0,0,1);
+I[43][3][3]=new Array('45 to 50 mm Hg','',0,0,1);
+I[44]=new Array();I[44][0]=100;
+I[44][1]='';
+I[44][2]='0';
+I[44][3]=new Array();
+I[44][3][0]=new Array('Initial rhythm of asystole','',0,0,1);
+I[44][3][1]=new Array('Responding to verbal commands','',1,100,1);
+I[44][3][2]=new Array('Patient age greater than 60 years','',0,0,1);
+I[44][3][3]=new Array('Desire to provide coronary reperfusion (eg, PCI)','',0,0,1);
+I[45]=new Array();I[45][0]=100;
+I[45][1]='';
+I[45][2]='0';
+I[45][3]=new Array();
+I[45][3][0]=new Array('May interfere with effective ventilation','',0,0,1);
+I[45][3][1]=new Array('Places the patient\'s cervical spine at risk','',0,0,1);
+I[45][3][2]=new Array('Obstruction of venous return from the brain','',1,100,1);
+I[45][3][3]=new Array('Does not adequately secure the airway device','',0,0,1);
+I[46]=new Array();I[46][0]=100;
+I[46][1]='';
+I[46][2]='0';
+I[46][3]=new Array();
+I[46][3][0]=new Array('5-point auscultation','',0,0,1);
+I[46][3][1]=new Array('Colorimetric capnography','',0,0,1);
+I[46][3][2]=new Array('Continuous waveform capnography','',1,100,1);
+I[46][3][3]=new Array('Use of esophageal detection devices','',0,0,1);
+I[47]=new Array();I[47][0]=100;
+I[47][1]='';
+I[47][2]='0';
+I[47][3]=new Array();
+I[47][3][0]=new Array('250 to 500 ml','',0,0,1);
+I[47][3][1]=new Array('500 to 1000 ml','',0,0,1);
+I[47][3][2]=new Array('1 to 2 L','',1,100,1);
+I[47][3][3]=new Array('2 to 3 L','',0,0,1);
+I[48]=new Array();I[48][0]=100;
+I[48][1]='';
+I[48][2]='0';
+I[48][3]=new Array();
+I[48][3][0]=new Array('90 mm Hg','',1,100,1);
+I[48][3][1]=new Array('85 mm Hg','',0,0,1);
+I[48][3][2]=new Array('80 mm Hg','',0,0,1);
+I[48][3][3]=new Array('75 mm Hg','',0,0,1);
+I[49]=new Array();I[49][0]=100;
+I[49][1]='';
+I[49][2]='0';
+I[49][3]=new Array();
+I[49][3][0]=new Array('Coronary reperfusion','',0,0,1);
+I[49][3][1]=new Array('Therapeutic hypothermia','',0,0,1);
+I[49][3][2]=new Array('Maintaining blood glucose <185 mg/dl','',0,0,1);
+I[49][3][3]=new Array('Optimizing ventilation and oxygenation','',1,100,1);
+
+
+function StartUp(){
+
+//If there's only one question, no need for question navigation controls
+	if (QsToShow < 2){
+		document.getElementById('QNav').style.display = 'none';
+	}
+	
+//Stash the instructions so they can be redisplayed
+	strInstructions = document.getElementById('InstructionsDiv').innerHTML;
+	
+
+	
+
+	
+
+	PreloadImages('https://github.com/canisiome/ACLS_verA/blob/main/Image_003.jpg','https://github.com/canisiome/ACLS_verA/blob/main/Image_004.jpg,'https://github.com/canisiome/ACLS_verA/blob/main/Image_009.jpg','https://github.com/canisiome/ACLS_verA/blob/main/Image_012.jpg');
+
+	
+	CompleteEmptyFeedback();
+
+	SetUpQuestions();
+	ClearTextBoxes();
+	CreateStatusArray();
+	
+
+	
+//Check search string for q parameter
+	if (document.location.search.length > 0){
+		if (ShuffleQs == false){
+			var JumpTo = parseInt(document.location.search.substring(1,document.location.search.length))-1;
+			if (JumpTo <= QsToShow){
+				ChangeQ(JumpTo);
+			}
+		}
+	}
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+}
+
+function ShowHideQuestions(){
+	document.getElementById('ShowMethodButton').style.display = 'none';
+	if (ShowingAllQuestions == false){
+		for (var i=0; i<QArray.length; i++){
+				QArray[i].style.display = '';
+			}
+		document.getElementById('Questions').style.listStyleType = 'decimal';
+		document.getElementById('OneByOneReadout').style.display = 'none';
+		document.getElementById('ShowMethodButton').innerHTML = ShowOneByOneCaption;
+		ShowingAllQuestions = true;
+	}
+	else{
+		for (var i=0; i<QArray.length; i++){
+				if (i != CurrQNum){
+					QArray[i].style.display = 'none';
+				}
+			}
+		document.getElementById('Questions').style.listStyleType = 'none';
+		document.getElementById('OneByOneReadout').style.display = '';
+		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
+		ShowingAllQuestions = false;	
+	}
+	document.getElementById('ShowMethodButton').style.display = 'inline';
+}
+
+function CreateStatusArray(){
+	var QNum, ANum;
+//For each item in the item array
+	for (QNum=0; QNum<I.length; QNum++){
+//Check if the question still exists (hasn't been nuked by showing a random selection)
+		if (document.getElementById('Q_' + QNum) != null){
+			State[QNum] = new Array();
+			State[QNum][0] = -1; //Score for this q; -1 shows question not done yet
+			State[QNum][1] = new Array(); //answers
+			for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+				State[QNum][1][ANum] = 0; //answer not chosen yet; when chosen, will store its position in the series of choices
+			}
+			State[QNum][2] = 0; //tries at this q so far
+			State[QNum][3] = 0; //incrementing percent-correct values of selected answers
+			State[QNum][4] = 0; //penalties incurred for hints
+			State[QNum][5] = ''; //Sequence of answers chosen by number
+		}
+		else{
+			State[QNum] = null;
+		}
+	}
+}
+
+
+
+function CheckMCAnswer(QNum, ANum, Btn){
+//if question doesn't exist, bail
+	if (State[QNum].length < 1){return;}
+	
+//Get the feedback
+	Feedback = I[QNum][3][ANum][1];
+	
+//Now show feedback and bail if question already complete
+	if (State[QNum][0] > -1){
+//Add an extra message explaining that the question
+// is finished if defined by the user
+		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
+//Show the feedback
+		ShowMessage(Feedback);
+//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
+//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
+		return;
+	}
+	
+//Hide the button while processing
+	Btn.style.display = 'none';
+
+//Increment the number of tries
+	State[QNum][2]++;
+	
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
+	
+//Store the try number in the answer part of the State array, for tracking purposes
+	State[QNum][1][ANum] = State[QNum][2];
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	State[QNum][5] += String.fromCharCode(65+ANum);
+	
+//Should this answer be accepted as correct?
+	if (I[QNum][3][ANum][2] < 1){
+//It's wrong
+
+//Mark the answer
+		Btn.innerHTML = IncorrectIndicator;
+		
+//Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+		
+//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
+		var RemainingAnswer = FinalAnswer(QNum);
+		if (RemainingAnswer > -1){
+//Behave as if the last answer had been selected, but give no credit for it
+//Increment the number of tries
+			State[QNum][2]++;		
+		
+//Calculate the score for this question
+			CalculateMCQuestionScore(QNum);
+			
+//Get the overall score and add it to the feedback
+			CalculateOverallScore();
+//New for 6.2.2.1
+			var QsDone = CheckQuestionsCompleted();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's right
+//Mark the answer
+		Btn.innerHTML = CorrectIndicator;
+				
+//Calculate the score for this question
+		CalculateMCQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+
+//Get the overall score and add it to the feedback
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+		}
+		else{
+			WriteToInstructions(QsDone);
+		}
+	}
+	
+//Show the button again
+	Btn.style.display = 'inline';
+	
+//Finally, show the feedback	
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMCQuestionScore(QNum){
+	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
+	var PercentCorrect = State[QNum][3];
+	var TotAns = GetTotalMCAnswers(QNum);
+	var HintPenalties = State[QNum][4];
+	
+//Make sure it's not already complete
+
+	if (State[QNum][0] < 0){
+//Allow for Hybrids
+		if (HintPenalties >= 1){
+			State[QNum][0] = 0;
+		}
+		else{
+//This line calculates the score for this question
+			if (TotAns == 1){
+				State[QNum][0] = 1;
+			}
+			else{
+				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
+			}
+		}
+//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
+		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+function GetTotalMCAnswers(QNum){
+	var Result = 0;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			Result++;
+		}
+	}
+	return Result;
+}
+
+function FinalAnswer(QNum){
+	var UnchosenAnswers = 0;
+	var FinalAnswer = -1;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
+				UnchosenAnswers++;
+				FinalAnswer = ANum;
+			}
+		}
+	}
+	if (UnchosenAnswers == 1){
+		return FinalAnswer;
+	}
+	else{
+		return -1;
+	}
+}
+
+
+
+
+
+function CalculateOverallScore(){
+	var TotalWeighting = 0;
+	var TotalScore = 0;
+	
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] > -1){
+				TotalWeighting += I[QNum][0];
+				TotalScore += (I[QNum][0] * State[QNum][0]);
+			}
+		}
+	}
+	if (TotalWeighting > 0){
+		Score = Math.floor((TotalScore/TotalWeighting)*100);
+	}
+	else{
+//if TotalWeighting is 0, no questions so far have any value, so 
+//no penalty should be shown.
+		Score = 100; 
+	}
+}
+
+//New for 6.2.2.0
+function CheckQuestionsCompleted(){
+	if (ShowCompletedSoFar == false){return '';}
+	var QsCompleted = 0;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] >= 0){
+				QsCompleted++;
+			}
+		}
+	}
+//Fixes for 6.2.2.2
+	if (QsCompleted >= QArray.length){
+		return ExerciseCompleted;
+	}
+	else{
+		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
+	}
+}
+
+function CheckFinished(){
+	var FB = '';
+	var AllDone = true;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				AllDone = false;
+			}
+		}
+	}
+	if (AllDone == true){
+	
+//Report final score and submit if necessary
+		CalculateOverallScore();
+		FB = YourScoreIs + ' ' + Score + '%.';
+		if (ShowCorrectFirstTime == true){
+			var CFT = 0;
+			for (QNum=0; QNum<State.length; QNum++){
+				if (State[QNum] != null){
+					if (State[QNum][0] >= 1){
+						CFT++;
+					}
+				}
+			}
+			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+		}
+		
+//New for 6.2.2.0
+		FB += '<br />' + ExerciseCompleted;
+		
+		WriteToInstructions(FB);
+		
+		Finished == true;
+
+
+
+
+		TimeOver = true;
+		Locked = true;
+		
+
+
+		Finished = true;
+		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
+		for (QNum=0; QNum<State.length; QNum++){
+			if (State[QNum] != null){
+				if (State[QNum][5].length > 0){
+					Detail += '<field><fieldname>Question #' + (QNum+1) + '</fieldname><fieldtype>question-tracking</fieldtype><fieldlabel>Q ' + (QNum+1) + '</fieldlabel><fieldlabelid>QuestionTrackingField</fieldlabelid><fielddata>' + State[QNum][5] + '</fielddata></field>';
+				}
+			}
+		}
+		Detail += '</fields></hpnetresult>';
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+<div class="NavButtonBar" id="TopNavBar">
+
+
+
+
+<button class="NavButton" onclick="location='contents.htm'; return false;"> Index </button>
+
+
+
+<button class="NavButton" onclick="location='nextpage.htm'; return false;">=&gt;</button>
+
+
+</div>
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">Advanced Cardiovascular Life Support Exam Version A </h2>
+
+	<h3 class="ExerciseSubtitle">Quiz</h3>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions"></div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Show all questions</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">You find an unresponsive patient who is not breathing. After activating the emergency response system, you determine that there is no pulse. What is your next action?</div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>&#160;&#160;Open the airway with a head tilt-chin lift.</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>&#160;&#160;Administer epinephrine at a dose of 1 mg/kg.</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">?</button>&#160;&#160;Deliver 2 rescue breaths each over 1 second.</li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">?</button>&#160;&#160;Start chest compressions at a rate of at least 100/min.</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">You are evaluating a 58-year-old man with chest pain. The blood pressure is 92/50 mm Hg, the heart rate is 92/min, the nonlabored respiratory rate is 14 breaths/min, and the pulse oximetry reading is 97%. What assessment step is most important now?</div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>&#160;&#160;PETCO2</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>&#160;&#160;Chest x-ray</li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">?</button>&#160;&#160;Laboratory testing</li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">?</button>&#160;&#160;Obtaining a 12-lead ECG</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">What is the preferred method of access for epinephrine administration during cardiac arrest in most patients?</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;lntraosseous</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;Endotracheal</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">?</button>&#160;&#160;Central intravenous</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">?</button>&#160;&#160;Peripheral intravenous</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">An activated AED does not promptly analyze the rhythm. What is your next action?</div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;Begin chest compressions.</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;Discontinue the resuscitation attempt.</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">?</button>&#160;&#160;Check all AED connections and reanalyze.</li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">?</button>&#160;&#160;Rotate AED electrodes to an alternate position.</li></ol></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">You have completed 2 minutes of CPR. The ECG monitor displays the lead II rhythm below, and the patient has no pulse. Another member of your team resumes chest compressions, and an IV is in place. What management step is your next priority?<br /><br /><img src="https://github.com/canisiome/ACLS_verA/blob/main/Image_003.jpg" alt="Image_003.jpg" title="Image_003" width="627" height="107"/><br /><br /></div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;Give 0.5 mg of atropine.</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;Insert an advanced airway.</li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">?</button>&#160;&#160;Administer 1 mg of epinephrine.</li><li id="Q_4_3"><button class="FuncButton" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">?</button>&#160;&#160;Administer a dopamine infusion.</li></ol></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">During a pause in CPR, you see this lead II ECG rhythm on the monitor. The patient has no pulse. What is the next action?<br /><br /><img src="https://github.com/canisiome/ACLS_verA/blob/main/Image_004.jpg" alt="Image_004.jpg" title="Image_004" width="627" height="107"/></div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;Establish vascular access.</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;Obtain the patient's history.</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;Resume chest compressions.</li><li id="Q_5_3"><button class="FuncButton" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">?</button>&#160;&#160;Terminate the resuscitative effort.</li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">What is a common but sometimes fatal mistake in cardiac arrest management?</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;Failure to obtain vascular access</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;Prolonged periods of no ventilations</li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">?</button>&#160;&#160;Failure to perform endotracheal intubation</li><li id="Q_6_3"><button class="FuncButton" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">?</button>&#160;&#160;Prolonged interruptions in chest compressions</li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">Which action is a component of high-quality chest compressions?</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;Allowing complete chest recoil</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;Chest compressions without ventilation</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">?</button>&#160;&#160;60 to 100 compressions per minute with a 15:2 ratio</li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">?</button>&#160;&#160;Uninterrupted compressions at a depth of 1&#x00BD; inches</li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">Which action increases the chance of successful conversion of ventricular fibrillation?</div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;Pausing chest compressions immediately after a defibrillation attempt</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;Administering 4 quick ventilations immediately before a defibrillation attempt</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;Using manual defibrillator paddles with light pressure against the chest</li><li id="Q_8_3"><button class="FuncButton" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">?</button>&#160;&#160;Providing quality compressions immediately before a defibrillation attempt</li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">Which situation BEST describes pulseless electrical activity?</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;Asystole without a pulse</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;Sinus rhythm without a pulse</li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;Torsades de pointes with a pulse</li><li id="Q_9_3"><button class="FuncButton" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">?</button>&#160;&#160;Ventricular tachycardia with a pulse</li></ol></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">What is the BEST strategy for performing high-quality CPR on a patient with an advanced airway in place?</div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>&#160;&#160;Provide compressions and ventilations with a 15:2 ratio.</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>&#160;&#160;Provide compressions and ventilations with a 30:2 ratio.</li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">?</button>&#160;&#160;Provide a single ventilation every 6 seconds during the compression pause.</li><li id="Q_10_3"><button class="FuncButton" id="Q_10_3_Btn" onclick="CheckMCAnswer(10,3,this)">?</button>&#160;&#160;Provide continuous chest compressions without pauses and 10 ventilations per minute.</li></ol></li>
+<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">Three minutes after witnessing a cardiac arrest, one member of your team inserts an endotracheal tube while another performs continuous chest compressions. During subsequent ventilation, you notice the presence of a waveform on the capnography screen and a PETC02 level of 8 mm Hg. What is the significance of this finding?</div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>&#160;&#160;Chest compressions may not be effective.</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>&#160;&#160;The endotracheal tube is no longer in the trachea.</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">?</button>&#160;&#160;The patient meets the criteria for termination of efforts.</li><li id="Q_11_3"><button class="FuncButton" id="Q_11_3_Btn" onclick="CheckMCAnswer(11,3,this)">?</button>&#160;&#160;The team is ventilating the patient too often (hyperventilation).</li></ol></li>
+<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">The use of quantitative capnography in intubated patients</div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>&#160;&#160;allows for monitoring of CPR quality.</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>&#160;&#160;measures oxygen levels at the alveoli level.</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">?</button>&#160;&#160;determines inspired carbon dioxide relating to cardiac output.</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">?</button>&#160;&#160;detects electrolyte abnormalities early in code management.</li></ol></li>
+<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">For the past 25 minutes, an EMS crew has attempted resuscitation of a patient who originally presented in ventricular fibrillation. After the first shock, the ECG screen displayed asystole, which has persisted despite 2 doses of epinephrine, a fluid bolus, and high-quality CPR. What is your next treatment?</div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>&#160;&#160;Apply a transcutaneous pacemaker.</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>&#160;&#160;Administer 1 mg of intravenous atropine.</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">?</button>&#160;&#160;Administer 40 units of intravenous vasopressin.</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">?</button>&#160;&#160;Consider terminating resuscitative efforts after consulting medical control.</li></ol></li>
+<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText">Which is a safe and effective practice within the defibrillation sequence?</div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">?</button>&#160;&#160;Stop chest compressions as you charge the defibrillator.</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">?</button>&#160;&#160;Be sure oxygen is not blowing over the patient's chest during the shock.</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">?</button>&#160;&#160;Assess for the presence of a pulse immediately after the shock.</li><li id="Q_14_3"><button class="FuncButton" id="Q_14_3_Btn" onclick="CheckMCAnswer(14,3,this)">?</button>&#160;&#160;Commandingly announce "clear" after you deliver the defibrillation shock.</li></ol></li>
+<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText">During your assessment, your patient suddenly loses consciousness. After calling for help and determining that the patient is not breathing, you are unsure whether the patient has a pulse. What is your next action?</div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">?</button>&#160;&#160;Leave and get an AED.</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">?</button>&#160;&#160;Begin chest compressions.</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">?</button>&#160;&#160;Deliver 2 quick ventilations.</li><li id="Q_15_3"><button class="FuncButton" id="Q_15_3_Btn" onclick="CheckMCAnswer(15,3,this)">?</button>&#160;&#160;Check the patient's mouth for the presence of a foreign body.</li></ol></li>
+<li class="QuizQuestion" id="Q_16" style="display: none;"><div class="QuestionText">What is an advantage of using hands-free defibrillation pads instead of defibrillation paddles?</div><ol class="MCAnswers"><li id="Q_16_0"><button class="FuncButton" id="Q_16_0_Btn" onclick="CheckMCAnswer(16,0,this)">?</button>&#160;&#160;Hands-free pads deliver more energy than paddles.</li><li id="Q_16_1"><button class="FuncButton" id="Q_16_1_Btn" onclick="CheckMCAnswer(16,1,this)">?</button>&#160;&#160;Hands-free pads increase electrical arc.</li><li id="Q_16_2"><button class="FuncButton" id="Q_16_2_Btn" onclick="CheckMCAnswer(16,2,this)">?</button>&#160;&#160;Hands-free pads allow for a more rapid defibrillation.</li><li id="Q_16_3"><button class="FuncButton" id="Q_16_3_Btn" onclick="CheckMCAnswer(16,3,this)">?</button>&#160;&#160;Hands-free pads have universal adaptors that can work with any machine.</li></ol></li>
+<li class="QuizQuestion" id="Q_17" style="display: none;"><div class="QuestionText">What action is recommended to help minimize interruptions in chest compressions during CPR?</div><ol class="MCAnswers"><li id="Q_17_0"><button class="FuncButton" id="Q_17_0_Btn" onclick="CheckMCAnswer(17,0,this)">?</button>&#160;&#160;Continue CPR while charging the defibrillator.</li><li id="Q_17_1"><button class="FuncButton" id="Q_17_1_Btn" onclick="CheckMCAnswer(17,1,this)">?</button>&#160;&#160;Perform pulse checks immediately after defibrillation.</li><li id="Q_17_2"><button class="FuncButton" id="Q_17_2_Btn" onclick="CheckMCAnswer(17,2,this)">?</button>&#160;&#160;Administer IV medications only when delivering breaths.</li><li id="Q_17_3"><button class="FuncButton" id="Q_17_3_Btn" onclick="CheckMCAnswer(17,3,this)">?</button>&#160;&#160;Continue to use an AED even after the arrival of a manual defibrillator.</li></ol></li>
+<li class="QuizQuestion" id="Q_18" style="display: none;"><div class="QuestionText">Which action is included in the BLS Survey?</div><ol class="MCAnswers"><li id="Q_18_0"><button class="FuncButton" id="Q_18_0_Btn" onclick="CheckMCAnswer(18,0,this)">?</button>&#160;&#160;Early defibrillation</li><li id="Q_18_1"><button class="FuncButton" id="Q_18_1_Btn" onclick="CheckMCAnswer(18,1,this)">?</button>&#160;&#160;Advanced airway management</li><li id="Q_18_2"><button class="FuncButton" id="Q_18_2_Btn" onclick="CheckMCAnswer(18,2,this)">?</button>&#160;&#160;Rapid medication administration</li><li id="Q_18_3"><button class="FuncButton" id="Q_18_3_Btn" onclick="CheckMCAnswer(18,3,this)">?</button>&#160;&#160;Preparation for therapeutic hypothermia</li></ol></li>
+<li class="QuizQuestion" id="Q_19" style="display: none;"><div class="QuestionText">Which drug and dose are recommended for the management of a patient in refractory ventricular fibrillation?</div><ol class="MCAnswers"><li id="Q_19_0"><button class="FuncButton" id="Q_19_0_Btn" onclick="CheckMCAnswer(19,0,this)">?</button>&#160;&#160;Atropine 2 mg</li><li id="Q_19_1"><button class="FuncButton" id="Q_19_1_Btn" onclick="CheckMCAnswer(19,1,this)">?</button>&#160;&#160;Amiodarone 300 mg</li><li id="Q_19_2"><button class="FuncButton" id="Q_19_2_Btn" onclick="CheckMCAnswer(19,2,this)">?</button>&#160;&#160;Vasopressin 1 mg/kg</li><li id="Q_19_3"><button class="FuncButton" id="Q_19_3_Btn" onclick="CheckMCAnswer(19,3,this)">?</button>&#160;&#160;Dopamine 2 mg/kg per minute</li></ol></li>
+<li class="QuizQuestion" id="Q_20" style="display: none;"><div class="QuestionText">What is the appropriate interval for an interruption in chest compressions?</div><ol class="MCAnswers"><li id="Q_20_0"><button class="FuncButton" id="Q_20_0_Btn" onclick="CheckMCAnswer(20,0,this)">?</button>&#160;&#160;10 seconds or less</li><li id="Q_20_1"><button class="FuncButton" id="Q_20_1_Btn" onclick="CheckMCAnswer(20,1,this)">?</button>&#160;&#160;10 to 15 seconds</li><li id="Q_20_2"><button class="FuncButton" id="Q_20_2_Btn" onclick="CheckMCAnswer(20,2,this)">?</button>&#160;&#160;15 to 20 seconds</li><li id="Q_20_3"><button class="FuncButton" id="Q_20_3_Btn" onclick="CheckMCAnswer(20,3,this)">?</button>&#160;&#160;Interruptions are never acceptable</li></ol></li>
+<li class="QuizQuestion" id="Q_21" style="display: none;"><div class="QuestionText">Which of the following is a sign of effective CPR?</div><ol class="MCAnswers"><li id="Q_21_0"><button class="FuncButton" id="Q_21_0_Btn" onclick="CheckMCAnswer(21,0,this)">?</button>&#160;&#160;PETC02 &#x2265; 10 mm Hg</li><li id="Q_21_1"><button class="FuncButton" id="Q_21_1_Btn" onclick="CheckMCAnswer(21,1,this)">?</button>&#160;&#160;Measured urine output of 1 ml/kg per hour</li><li id="Q_21_2"><button class="FuncButton" id="Q_21_2_Btn" onclick="CheckMCAnswer(21,2,this)">?</button>&#160;&#160;Patient temperature &gt;32&#x00B0;C (89.6&#x00B0;F)</li><li id="Q_21_3"><button class="FuncButton" id="Q_21_3_Btn" onclick="CheckMCAnswer(21,3,this)">?</button>&#160;&#160;Diastolic intra-arterial pressure &lt;20 mm Hg</li></ol></li>
+<li class="QuizQuestion" id="Q_22" style="display: none;"><div class="QuestionText">What is the primary purpose of a medical emergency team (MET) or rapid response team (RRT)?</div><ol class="MCAnswers"><li id="Q_22_0"><button class="FuncButton" id="Q_22_0_Btn" onclick="CheckMCAnswer(22,0,this)">?</button>&#160;&#160;Identifying and treating early clinical deterioration</li><li id="Q_22_1"><button class="FuncButton" id="Q_22_1_Btn" onclick="CheckMCAnswer(22,1,this)">?</button>&#160;&#160;Rapidly intervening with patients admitted through emergency department triage</li><li id="Q_22_2"><button class="FuncButton" id="Q_22_2_Btn" onclick="CheckMCAnswer(22,2,this)">?</button>&#160;&#160;Responding to patients during a disaster or multiple-patient situation</li><li id="Q_22_3"><button class="FuncButton" id="Q_22_3_Btn" onclick="CheckMCAnswer(22,3,this)">?</button>&#160;&#160;Responding to patients after activation of the emergency response system</li></ol></li>
+<li class="QuizQuestion" id="Q_23" style="display: none;"><div class="QuestionText">Which action improves the quality of chest compressions delivered during a resuscitation attempt?</div><ol class="MCAnswers"><li id="Q_23_0"><button class="FuncButton" id="Q_23_0_Btn" onclick="CheckMCAnswer(23,0,this)">?</button>&#160;&#160;0bserve ECG rhythm to determine depth of compressions.</li><li id="Q_23_1"><button class="FuncButton" id="Q_23_1_Btn" onclick="CheckMCAnswer(23,1,this)">?</button>&#160;&#160;Do not allow the chest to fully recoil with each compression.</li><li id="Q_23_2"><button class="FuncButton" id="Q_23_2_Btn" onclick="CheckMCAnswer(23,2,this)">?</button>&#160;&#160;Compress the upper half of the sternum at a rate of 150 compressions per minute.</li><li id="Q_23_3"><button class="FuncButton" id="Q_23_3_Btn" onclick="CheckMCAnswer(23,3,this)">?</button>&#160;&#160;Switch providers about every 2 minutes or every 5 compression cycles.</li></ol></li>
+<li class="QuizQuestion" id="Q_24" style="display: none;"><div class="QuestionText">What is the appropriate ventilation strategy for an adult in respiratory arrest with a pulse rate of 80/min?</div><ol class="MCAnswers"><li id="Q_24_0"><button class="FuncButton" id="Q_24_0_Btn" onclick="CheckMCAnswer(24,0,this)">?</button>&#160;&#160;1 breath every 3 to 4 seconds</li><li id="Q_24_1"><button class="FuncButton" id="Q_24_1_Btn" onclick="CheckMCAnswer(24,1,this)">?</button>&#160;&#160;1 breath every 5 to 6 seconds</li><li id="Q_24_2"><button class="FuncButton" id="Q_24_2_Btn" onclick="CheckMCAnswer(24,2,this)">?</button>&#160;&#160;2 breaths every 5 to 6 seconds</li><li id="Q_24_3"><button class="FuncButton" id="Q_24_3_Btn" onclick="CheckMCAnswer(24,3,this)">?</button>&#160;&#160;2 breaths every 6 to 8 seconds</li></ol></li>
+<li class="QuizQuestion" id="Q_25" style="display: none;"><div class="QuestionText">A patient presents to the emergency department with new onset of dizziness and fatigue. On examination, the patient's heart rate is 35/min, the blood pressure is 70/50 mm Hg, the respiratory rate is 22 breaths/min, and the oxygen saturation is 95%. What is the appropriate first medication?</div><ol class="MCAnswers"><li id="Q_25_0"><button class="FuncButton" id="Q_25_0_Btn" onclick="CheckMCAnswer(25,0,this)">?</button>&#160;&#160;Atropine 0.5 mg</li><li id="Q_25_1"><button class="FuncButton" id="Q_25_1_Btn" onclick="CheckMCAnswer(25,1,this)">?</button>&#160;&#160;Oxygen 12 to 15 L/min</li><li id="Q_25_2"><button class="FuncButton" id="Q_25_2_Btn" onclick="CheckMCAnswer(25,2,this)">?</button>&#160;&#160;Epinephrine 0.5 mg</li><li id="Q_25_3"><button class="FuncButton" id="Q_25_3_Btn" onclick="CheckMCAnswer(25,3,this)">?</button>&#160;&#160;Aspirin 160 mg chewed</li></ol></li>
+<li class="QuizQuestion" id="Q_26" style="display: none;"><div class="QuestionText">A patient presents to the emergency department with dizziness and shortness of breath with a sinus bradycardia of 40/min. The initial atropine dose was ineffective, and your monitor/defibrillator is not equipped with a transcutaneous pacemaker. What is the appropriate dose of dopamine for this patient?</div><ol class="MCAnswers"><li id="Q_26_0"><button class="FuncButton" id="Q_26_0_Btn" onclick="CheckMCAnswer(26,0,this)">?</button>&#160;&#160;2 to 10 mg/min</li><li id="Q_26_1"><button class="FuncButton" id="Q_26_1_Btn" onclick="CheckMCAnswer(26,1,this)">?</button>&#160;&#160;2 to 10 mcg/kg per minute</li><li id="Q_26_2"><button class="FuncButton" id="Q_26_2_Btn" onclick="CheckMCAnswer(26,2,this)">?</button>&#160;&#160;10 to 15 mg/min</li><li id="Q_26_3"><button class="FuncButton" id="Q_26_3_Btn" onclick="CheckMCAnswer(26,3,this)">?</button>&#160;&#160;10 to 15 mcg/kg per minute</li></ol></li>
+<li class="QuizQuestion" id="Q_27" style="display: none;"><div class="QuestionText">A patient has sudden onset of dizziness. The patient's heart rate is 180/min, blood pressure is 110/70 mm Hg, respiratory rate is 18 breaths/min, and pulse oximetry reading is 98% on room air. The lead II ECG is shown below:<br /><br /><img src="https://github.com/canisiome/ACLS_verA/blob/main/Image_009.jpg" alt="Image_009.jpg" title="Image_009" width="586" height="154"/><br /><br />What is the next appropriate intervention?</div><ol class="MCAnswers"><li id="Q_27_0"><button class="FuncButton" id="Q_27_0_Btn" onclick="CheckMCAnswer(27,0,this)">?</button>&#160;&#160;Vagal maneuvers</li><li id="Q_27_1"><button class="FuncButton" id="Q_27_1_Btn" onclick="CheckMCAnswer(27,1,this)">?</button>&#160;&#160;Metoprolol 5 mg IV</li><li id="Q_27_2"><button class="FuncButton" id="Q_27_2_Btn" onclick="CheckMCAnswer(27,2,this)">?</button>&#160;&#160;Adenosine 6 mg IV</li><li id="Q_27_3"><button class="FuncButton" id="Q_27_3_Btn" onclick="CheckMCAnswer(27,3,this)">?</button>&#160;&#160;Normal saline 1 L bolus</li></ol></li>
+<li class="QuizQuestion" id="Q_28" style="display: none;"><div class="QuestionText">A monitored patient in the ICU developed a sudden onset of narrow-complex tachycardia at a rate of 220/min. The patient's blood pressure is 128/58 mm Hg, the PETC02 is 38 mm Hg, and the pulse oximetry reading is 98%. There is vascular access at the left internal jugular vein, and the patient has not been given any vasoactive drugs. A 12-lead ECG confirms a supraventricular tachycardia with no evidence of ischemia or infarction. The heart rate has not responded to vagal maneuvers. What is the next recommended intervention?</div><ol class="MCAnswers"><li id="Q_28_0"><button class="FuncButton" id="Q_28_0_Btn" onclick="CheckMCAnswer(28,0,this)">?</button>&#160;&#160;Adenosine 6 mg IV push</li><li id="Q_28_1"><button class="FuncButton" id="Q_28_1_Btn" onclick="CheckMCAnswer(28,1,this)">?</button>&#160;&#160;Amiodarone 300 mg IV push</li><li id="Q_28_2"><button class="FuncButton" id="Q_28_2_Btn" onclick="CheckMCAnswer(28,2,this)">?</button>&#160;&#160;Synchronized cardioversion at 50 J</li><li id="Q_28_3"><button class="FuncButton" id="Q_28_3_Btn" onclick="CheckMCAnswer(28,3,this)">?</button>&#160;&#160;Synchronized cardioversion at 200 J</li></ol></li>
+<li class="QuizQuestion" id="Q_29" style="display: none;"><div class="QuestionText">You are receiving a radio report from an EMS team en route with a patient who may be having an acute stroke. The hospital CT scanner is not working at this time. What should you do in this situation?</div><ol class="MCAnswers"><li id="Q_29_0"><button class="FuncButton" id="Q_29_0_Btn" onclick="CheckMCAnswer(29,0,this)">?</button>&#160;&#160;Contact the patient's family to see what they would prefer.</li><li id="Q_29_1"><button class="FuncButton" id="Q_29_1_Btn" onclick="CheckMCAnswer(29,1,this)">?</button>&#160;&#160;Have the EMS crew choose an appropriate patient disposition.</li><li id="Q_29_2"><button class="FuncButton" id="Q_29_2_Btn" onclick="CheckMCAnswer(29,2,this)">?</button>&#160;&#160;Accept the report and provide care within your present capability.</li><li id="Q_29_3"><button class="FuncButton" id="Q_29_3_Btn" onclick="CheckMCAnswer(29,3,this)">?</button>&#160;&#160;Divert the patient to a hospital 15 minutes away with CT capabilities.</li></ol></li>
+<li class="QuizQuestion" id="Q_30" style="display: none;"><div class="QuestionText">Choose an appropriate indication to stop or withhold resuscitative efforts.</div><ol class="MCAnswers"><li id="Q_30_0"><button class="FuncButton" id="Q_30_0_Btn" onclick="CheckMCAnswer(30,0,this)">?</button>&#160;&#160;Arrest not witnessed</li><li id="Q_30_1"><button class="FuncButton" id="Q_30_1_Btn" onclick="CheckMCAnswer(30,1,this)">?</button>&#160;&#160;Evidence of rigor mortis</li><li id="Q_30_2"><button class="FuncButton" id="Q_30_2_Btn" onclick="CheckMCAnswer(30,2,this)">?</button>&#160;&#160;Patient age greater than 85 years</li><li id="Q_30_3"><button class="FuncButton" id="Q_30_3_Btn" onclick="CheckMCAnswer(30,3,this)">?</button>&#160;&#160;No return of spontaneous circulation after 10 minutes of CPR</li></ol></li>
+<li class="QuizQuestion" id="Q_31" style="display: none;"><div class="QuestionText">A 49-year-old woman arrives in the emergency department with persistent epigastric pain. She had been taking oral antacids for the past 6 hours because she thought she had heartburn. The initial blood pressure is 118/72 mm Hg, the heart rate is 92/min and regular, the nonlabored respiratory rate is 14 breaths/min, and the pulse oximetry reading is 96%. Which is the most appropriate intervention to perform next?</div><ol class="MCAnswers"><li id="Q_31_0"><button class="FuncButton" id="Q_31_0_Btn" onclick="CheckMCAnswer(31,0,this)">?</button>&#160;&#160;Administer oxygen.</li><li id="Q_31_1"><button class="FuncButton" id="Q_31_1_Btn" onclick="CheckMCAnswer(31,1,this)">?</button>&#160;&#160;Obtain a 12-lead ECG.</li><li id="Q_31_2"><button class="FuncButton" id="Q_31_2_Btn" onclick="CheckMCAnswer(31,2,this)">?</button>&#160;&#160;Evaluate for fibrinolytic eligibility.</li><li id="Q_31_3"><button class="FuncButton" id="Q_31_3_Btn" onclick="CheckMCAnswer(31,3,this)">?</button>&#160;&#160;Administer sublingual nitroglycerin.</li></ol></li>
+<li class="QuizQuestion" id="Q_32" style="display: none;"><div class="QuestionText">A patient in respiratory failure becomes apneic but continues to have a strong pulse. The heart rate is dropping rapidly and now shows a sinus bradycardia at a rate of 30/min. What intervention has the highest priority?</div><ol class="MCAnswers"><li id="Q_32_0"><button class="FuncButton" id="Q_32_0_Btn" onclick="CheckMCAnswer(32,0,this)">?</button>&#160;&#160;Atropine IV push</li><li id="Q_32_1"><button class="FuncButton" id="Q_32_1_Btn" onclick="CheckMCAnswer(32,1,this)">?</button>&#160;&#160;Epinephrine IV infusion</li><li id="Q_32_2"><button class="FuncButton" id="Q_32_2_Btn" onclick="CheckMCAnswer(32,2,this)">?</button>&#160;&#160;Application of a transcutaneous pacemaker</li><li id="Q_32_3"><button class="FuncButton" id="Q_32_3_Btn" onclick="CheckMCAnswer(32,3,this)">?</button>&#160;&#160;Simple airway maneuvers and assisted ventilation</li></ol></li>
+<li class="QuizQuestion" id="Q_33" style="display: none;"><div class="QuestionText">What is the appropriate procedure for endotracheal tube suctioning after the appropriate catheter is selected?</div><ol class="MCAnswers"><li id="Q_33_0"><button class="FuncButton" id="Q_33_0_Btn" onclick="CheckMCAnswer(33,0,this)">?</button>&#160;&#160;Suction during insertion but for no longer than 30 seconds.</li><li id="Q_33_1"><button class="FuncButton" id="Q_33_1_Btn" onclick="CheckMCAnswer(33,1,this)">?</button>&#160;&#160;Suction the mouth and nose for no longer than 30 seconds.</li><li id="Q_33_2"><button class="FuncButton" id="Q_33_2_Btn" onclick="CheckMCAnswer(33,2,this)">?</button>&#160;&#160;Suction during withdrawal but for no longer than 10 seconds.</li><li id="Q_33_3"><button class="FuncButton" id="Q_33_3_Btn" onclick="CheckMCAnswer(33,3,this)">?</button>&#160;&#160;Hyperventilate before catheter insertion, and then suction during withdrawal.</li></ol></li>
+<li class="QuizQuestion" id="Q_34" style="display: none;"><div class="QuestionText">While treating a patient with dizziness, a blood pressure of 68/30 mm Hg, and cool, clammy skin, you see this lead II ECG rhythm:<br /><br /><img src="https://github.com/canisiome/ACLS_verA/blob/main/Image_012.jpg" alt="Image_012.jpg" title="Image_012" width="613" height="90"/><br /><br />What is the most appropriate first intervention?</div><ol class="MCAnswers"><li id="Q_34_0"><button class="FuncButton" id="Q_34_0_Btn" onclick="CheckMCAnswer(34,0,this)">?</button>&#160;&#160;Aspirin</li><li id="Q_34_1"><button class="FuncButton" id="Q_34_1_Btn" onclick="CheckMCAnswer(34,1,this)">?</button>&#160;&#160;Atropine</li><li id="Q_34_2"><button class="FuncButton" id="Q_34_2_Btn" onclick="CheckMCAnswer(34,2,this)">?</button>&#160;&#160;Lidocaine</li><li id="Q_34_3"><button class="FuncButton" id="Q_34_3_Btn" onclick="CheckMCAnswer(34,3,this)">?</button>&#160;&#160;Nitroglycerin</li></ol></li>
+<li class="QuizQuestion" id="Q_35" style="display: none;"><div class="QuestionText">A 68-year-old woman experienced a sudden onset of right arm weakness. EMS personnel measure a blood pressure of 140/90 mm Hg, a heart rate of 78/min, a nonlabored respiratory rate of 14 breaths/min, and a pulse oximetry reading of 97%. The lead II ECG displays sinus rhythm. What is the most appropriate action for the EMS team to perform next?</div><ol class="MCAnswers"><li id="Q_35_0"><button class="FuncButton" id="Q_35_0_Btn" onclick="CheckMCAnswer(35,0,this)">?</button>&#160;&#160;12-lead ECG assessment</li><li id="Q_35_1"><button class="FuncButton" id="Q_35_1_Btn" onclick="CheckMCAnswer(35,1,this)">?</button>&#160;&#160;Administration of 100% supplementary oxygen</li><li id="Q_35_2"><button class="FuncButton" id="Q_35_2_Btn" onclick="CheckMCAnswer(35,2,this)">?</button>&#160;&#160;Cincinnati Prehospital Stroke Scale assessment</li><li id="Q_35_3"><button class="FuncButton" id="Q_35_3_Btn" onclick="CheckMCAnswer(35,3,this)">?</button>&#160;&#160;Administration of a low-dose aspirin</li></ol></li>
+<li class="QuizQuestion" id="Q_36" style="display: none;"><div class="QuestionText">What is the proper ventilation rate for a patient in cardiac arrest who has an advanced airway in place?EMS is transporting a patient with a positive prehospital stroke assessment. Upon arrival in the emergency department, the initial blood pressure is 138/78 mm Hg, the pulse rate is 80/min, the respiratory rate is 12 breaths/min, and the pulse oximetry reading is 95% on room air. The lead II ECG displays sinus rhythm. The blood glucose level is within normal limits. What intervention should you perform next?</div><ol class="MCAnswers"><li id="Q_36_0"><button class="FuncButton" id="Q_36_0_Btn" onclick="CheckMCAnswer(36,0,this)">?</button>&#160;&#160;Head CT scan</li><li id="Q_36_1"><button class="FuncButton" id="Q_36_1_Btn" onclick="CheckMCAnswer(36,1,this)">?</button>&#160;&#160;Transfer to the stroke unit</li><li id="Q_36_2"><button class="FuncButton" id="Q_36_2_Btn" onclick="CheckMCAnswer(36,2,this)">?</button>&#160;&#160;Immediate rtPA administration</li><li id="Q_36_3"><button class="FuncButton" id="Q_36_3_Btn" onclick="CheckMCAnswer(36,3,this)">?</button>&#160;&#160;Administration of 100% oxygen</li></ol></li>
+<li class="QuizQuestion" id="Q_37" style="display: none;"><div class="QuestionText">What is the proper ventilation rate for a patient in cardiac arrest who has an advanced airway in place?</div><ol class="MCAnswers"><li id="Q_37_0"><button class="FuncButton" id="Q_37_0_Btn" onclick="CheckMCAnswer(37,0,this)">?</button>&#160;&#160;4 to 6 breaths per minute</li><li id="Q_37_1"><button class="FuncButton" id="Q_37_1_Btn" onclick="CheckMCAnswer(37,1,this)">?</button>&#160;&#160;8 to 10 breaths per minute</li><li id="Q_37_2"><button class="FuncButton" id="Q_37_2_Btn" onclick="CheckMCAnswer(37,2,this)">?</button>&#160;&#160;12 to 14 breaths per minute</li><li id="Q_37_3"><button class="FuncButton" id="Q_37_3_Btn" onclick="CheckMCAnswer(37,3,this)">?</button>&#160;&#160;16 to 18 breaths per minute</li></ol></li>
+<li class="QuizQuestion" id="Q_38" style="display: none;"><div class="QuestionText">A 62-year-old man in the emergency department says that his heart is beating fast. He says he has no chest pain or shortness of breath. The blood pressure is 142/98 mm Hg, the pulse is 200/min, the respiratory rate is 14 breaths/min, and pulse oximetry is 95% on room air. What intervention should you perform next?</div><ol class="MCAnswers"><li id="Q_38_0"><button class="FuncButton" id="Q_38_0_Btn" onclick="CheckMCAnswer(38,0,this)">?</button>&#160;&#160;Obtain a 12-lead ECG.</li><li id="Q_38_1"><button class="FuncButton" id="Q_38_1_Btn" onclick="CheckMCAnswer(38,1,this)">?</button>&#160;&#160;Give 150 mg of amiodarone.</li><li id="Q_38_2"><button class="FuncButton" id="Q_38_2_Btn" onclick="CheckMCAnswer(38,2,this)">?</button>&#160;&#160;Administer 160 mg of aspirin.</li><li id="Q_38_3"><button class="FuncButton" id="Q_38_3_Btn" onclick="CheckMCAnswer(38,3,this)">?</button>&#160;&#160;Administer 6 mg of adenosine.</li></ol></li>
+<li class="QuizQuestion" id="Q_39" style="display: none;"><div class="QuestionText">You are evaluating a 48-year-old man with crushing substernal chest pain. The patient is pale, diaphoretic, cool to the touch, and slow to respond to your questions. The blood pressure is 58/32 mm Hg, the heart rate is 190/min, the respiratory rate is 18 breaths/min, and the pulse oximeter is unable to obtain a reading because there is no radial pulse. The lead II ECG displays a regular wide-complex tachycardia. What intervention should you perform next?</div><ol class="MCAnswers"><li id="Q_39_0"><button class="FuncButton" id="Q_39_0_Btn" onclick="CheckMCAnswer(39,0,this)">?</button>&#160;&#160;Procedural sedation</li><li id="Q_39_1"><button class="FuncButton" id="Q_39_1_Btn" onclick="CheckMCAnswer(39,1,this)">?</button>&#160;&#160;12-lead ECG</li><li id="Q_39_2"><button class="FuncButton" id="Q_39_2_Btn" onclick="CheckMCAnswer(39,2,this)">?</button>&#160;&#160;Amiodarone administration</li><li id="Q_39_3"><button class="FuncButton" id="Q_39_3_Btn" onclick="CheckMCAnswer(39,3,this)">?</button>&#160;&#160;Synchronized cardioversion</li></ol></li>
+<li class="QuizQuestion" id="Q_40" style="display: none;"><div class="QuestionText">What is the initial priority for an unconscious patient with any tachycardia on the monitor?</div><ol class="MCAnswers"><li id="Q_40_0"><button class="FuncButton" id="Q_40_0_Btn" onclick="CheckMCAnswer(40,0,this)">?</button>&#160;&#160;Review the patient's home medications.</li><li id="Q_40_1"><button class="FuncButton" id="Q_40_1_Btn" onclick="CheckMCAnswer(40,1,this)">?</button>&#160;&#160;Evaluate the breath sounds.</li><li id="Q_40_2"><button class="FuncButton" id="Q_40_2_Btn" onclick="CheckMCAnswer(40,2,this)">?</button>&#160;&#160;Determine whether pulses are present.</li><li id="Q_40_3"><button class="FuncButton" id="Q_40_3_Btn" onclick="CheckMCAnswer(40,3,this)">?</button>&#160;&#160;Administer sedative drugs.</li></ol></li>
+<li class="QuizQuestion" id="Q_41" style="display: none;"><div class="QuestionText">Which rhythm requires synchronized cardioversion?</div><ol class="MCAnswers"><li id="Q_41_0"><button class="FuncButton" id="Q_41_0_Btn" onclick="CheckMCAnswer(41,0,this)">?</button>&#160;&#160;Unstable supraventricular tachycardia</li><li id="Q_41_1"><button class="FuncButton" id="Q_41_1_Btn" onclick="CheckMCAnswer(41,1,this)">?</button>&#160;&#160;Atrial fibrillation</li><li id="Q_41_2"><button class="FuncButton" id="Q_41_2_Btn" onclick="CheckMCAnswer(41,2,this)">?</button>&#160;&#160;Sinus tachycardia</li><li id="Q_41_3"><button class="FuncButton" id="Q_41_3_Btn" onclick="CheckMCAnswer(41,3,this)">?</button>&#160;&#160;NSR on monitor but no pulse</li></ol></li>
+<li class="QuizQuestion" id="Q_42" style="display: none;"><div class="QuestionText">What is the recommended second dose of adenosine for patients in refractory but stable narrow-complex tachycardia?</div><ol class="MCAnswers"><li id="Q_42_0"><button class="FuncButton" id="Q_42_0_Btn" onclick="CheckMCAnswer(42,0,this)">?</button>&#160;&#160;3 mg</li><li id="Q_42_1"><button class="FuncButton" id="Q_42_1_Btn" onclick="CheckMCAnswer(42,1,this)">?</button>&#160;&#160;6 mg</li><li id="Q_42_2"><button class="FuncButton" id="Q_42_2_Btn" onclick="CheckMCAnswer(42,2,this)">?</button>&#160;&#160;9 mg</li><li id="Q_42_3"><button class="FuncButton" id="Q_42_3_Btn" onclick="CheckMCAnswer(42,3,this)">?</button>&#160;&#160;12 mg</li></ol></li>
+<li class="QuizQuestion" id="Q_43" style="display: none;"><div class="QuestionText">What is the usual post-cardiac arrest target range for PETCO2 when ventilating a patient who achieves return of spontaneous circulation (ROSC)?</div><ol class="MCAnswers"><li id="Q_43_0"><button class="FuncButton" id="Q_43_0_Btn" onclick="CheckMCAnswer(43,0,this)">?</button>&#160;&#160;30 to 35 mm Hg</li><li id="Q_43_1"><button class="FuncButton" id="Q_43_1_Btn" onclick="CheckMCAnswer(43,1,this)">?</button>&#160;&#160;35 to 40 mm Hg</li><li id="Q_43_2"><button class="FuncButton" id="Q_43_2_Btn" onclick="CheckMCAnswer(43,2,this)">?</button>&#160;&#160;40 to 45 mm Hg</li><li id="Q_43_3"><button class="FuncButton" id="Q_43_3_Btn" onclick="CheckMCAnswer(43,3,this)">?</button>&#160;&#160;45 to 50 mm Hg</li></ol></li>
+<li class="QuizQuestion" id="Q_44" style="display: none;"><div class="QuestionText">Which condition is a contraindication to therapeutic hypothermia during the post-cardiac arrest period for patients who achieve return of spontaneous circulation ROSC?</div><ol class="MCAnswers"><li id="Q_44_0"><button class="FuncButton" id="Q_44_0_Btn" onclick="CheckMCAnswer(44,0,this)">?</button>&#160;&#160;Initial rhythm of asystole</li><li id="Q_44_1"><button class="FuncButton" id="Q_44_1_Btn" onclick="CheckMCAnswer(44,1,this)">?</button>&#160;&#160;Responding to verbal commands</li><li id="Q_44_2"><button class="FuncButton" id="Q_44_2_Btn" onclick="CheckMCAnswer(44,2,this)">?</button>&#160;&#160;Patient age greater than 60 years</li><li id="Q_44_3"><button class="FuncButton" id="Q_44_3_Btn" onclick="CheckMCAnswer(44,3,this)">?</button>&#160;&#160;Desire to provide coronary reperfusion (eg, PCI)</li></ol></li>
+<li class="QuizQuestion" id="Q_45" style="display: none;"><div class="QuestionText">What is the potential danger of using ties that pass circumferentially around the patient's neck when securing an advanced airway?</div><ol class="MCAnswers"><li id="Q_45_0"><button class="FuncButton" id="Q_45_0_Btn" onclick="CheckMCAnswer(45,0,this)">?</button>&#160;&#160;May interfere with effective ventilation</li><li id="Q_45_1"><button class="FuncButton" id="Q_45_1_Btn" onclick="CheckMCAnswer(45,1,this)">?</button>&#160;&#160;Places the patient's cervical spine at risk</li><li id="Q_45_2"><button class="FuncButton" id="Q_45_2_Btn" onclick="CheckMCAnswer(45,2,this)">?</button>&#160;&#160;Obstruction of venous return from the brain</li><li id="Q_45_3"><button class="FuncButton" id="Q_45_3_Btn" onclick="CheckMCAnswer(45,3,this)">?</button>&#160;&#160;Does not adequately secure the airway device</li></ol></li>
+<li class="QuizQuestion" id="Q_46" style="display: none;"><div class="QuestionText">What is the most reliable method of confirming and monitoring correct placement of an endotracheal tube?</div><ol class="MCAnswers"><li id="Q_46_0"><button class="FuncButton" id="Q_46_0_Btn" onclick="CheckMCAnswer(46,0,this)">?</button>&#160;&#160;5-point auscultation</li><li id="Q_46_1"><button class="FuncButton" id="Q_46_1_Btn" onclick="CheckMCAnswer(46,1,this)">?</button>&#160;&#160;Colorimetric capnography</li><li id="Q_46_2"><button class="FuncButton" id="Q_46_2_Btn" onclick="CheckMCAnswer(46,2,this)">?</button>&#160;&#160;Continuous waveform capnography</li><li id="Q_46_3"><button class="FuncButton" id="Q_46_3_Btn" onclick="CheckMCAnswer(46,3,this)">?</button>&#160;&#160;Use of esophageal detection devices</li></ol></li>
+<li class="QuizQuestion" id="Q_47" style="display: none;"><div class="QuestionText">What is the recommended IV fluid (normal saline or Ringer's lactate) bolus dose for a patient who achieves ROSC but is hypotensive during the post-cardiac arrest period?</div><ol class="MCAnswers"><li id="Q_47_0"><button class="FuncButton" id="Q_47_0_Btn" onclick="CheckMCAnswer(47,0,this)">?</button>&#160;&#160;250 to 500 ml</li><li id="Q_47_1"><button class="FuncButton" id="Q_47_1_Btn" onclick="CheckMCAnswer(47,1,this)">?</button>&#160;&#160;500 to 1000 ml</li><li id="Q_47_2"><button class="FuncButton" id="Q_47_2_Btn" onclick="CheckMCAnswer(47,2,this)">?</button>&#160;&#160;1 to 2 L</li><li id="Q_47_3"><button class="FuncButton" id="Q_47_3_Btn" onclick="CheckMCAnswer(47,3,this)">?</button>&#160;&#160;2 to 3 L</li></ol></li>
+<li class="QuizQuestion" id="Q_48" style="display: none;"><div class="QuestionText">What is the minimum systolic blood pressure one should attempt to achieve with fluid, inotropic, or vasopressor administration in a hypotensive post-cardiac arrest patient who achieves ROSC?</div><ol class="MCAnswers"><li id="Q_48_0"><button class="FuncButton" id="Q_48_0_Btn" onclick="CheckMCAnswer(48,0,this)">?</button>&#160;&#160;90 mm Hg</li><li id="Q_48_1"><button class="FuncButton" id="Q_48_1_Btn" onclick="CheckMCAnswer(48,1,this)">?</button>&#160;&#160;85 mm Hg</li><li id="Q_48_2"><button class="FuncButton" id="Q_48_2_Btn" onclick="CheckMCAnswer(48,2,this)">?</button>&#160;&#160;80 mm Hg</li><li id="Q_48_3"><button class="FuncButton" id="Q_48_3_Btn" onclick="CheckMCAnswer(48,3,this)">?</button>&#160;&#160;75 mm Hg</li></ol></li>
+<li class="QuizQuestion" id="Q_49" style="display: none;"><div class="QuestionText">What is the first treatment priority for a patient who achieves ROSC?</div><ol class="MCAnswers"><li id="Q_49_0"><button class="FuncButton" id="Q_49_0_Btn" onclick="CheckMCAnswer(49,0,this)">?</button>&#160;&#160;Coronary reperfusion</li><li id="Q_49_1"><button class="FuncButton" id="Q_49_1_Btn" onclick="CheckMCAnswer(49,1,this)">?</button>&#160;&#160;Therapeutic hypothermia</li><li id="Q_49_2"><button class="FuncButton" id="Q_49_2_Btn" onclick="CheckMCAnswer(49,2,this)">?</button>&#160;&#160;Maintaining blood glucose &lt;185 mg/dl</li><li id="Q_49_3"><button class="FuncButton" id="Q_49_3_Btn" onclick="CheckMCAnswer(49,3,this)">?</button>&#160;&#160;Optimizing ventilation and oxygenation</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+<div class="NavButtonBar" id="BottomNavBar">
+
+
+
+
+<button class="NavButton" onclick="location='contents.htm'; return false;"> Index </button>
+
+
+
+<button class="NavButton" onclick="location='nextpage.htm'; return false;">=&gt;</button>
+
+
+</div>
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>
