@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Canisio."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="Canisio" />
+<meta name="dc:title" content="AHA BLS Exam Review (Latest 2022/2023)" />
+
+
+
+<title>
+AHA BLS Exam Review (Latest 2022/2023)
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontSize:       medium;
+	--strTextColor:      #000000;
+	--strTitleColor:     #000000;
+
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #0000FF;
+	--strVLinkColor:     #0000CC;
+	
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #C0C0C0;
+	--strExBGColor:      #FFFFFF;
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+}
+
+
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JQUIZ CORE JAVASCRIPT CODE
+
+var CurrQNum = 0;
+var CorrectIndicator = '&#x2714;';
+var IncorrectIndicator = '&#x2718;';
+var YourScoreIs = 'Your score is ';
+
+//New for 6.2.2.0
+var CompletedSoFar = 'Questions completed so far: ';
+var ExerciseCompleted = 'You have completed the exercise.';
+var ShowCompletedSoFar = true;
+
+var ContinuousScoring = true;
+var CorrectFirstTime = 'Questions answered correctly first time: ';
+var ShowCorrectFirstTime = true;
+var ShuffleQs = false;
+var ShuffleAs = false;
+var DefaultRight = 'Correct!';
+var DefaultWrong = 'Sorry! Try again.';
+var QsToShow = 61;
+var Score = 0;
+var Finished = false;
+var Qs = null;
+var QArray = new Array();
+var ShowingAllQuestions = false;
+var ShowAllQuestionsCaption = 'Show all questions';
+var ShowOneByOneCaption = 'Show questions one by one';
+var State = new Array();
+var Feedback = '';
+var TimeOver = false;
+var strInstructions = '';
+var Locked = false;
+
+//The following variable can be used to add a message explaining that
+//the question is finished, so no further marking will take place.
+var strQuestionFinished = '';
+
+function CompleteEmptyFeedback(){
+	var QNum, ANum;
+	for (QNum=0; QNum<I.length; QNum++){
+//Only do this if not multi-select
+		if (I[QNum][2] != '3'){
+  		for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+  			if (I[QNum][3][ANum][1].length < 1){
+  				if (I[QNum][3][ANum][2] > 0){
+  					I[QNum][3][ANum][1] = DefaultRight;
+  				}
+  				else{
+  					I[QNum][3][ANum][1] = DefaultWrong;
+  				}
+  			}
+  		}
+		}
+	}
+}
+
+function SetUpQuestions(){
+	var AList = new Array(); 
+	var QList = new Array();
+	var i, j;
+	Qs = document.getElementById('Questions');
+	while (Qs.getElementsByTagName('li').length > 0){
+		QList.push(Qs.removeChild(Qs.getElementsByTagName('li')[0]));
+	}
+	var DumpItem = 0;
+	if (QsToShow > QList.length){
+		QsToShow = QList.length;
+	}
+	while (QsToShow < QList.length){
+		DumpItem = Math.floor(QList.length*Math.random());
+		for (j=DumpItem; j<(QList.length-1); j++){
+			QList[j] = QList[j+1];
+		}
+		QList.length = QList.length-1;
+	}
+	if (ShuffleQs == true){
+		QList = Shuffle(QList);
+	}
+	if (ShuffleAs == true){
+		var As;
+		for (var i=0; i<QList.length; i++){
+			As = QList[i].getElementsByTagName('ol')[0];
+			if (As != null){
+  			AList.length = 0;
+				while (As.getElementsByTagName('li').length > 0){
+					AList.push(As.removeChild(As.getElementsByTagName('li')[0]));
+				}
+				AList = Shuffle(AList);
+				for (j=0; j<AList.length; j++){
+					As.appendChild(AList[j]);
+				}
+			}
+		}
+	}
+	
+	for (i=0; i<QList.length; i++){
+		Qs.appendChild(QList[i]);
+		QArray[QArray.length] = QList[i];
+	}
+
+//Show the first item
+	QArray[0].style.display = '';
+	
+//Now hide all except the first item
+	for (i=1; i<QArray.length; i++){
+		QArray[i].style.display = 'none';
+	}		
+	SetQNumReadout();
+	
+	SetFocusToTextbox();
+}
+
+function SetFocusToTextbox(){
+//if there's a textbox, set the focus in it
+	if (QArray[CurrQNum].getElementsByTagName('input')[0] != null){
+		QArray[CurrQNum].getElementsByTagName('input')[0].focus();
+//and show a keypad if there is one
+		if (document.getElementById('CharacterKeypad') != null){
+			document.getElementById('CharacterKeypad').style.display = 'block';
+		}
+	}
+	else{
+  	if (QArray[CurrQNum].getElementsByTagName('textarea')[0] != null){
+  		QArray[CurrQNum].getElementsByTagName('textarea')[0].focus();	
+//and show a keypad if there is one
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'block';
+			}
+		}
+//This added for 6.0.4.11: hide accented character buttons if no textbox
+		else{
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'none';
+			}
+		}
+	}
+}
+
+function ChangeQ(ChangeBy){
+//The following line prevents moving to another question until the current
+//question is answered correctly. Uncomment it to enable this behaviour. 
+//	if (State[CurrQNum][0] == -1){return;}
+	if (((CurrQNum + ChangeBy) < 0)||((CurrQNum + ChangeBy) >= QArray.length)){return;}
+	QArray[CurrQNum].style.display = 'none';
+	CurrQNum += ChangeBy;
+	QArray[CurrQNum].style.display = '';
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+	SetQNumReadout();
+	SetFocusToTextbox();
+}
+
+var HiddenReadingShown = false;
+function ShowSpecialReadingForQuestion(){
+//Undocumented function for showing specific reading text elements which change with each question
+//Added on 10/12/2004
+	if (document.getElementById('ReadingDiv') != null){
+		if (HiddenReadingShown == true){
+			document.getElementById('ReadingDiv').innerHTML = '';
+		}
+		if (QArray[CurrQNum] != null){
+//Fix for 6.0.4.25
+			var Children = QArray[CurrQNum].getElementsByTagName('div');
+			for (var i=0; i<Children.length; i++){
+			if (Children[i].className=="HiddenReading"){
+					document.getElementById('ReadingDiv').innerHTML = Children[i].innerHTML;
+					HiddenReadingShown = true;
+//Hide the ShowAllQuestions button to avoid confusion
+					if (document.getElementById('ShowMethodButton') != null){
+						document.getElementById('ShowMethodButton').style.display = 'none';
+					}
+				}
+			}	
+		}
+	}
+}
+
+function SetQNumReadout(){
+	document.getElementById('QNumReadout').innerHTML = (CurrQNum+1) + ' / ' + QArray.length;
+	if ((CurrQNum+1) >= QArray.length){
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'visible';
+		}
+	}
+	if (CurrQNum <= 0){
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'visible';
+		}
+	}
+}
+
+var I=new Array();
+I[0]=new Array();I[0][0]=100;
+I[0][1]='';
+I[0][2]='0';
+I[0][3]=new Array();
+I[0][3][0]=new Array('When the rescuer first sees a potential victim','',1,100,1);
+I[0][3][1]=new Array('After the rescuer activates the emergency response system','',0,0,1);
+I[0][3][2]=new Array('As emergency medical services arrive on the scene','',0,0,1);
+I[0][3][3]=new Array('After an AED that is attached to the victim delivers a shock','',0,0,1);
+I[1]=new Array();I[1][0]=100;
+I[1][1]='';
+I[1][2]='0';
+I[1][3]=new Array();
+I[1][3][0]=new Array('Place the AED pads on the chest','',0,0,1);
+I[1][3][1]=new Array('Deliver 2 rescue breaths before using the AED','',0,0,1);
+I[1][3][2]=new Array('Turn on the AED','',1,100,1);
+I[1][3][3]=new Array('Complete 5 cycles of chest compressions','',0,0,1);
+I[2]=new Array();I[2][0]=100;
+I[2][1]='';
+I[2][2]='0';
+I[2][3]=new Array();
+I[2][3][0]=new Array('Wait for the AED to reanalyze the rhythm','',0,0,1);
+I[2][3][1]=new Array('Immediately restart CPR, beginning with chest compressions','',1,100,1);
+I[2][3][2]=new Array('Provide 2 ventilations to the victim','',0,0,1);
+I[2][3][3]=new Array('Immediately check the carotid pulse for no more than 10 seconds','',0,0,1);
+I[3]=new Array();I[3][0]=100;
+I[3][1]='';
+I[3][2]='0';
+I[3][3]=new Array();
+I[3][3][0]=new Array('25 seconds','',0,0,1);
+I[3][3][1]=new Array('10 seconds','',1,100,1);
+I[3][3][2]=new Array('15 seconds','',0,0,1);
+I[3][3][3]=new Array('20 seconds','',0,0,1);
+I[4]=new Array();I[4][0]=100;
+I[4][1]='';
+I[4][2]='0';
+I[4][3]=new Array();
+I[4][3][0]=new Array('25 seconds','',0,0,1);
+I[4][3][1]=new Array('10 seconds','',1,100,1);
+I[4][3][2]=new Array('30 seconds','',0,0,1);
+I[4][3][3]=new Array('60 seconds','',0,0,1);
+I[5]=new Array();I[5][0]=100;
+I[5][1]='';
+I[5][2]='0';
+I[5][3]=new Array();
+I[5][3][0]=new Array('A victim with a pulse and who is having trouble breathing','',0,0,1);
+I[5][3][1]=new Array('A victim with chest pain and indigestion','',0,0,1);
+I[5][3][2]=new Array('A victim who is unresponsive, no normal breathing and absent/ inadequate pulse','',1,100,1);
+I[5][3][3]=new Array('A victim who is unresponsive but is breathing adequately','',0,0,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='0';
+I[6][3]=new Array();
+I[6][3][0]=new Array('On the lower half of the breastbone','',1,100,1);
+I[6][3][1]=new Array('In the center of the breastbone','',0,0,1);
+I[6][3][2]=new Array('On the upper portion of the abdomen','',0,0,1);
+I[6][3][3]=new Array('On the upper half of the breastbone','',0,0,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('1 inch','',0,0,1);
+I[7][3][1]=new Array('2 inches','',1,100,1);
+I[7][3][2]=new Array('3 inches','',0,0,1);
+I[7][3][3]=new Array('4 inches','',0,0,1);
+I[8]=new Array();I[8][0]=100;
+I[8][1]='';
+I[8][2]='0';
+I[8][3]=new Array();
+I[8][3][0]=new Array('Adequate depth of compression is needed to create blood flow during compressions','',1,100,1);
+I[8][3][1]=new Array('Adequate depth of compression is needed to create air flow into the lungs and adequate oxygenation','',0,0,1);
+I[8][3][2]=new Array('Adequate depth of compression is needed to prolong asystole','',0,0,1);
+I[8][3][3]=new Array('Adequate depth of compression is needed to stimulate spontaneous respirations','',0,0,1);
+I[9]=new Array();I[9][0]=100;
+I[9][1]='';
+I[9][2]='0';
+I[9][3]=new Array();
+I[9][3][0]=new Array('At least 40 compressions per minute','',0,0,1);
+I[9][3][1]=new Array('At least 60 compressions per minute','',0,0,1);
+I[9][3][2]=new Array('At least 80 compressions per minute','',0,0,1);
+I[9][3][3]=new Array('At least 100 compressions per minute','',1,100,1);
+I[10]=new Array();I[10][0]=100;
+I[10][1]='';
+I[10][2]='0';
+I[10][3]=new Array();
+I[10][3][0]=new Array('30:2','',1,100,1);
+I[10][3][1]=new Array('5:1','',0,0,1);
+I[10][3][2]=new Array('20:2','',0,0,1);
+I[10][3][3]=new Array('15:2','',0,0,1);
+I[11]=new Array();I[11][0]=100;
+I[11][1]='';
+I[11][2]='0';
+I[11][3]=new Array();
+I[11][3][0]=new Array('The rescuer opens the airway, seals their mouth over the victim\'s mouth, pinches the victim\'s nose closed, and gives 2 breaths while watching for the chest to rise','',1,100,1);
+I[11][3][1]=new Array('The rescuer opens the airway, seals their mouth over the victim\'s mouth, and gives several small puffs while trying to avoid making the chest rise','',0,0,1);
+I[11][3][2]=new Array('The rescuer opens the airway, seals their mouth over the victim\'s mouth, and gives 1 slow breath for a duration of 5 seconds','',0,0,1);
+I[11][3][3]=new Array('The rescuer opens the airway, seals their mouth over the victim\'s mouth, and gives 5 slow breaths, each with a duration of 2 seconds, while watching for the chest to rise','',0,0,1);
+I[12]=new Array();I[12][0]=100;
+I[12][1]='';
+I[12][2]='0';
+I[12][3]=new Array();
+I[12][3][0]=new Array('The stomach visibly rises','',0,0,1);
+I[12][3][1]=new Array('The chest rises visibly','',1,100,1);
+I[12][3][2]=new Array('The child ventilation bag is completely compressed','',0,0,1);
+I[12][3][3]=new Array('The rescuer can hear an air leak around the mask','',0,0,1);
+I[13]=new Array();I[13][0]=100;
+I[13][1]='';
+I[13][2]='0';
+I[13][3]=new Array();
+I[13][3][0]=new Array('Bag-mask device','',1,100,1);
+I[13][3][1]=new Array('Mouth-to-barrier device technique','',0,0,1);
+I[13][3][2]=new Array('Mouth-to-mouth technique','',0,0,1);
+I[13][3][3]=new Array('Mouth-to-mask technique','',0,0,1);
+I[14]=new Array();I[14][0]=100;
+I[14][1]='';
+I[14][2]='0';
+I[14][3]=new Array();
+I[14][3][0]=new Array('Give breaths as quickly as you can','',0,0,1);
+I[14][3][1]=new Array('Give each breath over as long a time as you can (several seconds)','',0,0,1);
+I[14][3][2]=new Array('Give the largest breaths that you can','',0,0,1);
+I[14][3][3]=new Array('Give a breath just until you see the chest rise','',1,100,1);
+I[15]=new Array();I[15][0]=100;
+I[15][1]='';
+I[15][2]='0';
+I[15][3]=new Array();
+I[15][3][0]=new Array('Give breaths and compressions','',0,0,1);
+I[15][3][1]=new Array('Give breaths without compressions','',1,100,1);
+I[15][3][2]=new Array('Give chest compressions without breaths','',0,0,1);
+I[15][3][3]=new Array('Connect the AED to the child and analyze','',0,0,1);
+I[16]=new Array();I[16][0]=100;
+I[16][1]='';
+I[16][2]='0';
+I[16][3]=new Array();
+I[16][3][0]=new Array('Squeeze the bag as often as possible','',0,0,1);
+I[16][3][1]=new Array('Give breaths at the rate of 1 breath every 3 to 5 seconds','',1,100,1);
+I[16][3][2]=new Array('Position the child on their stomach','',0,0,1);
+I[16][3][3]=new Array('Avoid performing a head tilt','',0,0,1);
+I[17]=new Array();I[17][0]=100;
+I[17][1]='';
+I[17][2]='0';
+I[17][3]=new Array();
+I[17][3][0]=new Array('Count compressions out loud','',0,0,1);
+I[17][3][1]=new Array('Check for a pulse during compressions','',0,0,1);
+I[17][3][2]=new Array('Do nothing until the first rescuer needs relief','',0,0,1);
+I[17][3][3]=new Array('Maintain an open airway and give ventilations','',1,100,1);
+I[18]=new Array();I[18][0]=100;
+I[18][1]='';
+I[18][2]='0';
+I[18][3]=new Array();
+I[18][3][0]=new Array('Compress at a rate of at least 100 per minute, 1 breath every 6 - 8 seconds','',1,100,1);
+I[18][3][1]=new Array('Compress at a rate of at least 60 per minute, 1 breath every 6 - 8 seconds','',0,0,1);
+I[18][3][2]=new Array('Compress at a rate of at least 100 per minute, 2 breaths every 5-10 seconds','',0,0,1);
+I[18][3][3]=new Array('Compress at a rate of at least 60 per minute, 1 breath every 5-10 seconds','',0,0,1);
+I[19]=new Array();I[19][0]=100;
+I[19][1]='';
+I[19][2]='0';
+I[19][3]=new Array();
+I[19][3][0]=new Array('30:2','',0,0,1);
+I[19][3][1]=new Array('5:1','',0,0,1);
+I[19][3][2]=new Array('20:2','',0,0,1);
+I[19][3][3]=new Array('15:2','',1,100,1);
+I[20]=new Array();I[20][0]=100;
+I[20][1]='';
+I[20][2]='0';
+I[20][3]=new Array();
+I[20][3][0]=new Array('30:2','',0,0,1);
+I[20][3][1]=new Array('5:1','',0,0,1);
+I[20][3][2]=new Array('20:2','',0,0,1);
+I[20][3][3]=new Array('15:2','',1,100,1);
+I[21]=new Array();I[21][0]=100;
+I[21][1]='';
+I[21][2]='0';
+I[21][3]=new Array();
+I[21][3][0]=new Array('Perform abdominal thrusts','',0,0,1);
+I[21][3][1]=new Array('Perform blind finger sweeps','',0,0,1);
+I[21][3][2]=new Array('Start CPR beginning with compressions','',1,100,1);
+I[21][3][3]=new Array('Call the victim\'s doctor','',0,0,1);
+I[22]=new Array();I[22][0]=100;
+I[22][1]='';
+I[22][2]='0';
+I[22][3]=new Array();
+I[22][3][0]=new Array('One rescue breath every 10 seconds','',0,0,1);
+I[22][3][1]=new Array('Cycles of back blows and chest thrusts','',0,0,1);
+I[22][3][2]=new Array('Chest compressions without breaths','',0,0,1);
+I[22][3][3]=new Array('Both chest compressions and breaths','',1,100,1);
+I[23]=new Array();I[23][0]=100;
+I[23][1]='';
+I[23][2]='0';
+I[23][3]=new Array();
+I[23][3][0]=new Array('At least one fourth the depth of the chest, approximately 1 inch','',0,0,1);
+I[23][3][1]=new Array('At least one third the depth of the chest, approximately 1.5 inches','',1,100,1);
+I[23][3][2]=new Array('At least one half the depth of the chest, approximately 2 inches','',0,0,1);
+I[23][3][3]=new Array('At least two thirds the depth of the chest, approximately 3 inches','',0,0,1);
+I[24]=new Array();I[24][0]=100;
+I[24][1]='';
+I[24][2]='0';
+I[24][3]=new Array();
+I[24][3][0]=new Array('Produces less blood flow than the 2-finger technique','',0,0,1);
+I[24][3][1]=new Array('Is the preferred chest compression technique for 2-rescuer CPR','',1,100,1);
+I[24][3][2]=new Array('Is the preferred chest compression technique for 1-rescuer CPR','',0,0,1);
+I[24][3][3]=new Array('Generates less blood pressure than the 2-finger technique','',0,0,1);
+I[25]=new Array();I[25][0]=100;
+I[25][1]='';
+I[25][2]='0';
+I[25][3]=new Array();
+I[25][3][0]=new Array('healthcare clinics','',0,0,1);
+I[25][3][1]=new Array('homes','',1,100,1);
+I[25][3][2]=new Array('recreational facilities','',0,0,1);
+I[25][3][3]=new Array('shopping centers','',0,0,1);
+I[26]=new Array();I[26][0]=100;
+I[26][1]='';
+I[26][2]='0';
+I[26][3]=new Array();
+I[26][3][0]=new Array('cardiac problem','',0,0,1);
+I[26][3][1]=new Array('congenital or acquired heart disease','',0,0,1);
+I[26][3][2]=new Array('respiratory failure or shock','',1,100,1);
+I[26][3][3]=new Array('infection and sepsis','',0,0,1);
+I[27]=new Array();I[27][0]=100;
+I[27][1]='';
+I[27][2]='0';
+I[27][3]=new Array();
+I[27][3][0]=new Array('Advanced life support','',0,0,1);
+I[27][3][1]=new Array('High-quality CPR','',0,0,1);
+I[27][3][2]=new Array('prevention','',0,0,1);
+I[27][3][3]=new Array('rapid defibrillation','',1,100,1);
+I[28]=new Array();I[28][0]=100;
+I[28][1]='';
+I[28][2]='0';
+I[28][3]=new Array();
+I[28][3][0]=new Array('when respiratory distress in adults occurs and the heart rate does not change','',0,0,1);
+I[28][3][1]=new Array('when the heart rate is 40-60/min and respirations increase','',0,0,1);
+I[28][3][2]=new Array('when blood flow to the heart is blocked and the heart rate increases','',0,0,1);
+I[28][3][3]=new Array('when an abnormal rhythm develops and the heart stops beating unexpectedly','',1,100,1);
+I[29]=new Array();I[29][0]=100;
+I[29][1]='';
+I[29][2]='0';
+I[29][3]=new Array();
+I[29][3][0]=new Array('activate the emergency response system','',0,0,1);
+I[29][3][1]=new Array('start high-quality CPR beginning with chest compressions','',0,0,1);
+I[29][3][2]=new Array('start providing rescue breaths','',0,0,1);
+I[29][3][3]=new Array('verify that the scene is safe for you and the victim','',1,100,1);
+I[30]=new Array();I[30][0]=100;
+I[30][1]='';
+I[30][2]='0';
+I[30][3]=new Array();
+I[30][3][0]=new Array('check his pulse','',0,0,1);
+I[30][3][1]=new Array('start high-quality cpr','',0,0,1);
+I[30][3][2]=new Array('start providing rescue breaths','',0,0,1);
+I[30][3][3]=new Array('shout for nearby help','',1,100,1);
+I[31]=new Array();I[31][0]=100;
+I[31][1]='';
+I[31][2]='0';
+I[31][3]=new Array();
+I[31][3][0]=new Array('Start high-quality cpr, beginning with chest compressions','',1,100,1);
+I[31][3][1]=new Array('monitor the victim until additional, more experienced help arrives','',0,0,1);
+I[31][3][2]=new Array('provide rescue breathing by delivering 1 breath every 5-6 seconds','',0,0,1);
+I[31][3][3]=new Array('find someone to help by retrieving the nearest AED','',0,0,1);
+I[32]=new Array();I[32][0]=100;
+I[32][1]='';
+I[32][2]='0';
+I[32][3]=new Array();
+I[32][3][0]=new Array('10 compressions to 2 breaths','',0,0,1);
+I[32][3][1]=new Array('15 compressions to 2 breaths','',0,0,1);
+I[32][3][2]=new Array('30 compressions to 2 breaths','',0,0,1);
+I[32][3][3]=new Array('100 compressions to 2 breaths','',1,100,1);
+I[33]=new Array();I[33][0]=100;
+I[33][1]='';
+I[33][2]='0';
+I[33][3]=new Array();
+I[33][3][0]=new Array('rate of 60-80 compressions per minute and depth of about 1 inch','',0,0,1);
+I[33][3][1]=new Array('rate of 80-100 compressions per minute and depth of about 1.5 inches','',0,0,1);
+I[33][3][2]=new Array('rate of 120-140 compressions per minute and depth of about 2.5 inches','',0,0,1);
+I[33][3][3]=new Array('rate of 100-120 compressions per minute and depth of at least 2 inches','',1,100,1);
+I[34]=new Array();I[34][0]=100;
+I[34][1]='';
+I[34][2]='0';
+I[34][3]=new Array();
+I[34][3][0]=new Array('Assign tasks to other rescuers and rotate compressions every 2 minutes or more frequently if needed to avoid fatigued','',1,100,1);
+I[34][3][1]=new Array('Continue cpr while the aed is attached even if you are fatigued','',0,0,1);
+I[34][3][2]=new Array('wait for the most experienced rescuer to provide direction to the team','',0,0,1);
+I[34][3][3]=new Array('direct the team to assign a team leader and toles while you continue cpr','',0,0,1);
+I[35]=new Array();I[35][0]=100;
+I[35][1]='';
+I[35][2]='0';
+I[35][3]=new Array();
+I[35][3][0]=new Array('head-tilt, chin-lift','',0,0,1);
+I[35][3][1]=new Array('jaw thrust','',1,100,1);
+I[35][3][2]=new Array('head tilt-neck lift','',0,0,1);
+I[35][3][3]=new Array('avoid opening the airway','',0,0,1);
+I[36]=new Array();I[36][0]=100;
+I[36][1]='';
+I[36][2]='0';
+I[36][3]=new Array();
+I[36][3][0]=new Array('power on the aed','',1,100,1);
+I[36][3][1]=new Array('apply the pads','',0,0,1);
+I[36][3][2]=new Array('press the analyze button','',0,0,1);
+I[36][3][3]=new Array('press the shock button','',0,0,1);
+I[37]=new Array();I[37][0]=100;
+I[37][1]='';
+I[37][2]='0';
+I[37][3]=new Array();
+I[37][3][0]=new Array('placing pads on victims bare chest','',1,100,1);
+I[37][3][1]=new Array('shaving victims hairy chest','',0,0,1);
+I[37][3][2]=new Array('emoving victim from water','',0,0,1);
+I[37][3][3]=new Array('finding victims implanted pacemaker','',0,0,1);
+I[38]=new Array();I[38][0]=100;
+I[38][1]='';
+I[38][2]='0';
+I[38][3]=new Array();
+I[38][3][0]=new Array('avoid placing the aed pad directly over the implanted device','',1,100,1);
+I[38][3][1]=new Array('avoid using the aed to prevent damage to the implanted device','',0,0,1);
+I[38][3][2]=new Array('turn off the implanted device before applying the aed pads','',0,0,1);
+I[38][3][3]=new Array('consider using pediatric pads to decrease the shock dose delivered','',0,0,1);
+I[39]=new Array();I[39][0]=100;
+I[39][1]='';
+I[39][2]='0';
+I[39][3]=new Array();
+I[39][3][0]=new Array('Check the pulse','',0,0,1);
+I[39][3][1]=new Array('continue the chest compressions','',0,0,1);
+I[39][3][2]=new Array('give rescue breaths only','',0,0,1);
+I[39][3][3]=new Array('stand clear of the victim','',1,100,1);
+I[40]=new Array();I[40][0]=100;
+I[40][1]='';
+I[40][2]='0';
+I[40][3]=new Array();
+I[40][3][0]=new Array('ask another rescuer what he thinks should be done','',0,0,1);
+I[40][3][1]=new Array('say nothing that contradicts the team leader','',0,0,1);
+I[40][3][2]=new Array('suggest to resume chest compressions without delay','',1,100,1);
+I[40][3][3]=new Array('wait until the debriefing session afterward to discuss is','',0,0,1);
+I[41]=new Array();I[41][0]=100;
+I[41][1]='';
+I[41][2]='0';
+I[41][3]=new Array();
+I[41][3][0]=new Array('pick up the bag-mask device and give it to another team member','',0,0,1);
+I[41][3][1]=new Array('pretend you did not hear the request and hope the team leader chooses someone else to do it','',0,0,1);
+I[41][3][2]=new Array('tell the team leader that you are not comfortable performing that task','',1,100,1);
+I[41][3][3]=new Array('try to do it as best as you can and hope another team member will see you struggling and take over','',0,0,1);
+I[42]=new Array();I[42][0]=100;
+I[42][1]='';
+I[42][2]='0';
+I[42][3]=new Array();
+I[42][3][0]=new Array('repeat back to the team leader the task you were assigned','',1,100,1);
+I[42][3][1]=new Array('nod your head as an acknowledgment of the assigned task','',0,0,1);
+I[42][3][2]=new Array('start performing the assigned tasks, but do not speak, to minimize noise','',0,0,1);
+I[42][3][3]=new Array('wait for the team leader to address you by name before acknowledging the taks','',0,0,1);
+I[43]=new Array();I[43][0]=100;
+I[43][1]='';
+I[43][2]='0';
+I[43][3]=new Array();
+I[43][3][0]=new Array('15:1','',0,0,1);
+I[43][3][1]=new Array('15:2','',0,0,1);
+I[43][3][2]=new Array('20:2','',0,0,1);
+I[43][3][3]=new Array('30:2','',1,100,1);
+I[44]=new Array();I[44][0]=100;
+I[44][1]='';
+I[44][2]='0';
+I[44][3]=new Array();
+I[44][3][0]=new Array('15:1','',0,0,1);
+I[44][3][1]=new Array('15:2','',1,100,1);
+I[44][3][2]=new Array('20:2','',0,0,1);
+I[44][3][3]=new Array('30:2','',0,0,1);
+I[45]=new Array();I[45][0]=100;
+I[45][1]='';
+I[45][2]='0';
+I[45][3]=new Array();
+I[45][3][0]=new Array('a child younger than 3 years','',0,0,1);
+I[45][3][1]=new Array('a child older than 3 years','',0,0,1);
+I[45][3][2]=new Array('an infant older than 1 year','',0,0,1);
+I[45][3][3]=new Array('an infant younger than 1 year','',1,100,1);
+I[46]=new Array();I[46][0]=100;
+I[46][1]='';
+I[46][2]='0';
+I[46][3]=new Array();
+I[46][3][0]=new Array('at least 1/4 of depth, about 1 inch','',0,0,1);
+I[46][3][1]=new Array('at least 1/3 of depth, about 1.5 inches','',0,0,1);
+I[46][3][2]=new Array('at least 1/3 of depth, about 2 inches','',1,100,1);
+I[46][3][3]=new Array('at least 1/2 of depth, about 3 inches','',0,0,1);
+I[47]=new Array();I[47][0]=100;
+I[47][1]='';
+I[47][2]='0';
+I[47][3]=new Array();
+I[47][3][0]=new Array('at least 1/4 of depth or 1 inch','',0,0,1);
+I[47][3][1]=new Array('at least 1/3 of depth or 1.5 inches','',1,100,1);
+I[47][3][2]=new Array('at least 1/3 of depth or about 2 inches','',0,0,1);
+I[47][3][3]=new Array('at least 1/2 or at least 2.5 inches','',0,0,1);
+I[48]=new Array();I[48][0]=100;
+I[48][1]='';
+I[48][2]='0';
+I[48][3]=new Array();
+I[48][3][0]=new Array('never use adult aed pads','',0,0,1);
+I[48][3][1]=new Array('use adult aed pads','',1,100,1);
+I[48][3][2]=new Array('use adult aed pads if aed does not have child pads','',0,0,1);
+I[48][3][3]=new Array('use adult aed pads but cut in half','',0,0,1);
+I[49]=new Array();I[49][0]=100;
+I[49][1]='';
+I[49][2]='0';
+I[49][3]=new Array();
+I[49][3][0]=new Array('perform high-quality cpr','',0,0,1);
+I[49][3][1]=new Array('use a aed equipped with pediatric dose attenuator','',1,100,1);
+I[49][3][2]=new Array('use an aed without a pediatric dose attenuator','',0,0,1);
+I[49][3][3]=new Array('wait for advanced care to arrive','',0,0,1);
+I[50]=new Array();I[50][0]=100;
+I[50][1]='';
+I[50][2]='0';
+I[50][3]=new Array();
+I[50][3][0]=new Array('ensure pads overlap','',0,0,1);
+I[50][3][1]=new Array('place 1 adult pad on the chest','',0,0,1);
+I[50][3][2]=new Array('place 1 pad on chest and one on back','',1,100,1);
+I[50][3][3]=new Array('if child pads not available do not use aed','',0,0,1);
+I[51]=new Array();I[51][0]=100;
+I[51][1]='';
+I[51][2]='0';
+I[51][3]=new Array();
+I[51][3][0]=new Array('agonal gasping with no pulse','',0,0,1);
+I[51][3][1]=new Array('breathing with weak pulse','',0,0,1);
+I[51][3][2]=new Array('no breathing and a pulse','',1,100,1);
+I[51][3][3]=new Array('no breathing and no pulse','',0,0,1);
+I[52]=new Array();I[52][0]=100;
+I[52][1]='';
+I[52][2]='0';
+I[52][3]=new Array();
+I[52][3][0]=new Array('1 breath 2-3 seconds','',0,0,1);
+I[52][3][1]=new Array('1 breath 3-5 seconds','',1,100,1);
+I[52][3][2]=new Array('1 breath 5-6 seconds','',0,0,1);
+I[52][3][3]=new Array('1 breath 8-10 seconds','',0,0,1);
+I[53]=new Array();I[53][0]=100;
+I[53][1]='';
+I[53][2]='0';
+I[53][3]=new Array();
+I[53][3][0]=new Array('delivering each breath over 1 second','',1,100,1);
+I[53][3][1]=new Array('giving rapid, shallow breaths','',0,0,1);
+I[53][3][2]=new Array('using bvm to deliver ventilation','',0,0,1);
+I[53][3][3]=new Array('using mouth to mouth breathing','',0,0,1);
+I[54]=new Array();I[54][0]=100;
+I[54][1]='';
+I[54][2]='0';
+I[54][3]=new Array();
+I[54][3][0]=new Array('mouth to mouth','',0,0,1);
+I[54][3][1]=new Array('mouth to mouth and nose','',1,100,1);
+I[54][3][2]=new Array('mouth to nose','',0,0,1);
+I[54][3][3]=new Array('any method','',0,0,1);
+I[55]=new Array();I[55][0]=100;
+I[55][1]='';
+I[55][2]='0';
+I[55][3]=new Array();
+I[55][3][0]=new Array('heroin','',0,0,1);
+I[55][3][1]=new Array('hydrocodone','',0,0,1);
+I[55][3][2]=new Array('morphine','',0,0,1);
+I[55][3][3]=new Array('naloxone','',1,100,1);
+I[56]=new Array();I[56][0]=100;
+I[56][1]='';
+I[56][2]='0';
+I[56][3]=new Array();
+I[56][3][0]=new Array('remain with your roommate until naloxone arrives and administer it','',0,0,1);
+I[56][3][1]=new Array('begin cpr, starting with chest compressions','',0,0,1);
+I[56][3][2]=new Array('provide rescue breathing, 1 breath 5-6 seconds','',1,100,1);
+I[56][3][3]=new Array('provide rapid defib with an aed','',0,0,1);
+I[57]=new Array();I[57][0]=100;
+I[57][1]='';
+I[57][2]='0';
+I[57][3]=new Array();
+I[57][3][0]=new Array('wait for naloxone to arrive','',0,0,1);
+I[57][3][1]=new Array('begin cpr','',1,100,1);
+I[57][3][2]=new Array('provide 1 rescue breathe every 5-6 seconds until naloxone arrives','',0,0,1);
+I[57][3][3]=new Array('provide rapid defib with aed','',0,0,1);
+I[58]=new Array();I[58][0]=100;
+I[58][1]='';
+I[58][2]='0';
+I[58][3]=new Array();
+I[58][3][0]=new Array('cyanosis','',0,0,1);
+I[58][3][1]=new Array('high-pitched noise while inhaling','',0,0,1);
+I[58][3][2]=new Array('inability to speak or cry','',0,0,1);
+I[58][3][3]=new Array('wheezing between coughs','',1,100,1);
+I[59]=new Array();I[59][0]=100;
+I[59][1]='';
+I[59][2]='0';
+I[59][3]=new Array();
+I[59][3][0]=new Array('average size 27 year old man','',1,100,1);
+I[59][3][1]=new Array('woman who is pregnant','',0,0,1);
+I[59][3][2]=new Array('obese 50 year old','',0,0,1);
+I[59][3][3]=new Array('average size 9 month old infant','',0,0,1);
+I[60]=new Array();I[60][0]=100;
+I[60][1]='';
+I[60][2]='0';
+I[60][3]=new Array();
+I[60][3][0]=new Array('begin cpr with chest compressions','',1,100,1);
+I[60][3][1]=new Array('check for pulse','',0,0,1);
+I[60][3][2]=new Array('continue performing abdominal thrusts','',0,0,1);
+I[60][3][3]=new Array('provide 5 back slaps followed by 5 chest thrusts','',0,0,1);
+
+
+function StartUp(){
+
+//If there's only one question, no need for question navigation controls
+	if (QsToShow < 2){
+		document.getElementById('QNav').style.display = 'none';
+	}
+	
+//Stash the instructions so they can be redisplayed
+	strInstructions = document.getElementById('InstructionsDiv').innerHTML;
+	
+
+	
+
+	
+
+	
+	CompleteEmptyFeedback();
+
+	SetUpQuestions();
+	ClearTextBoxes();
+	CreateStatusArray();
+	
+
+	
+//Check search string for q parameter
+	if (document.location.search.length > 0){
+		if (ShuffleQs == false){
+			var JumpTo = parseInt(document.location.search.substring(1,document.location.search.length))-1;
+			if (JumpTo <= QsToShow){
+				ChangeQ(JumpTo);
+			}
+		}
+	}
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+}
+
+function ShowHideQuestions(){
+	document.getElementById('ShowMethodButton').style.display = 'none';
+	if (ShowingAllQuestions == false){
+		for (var i=0; i<QArray.length; i++){
+				QArray[i].style.display = '';
+			}
+		document.getElementById('Questions').style.listStyleType = 'decimal';
+		document.getElementById('OneByOneReadout').style.display = 'none';
+		document.getElementById('ShowMethodButton').innerHTML = ShowOneByOneCaption;
+		ShowingAllQuestions = true;
+	}
+	else{
+		for (var i=0; i<QArray.length; i++){
+				if (i != CurrQNum){
+					QArray[i].style.display = 'none';
+				}
+			}
+		document.getElementById('Questions').style.listStyleType = 'none';
+		document.getElementById('OneByOneReadout').style.display = '';
+		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
+		ShowingAllQuestions = false;	
+	}
+	document.getElementById('ShowMethodButton').style.display = 'inline';
+}
+
+function CreateStatusArray(){
+	var QNum, ANum;
+//For each item in the item array
+	for (QNum=0; QNum<I.length; QNum++){
+//Check if the question still exists (hasn't been nuked by showing a random selection)
+		if (document.getElementById('Q_' + QNum) != null){
+			State[QNum] = new Array();
+			State[QNum][0] = -1; //Score for this q; -1 shows question not done yet
+			State[QNum][1] = new Array(); //answers
+			for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+				State[QNum][1][ANum] = 0; //answer not chosen yet; when chosen, will store its position in the series of choices
+			}
+			State[QNum][2] = 0; //tries at this q so far
+			State[QNum][3] = 0; //incrementing percent-correct values of selected answers
+			State[QNum][4] = 0; //penalties incurred for hints
+			State[QNum][5] = ''; //Sequence of answers chosen by number
+		}
+		else{
+			State[QNum] = null;
+		}
+	}
+}
+
+
+
+function CheckMCAnswer(QNum, ANum, Btn){
+//if question doesn't exist, bail
+	if (State[QNum].length < 1){return;}
+	
+//Get the feedback
+	Feedback = I[QNum][3][ANum][1];
+	
+//Now show feedback and bail if question already complete
+	if (State[QNum][0] > -1){
+//Add an extra message explaining that the question
+// is finished if defined by the user
+		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
+//Show the feedback
+		ShowMessage(Feedback);
+//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
+//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
+		return;
+	}
+	
+//Hide the button while processing
+	Btn.style.display = 'none';
+
+//Increment the number of tries
+	State[QNum][2]++;
+	
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
+	
+//Store the try number in the answer part of the State array, for tracking purposes
+	State[QNum][1][ANum] = State[QNum][2];
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	State[QNum][5] += String.fromCharCode(65+ANum);
+	
+//Should this answer be accepted as correct?
+	if (I[QNum][3][ANum][2] < 1){
+//It's wrong
+
+//Mark the answer
+		Btn.innerHTML = IncorrectIndicator;
+		
+//Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+		
+//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
+		var RemainingAnswer = FinalAnswer(QNum);
+		if (RemainingAnswer > -1){
+//Behave as if the last answer had been selected, but give no credit for it
+//Increment the number of tries
+			State[QNum][2]++;		
+		
+//Calculate the score for this question
+			CalculateMCQuestionScore(QNum);
+			
+//Get the overall score and add it to the feedback
+			CalculateOverallScore();
+//New for 6.2.2.1
+			var QsDone = CheckQuestionsCompleted();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's right
+//Mark the answer
+		Btn.innerHTML = CorrectIndicator;
+				
+//Calculate the score for this question
+		CalculateMCQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+
+//Get the overall score and add it to the feedback
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+		}
+		else{
+			WriteToInstructions(QsDone);
+		}
+	}
+	
+//Show the button again
+	Btn.style.display = 'inline';
+	
+//Finally, show the feedback	
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMCQuestionScore(QNum){
+	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
+	var PercentCorrect = State[QNum][3];
+	var TotAns = GetTotalMCAnswers(QNum);
+	var HintPenalties = State[QNum][4];
+	
+//Make sure it's not already complete
+
+	if (State[QNum][0] < 0){
+//Allow for Hybrids
+		if (HintPenalties >= 1){
+			State[QNum][0] = 0;
+		}
+		else{
+//This line calculates the score for this question
+			if (TotAns == 1){
+				State[QNum][0] = 1;
+			}
+			else{
+				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
+			}
+		}
+//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
+		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+function GetTotalMCAnswers(QNum){
+	var Result = 0;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			Result++;
+		}
+	}
+	return Result;
+}
+
+function FinalAnswer(QNum){
+	var UnchosenAnswers = 0;
+	var FinalAnswer = -1;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
+				UnchosenAnswers++;
+				FinalAnswer = ANum;
+			}
+		}
+	}
+	if (UnchosenAnswers == 1){
+		return FinalAnswer;
+	}
+	else{
+		return -1;
+	}
+}
+
+
+
+
+
+function CalculateOverallScore(){
+	var TotalWeighting = 0;
+	var TotalScore = 0;
+	
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] > -1){
+				TotalWeighting += I[QNum][0];
+				TotalScore += (I[QNum][0] * State[QNum][0]);
+			}
+		}
+	}
+	if (TotalWeighting > 0){
+		Score = Math.floor((TotalScore/TotalWeighting)*100);
+	}
+	else{
+//if TotalWeighting is 0, no questions so far have any value, so 
+//no penalty should be shown.
+		Score = 100; 
+	}
+}
+
+//New for 6.2.2.0
+function CheckQuestionsCompleted(){
+	if (ShowCompletedSoFar == false){return '';}
+	var QsCompleted = 0;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] >= 0){
+				QsCompleted++;
+			}
+		}
+	}
+//Fixes for 6.2.2.2
+	if (QsCompleted >= QArray.length){
+		return ExerciseCompleted;
+	}
+	else{
+		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
+	}
+}
+
+function CheckFinished(){
+	var FB = '';
+	var AllDone = true;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				AllDone = false;
+			}
+		}
+	}
+	if (AllDone == true){
+	
+//Report final score and submit if necessary
+		CalculateOverallScore();
+		FB = YourScoreIs + ' ' + Score + '%.';
+		if (ShowCorrectFirstTime == true){
+			var CFT = 0;
+			for (QNum=0; QNum<State.length; QNum++){
+				if (State[QNum] != null){
+					if (State[QNum][0] >= 1){
+						CFT++;
+					}
+				}
+			}
+			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+		}
+		
+//New for 6.2.2.0
+		FB += '<br />' + ExerciseCompleted;
+		
+		WriteToInstructions(FB);
+		
+		Finished == true;
+
+
+
+
+		TimeOver = true;
+		Locked = true;
+		
+
+
+		Finished = true;
+		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
+		for (QNum=0; QNum<State.length; QNum++){
+			if (State[QNum] != null){
+				if (State[QNum][5].length > 0){
+					Detail += '<field><fieldname>Question #' + (QNum+1) + '</fieldname><fieldtype>question-tracking</fieldtype><fieldlabel>Q ' + (QNum+1) + '</fieldlabel><fieldlabelid>QuestionTrackingField</fieldlabelid><fielddata>' + State[QNum][5] + '</fielddata></field>';
+				}
+			}
+		}
+		Detail += '</fields></hpnetresult>';
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+<div class="NavButtonBar" id="TopNavBar">
+
+
+
+
+<button class="NavButton" onclick="location='contents.htm'; return false;"> Index </button>
+
+
+
+<button class="NavButton" onclick="location='nextpage.htm'; return false;">=&gt;</button>
+
+
+</div>
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">AHA BLS Exam Review (Latest 2022/2023)</h2>
+
+	<h3 class="ExerciseSubtitle">Quiz</h3>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions"></div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Show all questions</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">When should the rescuer initially ensure that the scene is safe?</div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>&#160;&#160;When the rescuer first sees a potential victim</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>&#160;&#160;After the rescuer activates the emergency response system</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">?</button>&#160;&#160;As emergency medical services arrive on the scene</li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">?</button>&#160;&#160;After an AED that is attached to the victim delivers a shock</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">As soon as an AED becomes available, which of the following is the first step the rescuer should perform to operate the AED?</div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>&#160;&#160;Place the AED pads on the chest</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>&#160;&#160;Deliver 2 rescue breaths before using the AED</li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">?</button>&#160;&#160;Turn on the AED</li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">?</button>&#160;&#160;Complete 5 cycles of chest compressions</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">After the AED delivers a shock, the rescuer should</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;Wait for the AED to reanalyze the rhythm</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;Immediately restart CPR, beginning with chest compressions</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">?</button>&#160;&#160;Provide 2 ventilations to the victim</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">?</button>&#160;&#160;Immediately check the carotid pulse for no more than 10 seconds</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">The 2010 AHA Guidelines for CPR and ECC recommend that to identify cardiac arrest in an unresponsive victim with no breathing (or no normal breathing), a healthcare provider should check a pulse for no more than</div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;25 seconds</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;10 seconds</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">?</button>&#160;&#160;15 seconds</li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">?</button>&#160;&#160;20 seconds</li></ol></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">After you identify an unresponsive victim with no breathing (or no normal breathing) and no pulse, chest compressions should be initiated within</div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;25 seconds</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;10 seconds</li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">?</button>&#160;&#160;30 seconds</li><li id="Q_4_3"><button class="FuncButton" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">?</button>&#160;&#160;60 seconds</li></ol></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">Which of the following victims need CPR?</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;A victim with a pulse and who is having trouble breathing</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;A victim with chest pain and indigestion</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;A victim who is unresponsive, no normal breathing and absent/ inadequate pulse</li><li id="Q_5_3"><button class="FuncButton" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">?</button>&#160;&#160;A victim who is unresponsive but is breathing adequately</li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">Where should the hands be placed to perform chest compressions on an adult?</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;On the lower half of the breastbone</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;In the center of the breastbone</li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">?</button>&#160;&#160;On the upper portion of the abdomen</li><li id="Q_6_3"><button class="FuncButton" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">?</button>&#160;&#160;On the upper half of the breastbone</li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">The depth of compressions for an adult victim should be at least</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;1 inch</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;2 inches</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">?</button>&#160;&#160;3 inches</li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">?</button>&#160;&#160;4 inches</li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">Why is it important to compress to the appropriate depth during CPR?</div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;Adequate depth of compression is needed to create blood flow during compressions</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;Adequate depth of compression is needed to create air flow into the lungs and adequate oxygenation</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;Adequate depth of compression is needed to prolong asystole</li><li id="Q_8_3"><button class="FuncButton" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">?</button>&#160;&#160;Adequate depth of compression is needed to stimulate spontaneous respirations</li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">The recommended rate for performing chest compressions for victims of all ages is</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;At least 40 compressions per minute</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;At least 60 compressions per minute</li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;At least 80 compressions per minute</li><li id="Q_9_3"><button class="FuncButton" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">?</button>&#160;&#160;At least 100 compressions per minute</li></ol></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">The compression-to-ventilation ratio for 1-rescuer adult CPR is</div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>&#160;&#160;30:2</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>&#160;&#160;5:1</li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">?</button>&#160;&#160;20:2</li><li id="Q_10_3"><button class="FuncButton" id="Q_10_3_Btn" onclick="CheckMCAnswer(10,3,this)">?</button>&#160;&#160;15:2</li></ol></li>
+<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">After the airway is opened, which of the following correctly states the proper technique for delivering mouth-to-mouth ventilation?</div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>&#160;&#160;The rescuer opens the airway, seals their mouth over the victim's mouth, pinches the victim's nose closed, and gives 2 breaths while watching for the chest to rise</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>&#160;&#160;The rescuer opens the airway, seals their mouth over the victim's mouth, and gives several small puffs while trying to avoid making the chest rise</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">?</button>&#160;&#160;The rescuer opens the airway, seals their mouth over the victim's mouth, and gives 1 slow breath for a duration of 5 seconds</li><li id="Q_11_3"><button class="FuncButton" id="Q_11_3_Btn" onclick="CheckMCAnswer(11,3,this)">?</button>&#160;&#160;The rescuer opens the airway, seals their mouth over the victim's mouth, and gives 5 slow breaths, each with a duration of 2 seconds, while watching for the chest to rise</li></ol></li>
+<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">The rescuer knows the rescue breath for in infant victim is effective when</div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>&#160;&#160;The stomach visibly rises</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>&#160;&#160;The chest rises visibly</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">?</button>&#160;&#160;The child ventilation bag is completely compressed</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">?</button>&#160;&#160;The rescuer can hear an air leak around the mask</li></ol></li>
+<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">Which of the following ventilation devices/techniques is not recommended for a single rescuer to provide breaths during CPR?</div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>&#160;&#160;Bag-mask device</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>&#160;&#160;Mouth-to-barrier device technique</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">?</button>&#160;&#160;Mouth-to-mouth technique</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">?</button>&#160;&#160;Mouth-to-mask technique</li></ol></li>
+<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText">During bag-mask ventilation, which of the following is recommended to minimize the risk of gastric inflation?</div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">?</button>&#160;&#160;Give breaths as quickly as you can</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">?</button>&#160;&#160;Give each breath over as long a time as you can (several seconds)</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">?</button>&#160;&#160;Give the largest breaths that you can</li><li id="Q_14_3"><button class="FuncButton" id="Q_14_3_Btn" onclick="CheckMCAnswer(14,3,this)">?</button>&#160;&#160;Give a breath just until you see the chest rise</li></ol></li>
+<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText">When a child has a pulse rate greater than 60 per minute, but is not breathing effectively, the rescuer should</div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">?</button>&#160;&#160;Give breaths and compressions</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">?</button>&#160;&#160;Give breaths without compressions</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">?</button>&#160;&#160;Give chest compressions without breaths</li><li id="Q_15_3"><button class="FuncButton" id="Q_15_3_Btn" onclick="CheckMCAnswer(15,3,this)">?</button>&#160;&#160;Connect the AED to the child and analyze</li></ol></li>
+<li class="QuizQuestion" id="Q_16" style="display: none;"><div class="QuestionText">When administering breaths by using a bag-mask device for a child who is not breathing but does have a pulse, the rescuer should</div><ol class="MCAnswers"><li id="Q_16_0"><button class="FuncButton" id="Q_16_0_Btn" onclick="CheckMCAnswer(16,0,this)">?</button>&#160;&#160;Squeeze the bag as often as possible</li><li id="Q_16_1"><button class="FuncButton" id="Q_16_1_Btn" onclick="CheckMCAnswer(16,1,this)">?</button>&#160;&#160;Give breaths at the rate of 1 breath every 3 to 5 seconds</li><li id="Q_16_2"><button class="FuncButton" id="Q_16_2_Btn" onclick="CheckMCAnswer(16,2,this)">?</button>&#160;&#160;Position the child on their stomach</li><li id="Q_16_3"><button class="FuncButton" id="Q_16_3_Btn" onclick="CheckMCAnswer(16,3,this)">?</button>&#160;&#160;Avoid performing a head tilt</li></ol></li>
+<li class="QuizQuestion" id="Q_17" style="display: none;"><div class="QuestionText">In 2-rescuer CPR, while the first rescuer begins chest compressions, the second rescuer should</div><ol class="MCAnswers"><li id="Q_17_0"><button class="FuncButton" id="Q_17_0_Btn" onclick="CheckMCAnswer(17,0,this)">?</button>&#160;&#160;Count compressions out loud</li><li id="Q_17_1"><button class="FuncButton" id="Q_17_1_Btn" onclick="CheckMCAnswer(17,1,this)">?</button>&#160;&#160;Check for a pulse during compressions</li><li id="Q_17_2"><button class="FuncButton" id="Q_17_2_Btn" onclick="CheckMCAnswer(17,2,this)">?</button>&#160;&#160;Do nothing until the first rescuer needs relief</li><li id="Q_17_3"><button class="FuncButton" id="Q_17_3_Btn" onclick="CheckMCAnswer(17,3,this)">?</button>&#160;&#160;Maintain an open airway and give ventilations</li></ol></li>
+<li class="QuizQuestion" id="Q_18" style="display: none;"><div class="QuestionText">Which of the following options lists the correct compression and ventilation rates for 2- rescuer CPR in the presence of an advanced airway?</div><ol class="MCAnswers"><li id="Q_18_0"><button class="FuncButton" id="Q_18_0_Btn" onclick="CheckMCAnswer(18,0,this)">?</button>&#160;&#160;Compress at a rate of at least 100 per minute, 1 breath every 6 - 8 seconds</li><li id="Q_18_1"><button class="FuncButton" id="Q_18_1_Btn" onclick="CheckMCAnswer(18,1,this)">?</button>&#160;&#160;Compress at a rate of at least 60 per minute, 1 breath every 6 - 8 seconds</li><li id="Q_18_2"><button class="FuncButton" id="Q_18_2_Btn" onclick="CheckMCAnswer(18,2,this)">?</button>&#160;&#160;Compress at a rate of at least 100 per minute, 2 breaths every 5-10 seconds</li><li id="Q_18_3"><button class="FuncButton" id="Q_18_3_Btn" onclick="CheckMCAnswer(18,3,this)">?</button>&#160;&#160;Compress at a rate of at least 60 per minute, 1 breath every 5-10 seconds</li></ol></li>
+<li class="QuizQuestion" id="Q_19" style="display: none;"><div class="QuestionText">The compression-to-breaths ratio for 2-rescuer child CPR is</div><ol class="MCAnswers"><li id="Q_19_0"><button class="FuncButton" id="Q_19_0_Btn" onclick="CheckMCAnswer(19,0,this)">?</button>&#160;&#160;30:2</li><li id="Q_19_1"><button class="FuncButton" id="Q_19_1_Btn" onclick="CheckMCAnswer(19,1,this)">?</button>&#160;&#160;5:1</li><li id="Q_19_2"><button class="FuncButton" id="Q_19_2_Btn" onclick="CheckMCAnswer(19,2,this)">?</button>&#160;&#160;20:2</li><li id="Q_19_3"><button class="FuncButton" id="Q_19_3_Btn" onclick="CheckMCAnswer(19,3,this)">?</button>&#160;&#160;15:2</li></ol></li>
+<li class="QuizQuestion" id="Q_20" style="display: none;"><div class="QuestionText">The compression-to-breaths ratio for 2-rescuer infant CPR is</div><ol class="MCAnswers"><li id="Q_20_0"><button class="FuncButton" id="Q_20_0_Btn" onclick="CheckMCAnswer(20,0,this)">?</button>&#160;&#160;30:2</li><li id="Q_20_1"><button class="FuncButton" id="Q_20_1_Btn" onclick="CheckMCAnswer(20,1,this)">?</button>&#160;&#160;5:1</li><li id="Q_20_2"><button class="FuncButton" id="Q_20_2_Btn" onclick="CheckMCAnswer(20,2,this)">?</button>&#160;&#160;20:2</li><li id="Q_20_3"><button class="FuncButton" id="Q_20_3_Btn" onclick="CheckMCAnswer(20,3,this)">?</button>&#160;&#160;15:2</li></ol></li>
+<li class="QuizQuestion" id="Q_21" style="display: none;"><div class="QuestionText">If a victim of foreign body airway obstruction becomes unresponsive, the rescuer should send someone to activate the emergency response system and immediately</div><ol class="MCAnswers"><li id="Q_21_0"><button class="FuncButton" id="Q_21_0_Btn" onclick="CheckMCAnswer(21,0,this)">?</button>&#160;&#160;Perform abdominal thrusts</li><li id="Q_21_1"><button class="FuncButton" id="Q_21_1_Btn" onclick="CheckMCAnswer(21,1,this)">?</button>&#160;&#160;Perform blind finger sweeps</li><li id="Q_21_2"><button class="FuncButton" id="Q_21_2_Btn" onclick="CheckMCAnswer(21,2,this)">?</button>&#160;&#160;Start CPR beginning with compressions</li><li id="Q_21_3"><button class="FuncButton" id="Q_21_3_Btn" onclick="CheckMCAnswer(21,3,this)">?</button>&#160;&#160;Call the victim's doctor</li></ol></li>
+<li class="QuizQuestion" id="Q_22" style="display: none;"><div class="QuestionText">If an unresponsive infant is not breathing and has a heart rate of 53 beats per minute and signs of poor perfusion despite oxygenation and ventilation with a bag and mask, which of the following should you p</div><ol class="MCAnswers"><li id="Q_22_0"><button class="FuncButton" id="Q_22_0_Btn" onclick="CheckMCAnswer(22,0,this)">?</button>&#160;&#160;One rescue breath every 10 seconds</li><li id="Q_22_1"><button class="FuncButton" id="Q_22_1_Btn" onclick="CheckMCAnswer(22,1,this)">?</button>&#160;&#160;Cycles of back blows and chest thrusts</li><li id="Q_22_2"><button class="FuncButton" id="Q_22_2_Btn" onclick="CheckMCAnswer(22,2,this)">?</button>&#160;&#160;Chest compressions without breaths</li><li id="Q_22_3"><button class="FuncButton" id="Q_22_3_Btn" onclick="CheckMCAnswer(22,3,this)">?</button>&#160;&#160;Both chest compressions and breaths</li></ol></li>
+<li class="QuizQuestion" id="Q_23" style="display: none;"><div class="QuestionText">The recommended depth of compressions for an infant is</div><ol class="MCAnswers"><li id="Q_23_0"><button class="FuncButton" id="Q_23_0_Btn" onclick="CheckMCAnswer(23,0,this)">?</button>&#160;&#160;At least one fourth the depth of the chest, approximately 1 inch</li><li id="Q_23_1"><button class="FuncButton" id="Q_23_1_Btn" onclick="CheckMCAnswer(23,1,this)">?</button>&#160;&#160;At least one third the depth of the chest, approximately 1.5 inches</li><li id="Q_23_2"><button class="FuncButton" id="Q_23_2_Btn" onclick="CheckMCAnswer(23,2,this)">?</button>&#160;&#160;At least one half the depth of the chest, approximately 2 inches</li><li id="Q_23_3"><button class="FuncButton" id="Q_23_3_Btn" onclick="CheckMCAnswer(23,3,this)">?</button>&#160;&#160;At least two thirds the depth of the chest, approximately 3 inches</li></ol></li>
+<li class="QuizQuestion" id="Q_24" style="display: none;"><div class="QuestionText">The 2 thumb-encircling hands technique for the infant</div><ol class="MCAnswers"><li id="Q_24_0"><button class="FuncButton" id="Q_24_0_Btn" onclick="CheckMCAnswer(24,0,this)">?</button>&#160;&#160;Produces less blood flow than the 2-finger technique</li><li id="Q_24_1"><button class="FuncButton" id="Q_24_1_Btn" onclick="CheckMCAnswer(24,1,this)">?</button>&#160;&#160;Is the preferred chest compression technique for 2-rescuer CPR</li><li id="Q_24_2"><button class="FuncButton" id="Q_24_2_Btn" onclick="CheckMCAnswer(24,2,this)">?</button>&#160;&#160;Is the preferred chest compression technique for 1-rescuer CPR</li><li id="Q_24_3"><button class="FuncButton" id="Q_24_3_Btn" onclick="CheckMCAnswer(24,3,this)">?</button>&#160;&#160;Generates less blood pressure than the 2-finger technique</li></ol></li>
+<li class="QuizQuestion" id="Q_25" style="display: none;"><div class="QuestionText">In which locations do most out-of-hospital cardiac arrests occur?</div><ol class="MCAnswers"><li id="Q_25_0"><button class="FuncButton" id="Q_25_0_Btn" onclick="CheckMCAnswer(25,0,this)">?</button>&#160;&#160;healthcare clinics</li><li id="Q_25_1"><button class="FuncButton" id="Q_25_1_Btn" onclick="CheckMCAnswer(25,1,this)">?</button>&#160;&#160;homes</li><li id="Q_25_2"><button class="FuncButton" id="Q_25_2_Btn" onclick="CheckMCAnswer(25,2,this)">?</button>&#160;&#160;recreational facilities</li><li id="Q_25_3"><button class="FuncButton" id="Q_25_3_Btn" onclick="CheckMCAnswer(25,3,this)">?</button>&#160;&#160;shopping centers</li></ol></li>
+<li class="QuizQuestion" id="Q_26" style="display: none;"><div class="QuestionText">Which is the most common cause of cardiac arrest in children?</div><ol class="MCAnswers"><li id="Q_26_0"><button class="FuncButton" id="Q_26_0_Btn" onclick="CheckMCAnswer(26,0,this)">?</button>&#160;&#160;cardiac problem</li><li id="Q_26_1"><button class="FuncButton" id="Q_26_1_Btn" onclick="CheckMCAnswer(26,1,this)">?</button>&#160;&#160;congenital or acquired heart disease</li><li id="Q_26_2"><button class="FuncButton" id="Q_26_2_Btn" onclick="CheckMCAnswer(26,2,this)">?</button>&#160;&#160;respiratory failure or shock</li><li id="Q_26_3"><button class="FuncButton" id="Q_26_3_Btn" onclick="CheckMCAnswer(26,3,this)">?</button>&#160;&#160;infection and sepsis</li></ol></li>
+<li class="QuizQuestion" id="Q_27" style="display: none;"><div class="QuestionText">What is the third link in the adult out-of-hospital chain of survival?</div><ol class="MCAnswers"><li id="Q_27_0"><button class="FuncButton" id="Q_27_0_Btn" onclick="CheckMCAnswer(27,0,this)">?</button>&#160;&#160;Advanced life support</li><li id="Q_27_1"><button class="FuncButton" id="Q_27_1_Btn" onclick="CheckMCAnswer(27,1,this)">?</button>&#160;&#160;High-quality CPR</li><li id="Q_27_2"><button class="FuncButton" id="Q_27_2_Btn" onclick="CheckMCAnswer(27,2,this)">?</button>&#160;&#160;prevention</li><li id="Q_27_3"><button class="FuncButton" id="Q_27_3_Btn" onclick="CheckMCAnswer(27,3,this)">?</button>&#160;&#160;rapid defibrillation</li></ol></li>
+<li class="QuizQuestion" id="Q_28" style="display: none;"><div class="QuestionText">Which statement best describes sudden cardiac arrest?</div><ol class="MCAnswers"><li id="Q_28_0"><button class="FuncButton" id="Q_28_0_Btn" onclick="CheckMCAnswer(28,0,this)">?</button>&#160;&#160;when respiratory distress in adults occurs and the heart rate does not change</li><li id="Q_28_1"><button class="FuncButton" id="Q_28_1_Btn" onclick="CheckMCAnswer(28,1,this)">?</button>&#160;&#160;when the heart rate is 40-60/min and respirations increase</li><li id="Q_28_2"><button class="FuncButton" id="Q_28_2_Btn" onclick="CheckMCAnswer(28,2,this)">?</button>&#160;&#160;when blood flow to the heart is blocked and the heart rate increases</li><li id="Q_28_3"><button class="FuncButton" id="Q_28_3_Btn" onclick="CheckMCAnswer(28,3,this)">?</button>&#160;&#160;when an abnormal rhythm develops and the heart stops beating unexpectedly</li></ol></li>
+<li class="QuizQuestion" id="Q_29" style="display: none;"><div class="QuestionText">Scenario: 53-year old man suddenly collapses and becomes unresponsive. You witness him collapse and are the first rescuer to arrive at the scene. You find him lying motionless on the floor.<br /><br />What is the first action you should take in this situation?</div><ol class="MCAnswers"><li id="Q_29_0"><button class="FuncButton" id="Q_29_0_Btn" onclick="CheckMCAnswer(29,0,this)">?</button>&#160;&#160;activate the emergency response system</li><li id="Q_29_1"><button class="FuncButton" id="Q_29_1_Btn" onclick="CheckMCAnswer(29,1,this)">?</button>&#160;&#160;start high-quality CPR beginning with chest compressions</li><li id="Q_29_2"><button class="FuncButton" id="Q_29_2_Btn" onclick="CheckMCAnswer(29,2,this)">?</button>&#160;&#160;start providing rescue breaths</li><li id="Q_29_3"><button class="FuncButton" id="Q_29_3_Btn" onclick="CheckMCAnswer(29,3,this)">?</button>&#160;&#160;verify that the scene is safe for you and the victim</li></ol></li>
+<li class="QuizQuestion" id="Q_30" style="display: none;"><div class="QuestionText">Scenario: 53-year old man suddenly collapses and becomes unresponsive. You witness him collapse and are the first rescuer to arrive at the scene. You find him lying motionless on the floor.<br /><br />The man doesnt respond when you touch his shoulders and shout, "are you okay?" What is your best next action?</div><ol class="MCAnswers"><li id="Q_30_0"><button class="FuncButton" id="Q_30_0_Btn" onclick="CheckMCAnswer(30,0,this)">?</button>&#160;&#160;check his pulse</li><li id="Q_30_1"><button class="FuncButton" id="Q_30_1_Btn" onclick="CheckMCAnswer(30,1,this)">?</button>&#160;&#160;start high-quality cpr</li><li id="Q_30_2"><button class="FuncButton" id="Q_30_2_Btn" onclick="CheckMCAnswer(30,2,this)">?</button>&#160;&#160;start providing rescue breaths</li><li id="Q_30_3"><button class="FuncButton" id="Q_30_3_Btn" onclick="CheckMCAnswer(30,3,this)">?</button>&#160;&#160;shout for nearby help</li></ol></li>
+<li class="QuizQuestion" id="Q_31" style="display: none;"><div class="QuestionText">Several rescuers respond and you ask them to activate the emergency response and retrieve the AED and emergency equipment. As you check for a pulse and breathing, you notice that the man is gasping for air and making snorting sounds. You do not feel a pulse. What is the next best action?</div><ol class="MCAnswers"><li id="Q_31_0"><button class="FuncButton" id="Q_31_0_Btn" onclick="CheckMCAnswer(31,0,this)">?</button>&#160;&#160;Start high-quality cpr, beginning with chest compressions</li><li id="Q_31_1"><button class="FuncButton" id="Q_31_1_Btn" onclick="CheckMCAnswer(31,1,this)">?</button>&#160;&#160;monitor the victim until additional, more experienced help arrives</li><li id="Q_31_2"><button class="FuncButton" id="Q_31_2_Btn" onclick="CheckMCAnswer(31,2,this)">?</button>&#160;&#160;provide rescue breathing by delivering 1 breath every 5-6 seconds</li><li id="Q_31_3"><button class="FuncButton" id="Q_31_3_Btn" onclick="CheckMCAnswer(31,3,this)">?</button>&#160;&#160;find someone to help by retrieving the nearest AED</li></ol></li>
+<li class="QuizQuestion" id="Q_32" style="display: none;"><div class="QuestionText">What is the ratio of chest compressions to breaths when providing cpr to an adult?</div><ol class="MCAnswers"><li id="Q_32_0"><button class="FuncButton" id="Q_32_0_Btn" onclick="CheckMCAnswer(32,0,this)">?</button>&#160;&#160;10 compressions to 2 breaths</li><li id="Q_32_1"><button class="FuncButton" id="Q_32_1_Btn" onclick="CheckMCAnswer(32,1,this)">?</button>&#160;&#160;15 compressions to 2 breaths</li><li id="Q_32_2"><button class="FuncButton" id="Q_32_2_Btn" onclick="CheckMCAnswer(32,2,this)">?</button>&#160;&#160;30 compressions to 2 breaths</li><li id="Q_32_3"><button class="FuncButton" id="Q_32_3_Btn" onclick="CheckMCAnswer(32,3,this)">?</button>&#160;&#160;100 compressions to 2 breaths</li></ol></li>
+<li class="QuizQuestion" id="Q_33" style="display: none;"><div class="QuestionText">What are the rate and depth of chest compressions on an adult?</div><ol class="MCAnswers"><li id="Q_33_0"><button class="FuncButton" id="Q_33_0_Btn" onclick="CheckMCAnswer(33,0,this)">?</button>&#160;&#160;rate of 60-80 compressions per minute and depth of about 1 inch</li><li id="Q_33_1"><button class="FuncButton" id="Q_33_1_Btn" onclick="CheckMCAnswer(33,1,this)">?</button>&#160;&#160;rate of 80-100 compressions per minute and depth of about 1.5 inches</li><li id="Q_33_2"><button class="FuncButton" id="Q_33_2_Btn" onclick="CheckMCAnswer(33,2,this)">?</button>&#160;&#160;rate of 120-140 compressions per minute and depth of about 2.5 inches</li><li id="Q_33_3"><button class="FuncButton" id="Q_33_3_Btn" onclick="CheckMCAnswer(33,3,this)">?</button>&#160;&#160;rate of 100-120 compressions per minute and depth of at least 2 inches</li></ol></li>
+<li class="QuizQuestion" id="Q_34" style="display: none;"><div class="QuestionText">What action should you take when more rescuers arrive?</div><ol class="MCAnswers"><li id="Q_34_0"><button class="FuncButton" id="Q_34_0_Btn" onclick="CheckMCAnswer(34,0,this)">?</button>&#160;&#160;Assign tasks to other rescuers and rotate compressions every 2 minutes or more frequently if needed to avoid fatigued</li><li id="Q_34_1"><button class="FuncButton" id="Q_34_1_Btn" onclick="CheckMCAnswer(34,1,this)">?</button>&#160;&#160;Continue cpr while the aed is attached even if you are fatigued</li><li id="Q_34_2"><button class="FuncButton" id="Q_34_2_Btn" onclick="CheckMCAnswer(34,2,this)">?</button>&#160;&#160;wait for the most experienced rescuer to provide direction to the team</li><li id="Q_34_3"><button class="FuncButton" id="Q_34_3_Btn" onclick="CheckMCAnswer(34,3,this)">?</button>&#160;&#160;direct the team to assign a team leader and toles while you continue cpr</li></ol></li>
+<li class="QuizQuestion" id="Q_35" style="display: none;"><div class="QuestionText">If you suspect that and unresponsive has head or neck trauma what is preffered method to opening the airway?</div><ol class="MCAnswers"><li id="Q_35_0"><button class="FuncButton" id="Q_35_0_Btn" onclick="CheckMCAnswer(35,0,this)">?</button>&#160;&#160;head-tilt, chin-lift</li><li id="Q_35_1"><button class="FuncButton" id="Q_35_1_Btn" onclick="CheckMCAnswer(35,1,this)">?</button>&#160;&#160;jaw thrust</li><li id="Q_35_2"><button class="FuncButton" id="Q_35_2_Btn" onclick="CheckMCAnswer(35,2,this)">?</button>&#160;&#160;head tilt-neck lift</li><li id="Q_35_3"><button class="FuncButton" id="Q_35_3_Btn" onclick="CheckMCAnswer(35,3,this)">?</button>&#160;&#160;avoid opening the airway</li></ol></li>
+<li class="QuizQuestion" id="Q_36" style="display: none;"><div class="QuestionText">What is the most appropriate first step to take as soon as the AED arrives at the victim's side?</div><ol class="MCAnswers"><li id="Q_36_0"><button class="FuncButton" id="Q_36_0_Btn" onclick="CheckMCAnswer(36,0,this)">?</button>&#160;&#160;power on the aed</li><li id="Q_36_1"><button class="FuncButton" id="Q_36_1_Btn" onclick="CheckMCAnswer(36,1,this)">?</button>&#160;&#160;apply the pads</li><li id="Q_36_2"><button class="FuncButton" id="Q_36_2_Btn" onclick="CheckMCAnswer(36,2,this)">?</button>&#160;&#160;press the analyze button</li><li id="Q_36_3"><button class="FuncButton" id="Q_36_3_Btn" onclick="CheckMCAnswer(36,3,this)">?</button>&#160;&#160;press the shock button</li></ol></li>
+<li class="QuizQuestion" id="Q_37" style="display: none;"><div class="QuestionText">Which step is one of universal steps for operating an AED?</div><ol class="MCAnswers"><li id="Q_37_0"><button class="FuncButton" id="Q_37_0_Btn" onclick="CheckMCAnswer(37,0,this)">?</button>&#160;&#160;placing pads on victims bare chest</li><li id="Q_37_1"><button class="FuncButton" id="Q_37_1_Btn" onclick="CheckMCAnswer(37,1,this)">?</button>&#160;&#160;shaving victims hairy chest</li><li id="Q_37_2"><button class="FuncButton" id="Q_37_2_Btn" onclick="CheckMCAnswer(37,2,this)">?</button>&#160;&#160;emoving victim from water</li><li id="Q_37_3"><button class="FuncButton" id="Q_37_3_Btn" onclick="CheckMCAnswer(37,3,this)">?</button>&#160;&#160;finding victims implanted pacemaker</li></ol></li>
+<li class="QuizQuestion" id="Q_38" style="display: none;"><div class="QuestionText">If a victim of cardiac arrest has an implanted pacemaker or defib, what special steps should be taken?</div><ol class="MCAnswers"><li id="Q_38_0"><button class="FuncButton" id="Q_38_0_Btn" onclick="CheckMCAnswer(38,0,this)">?</button>&#160;&#160;avoid placing the aed pad directly over the implanted device</li><li id="Q_38_1"><button class="FuncButton" id="Q_38_1_Btn" onclick="CheckMCAnswer(38,1,this)">?</button>&#160;&#160;avoid using the aed to prevent damage to the implanted device</li><li id="Q_38_2"><button class="FuncButton" id="Q_38_2_Btn" onclick="CheckMCAnswer(38,2,this)">?</button>&#160;&#160;turn off the implanted device before applying the aed pads</li><li id="Q_38_3"><button class="FuncButton" id="Q_38_3_Btn" onclick="CheckMCAnswer(38,3,this)">?</button>&#160;&#160;consider using pediatric pads to decrease the shock dose delivered</li></ol></li>
+<li class="QuizQuestion" id="Q_39" style="display: none;"><div class="QuestionText">What action should you take when the aed is analyzing the heart rhythm?</div><ol class="MCAnswers"><li id="Q_39_0"><button class="FuncButton" id="Q_39_0_Btn" onclick="CheckMCAnswer(39,0,this)">?</button>&#160;&#160;Check the pulse</li><li id="Q_39_1"><button class="FuncButton" id="Q_39_1_Btn" onclick="CheckMCAnswer(39,1,this)">?</button>&#160;&#160;continue the chest compressions</li><li id="Q_39_2"><button class="FuncButton" id="Q_39_2_Btn" onclick="CheckMCAnswer(39,2,this)">?</button>&#160;&#160;give rescue breaths only</li><li id="Q_39_3"><button class="FuncButton" id="Q_39_3_Btn" onclick="CheckMCAnswer(39,3,this)">?</button>&#160;&#160;stand clear of the victim</li></ol></li>
+<li class="QuizQuestion" id="Q_40" style="display: none;"><div class="QuestionText">After performing high-quality cpr for 5 minutes, team leader frequently interrupts chest compressions to check for a pulse even though the victim has no organized rhythm when aed analyzes the rhythm/ Which action demonstrates constructive intervention?</div><ol class="MCAnswers"><li id="Q_40_0"><button class="FuncButton" id="Q_40_0_Btn" onclick="CheckMCAnswer(40,0,this)">?</button>&#160;&#160;ask another rescuer what he thinks should be done</li><li id="Q_40_1"><button class="FuncButton" id="Q_40_1_Btn" onclick="CheckMCAnswer(40,1,this)">?</button>&#160;&#160;say nothing that contradicts the team leader</li><li id="Q_40_2"><button class="FuncButton" id="Q_40_2_Btn" onclick="CheckMCAnswer(40,2,this)">?</button>&#160;&#160;suggest to resume chest compressions without delay</li><li id="Q_40_3"><button class="FuncButton" id="Q_40_3_Btn" onclick="CheckMCAnswer(40,3,this)">?</button>&#160;&#160;wait until the debriefing session afterward to discuss is</li></ol></li>
+<li class="QuizQuestion" id="Q_41" style="display: none;"><div class="QuestionText">The team leader asks you to perform bag-mask ventilation during resuscitation attempt, but you have not perfected that skill. What would be an appropriate action to acknowledge your limitations?</div><ol class="MCAnswers"><li id="Q_41_0"><button class="FuncButton" id="Q_41_0_Btn" onclick="CheckMCAnswer(41,0,this)">?</button>&#160;&#160;pick up the bag-mask device and give it to another team member</li><li id="Q_41_1"><button class="FuncButton" id="Q_41_1_Btn" onclick="CheckMCAnswer(41,1,this)">?</button>&#160;&#160;pretend you did not hear the request and hope the team leader chooses someone else to do it</li><li id="Q_41_2"><button class="FuncButton" id="Q_41_2_Btn" onclick="CheckMCAnswer(41,2,this)">?</button>&#160;&#160;tell the team leader that you are not comfortable performing that task</li><li id="Q_41_3"><button class="FuncButton" id="Q_41_3_Btn" onclick="CheckMCAnswer(41,3,this)">?</button>&#160;&#160;try to do it as best as you can and hope another team member will see you struggling and take over</li></ol></li>
+<li class="QuizQuestion" id="Q_42" style="display: none;"><div class="QuestionText">what is the appropriate action to demonstrate closed-loop communication when the team leader assigns you a task?</div><ol class="MCAnswers"><li id="Q_42_0"><button class="FuncButton" id="Q_42_0_Btn" onclick="CheckMCAnswer(42,0,this)">?</button>&#160;&#160;repeat back to the team leader the task you were assigned</li><li id="Q_42_1"><button class="FuncButton" id="Q_42_1_Btn" onclick="CheckMCAnswer(42,1,this)">?</button>&#160;&#160;nod your head as an acknowledgment of the assigned task</li><li id="Q_42_2"><button class="FuncButton" id="Q_42_2_Btn" onclick="CheckMCAnswer(42,2,this)">?</button>&#160;&#160;start performing the assigned tasks, but do not speak, to minimize noise</li><li id="Q_42_3"><button class="FuncButton" id="Q_42_3_Btn" onclick="CheckMCAnswer(42,3,this)">?</button>&#160;&#160;wait for the team leader to address you by name before acknowledging the taks</li></ol></li>
+<li class="QuizQuestion" id="Q_43" style="display: none;"><div class="QuestionText">What is the correct compression-to-ventilation ratio for a single rescuer of a 3-year old child?</div><ol class="MCAnswers"><li id="Q_43_0"><button class="FuncButton" id="Q_43_0_Btn" onclick="CheckMCAnswer(43,0,this)">?</button>&#160;&#160;15:1</li><li id="Q_43_1"><button class="FuncButton" id="Q_43_1_Btn" onclick="CheckMCAnswer(43,1,this)">?</button>&#160;&#160;15:2</li><li id="Q_43_2"><button class="FuncButton" id="Q_43_2_Btn" onclick="CheckMCAnswer(43,2,this)">?</button>&#160;&#160;20:2</li><li id="Q_43_3"><button class="FuncButton" id="Q_43_3_Btn" onclick="CheckMCAnswer(43,3,this)">?</button>&#160;&#160;30:2</li></ol></li>
+<li class="QuizQuestion" id="Q_44" style="display: none;"><div class="QuestionText">What is the correct compression to ventilation ratio for a 7 year old child when 2 or more rescuers are present?</div><ol class="MCAnswers"><li id="Q_44_0"><button class="FuncButton" id="Q_44_0_Btn" onclick="CheckMCAnswer(44,0,this)">?</button>&#160;&#160;15:1</li><li id="Q_44_1"><button class="FuncButton" id="Q_44_1_Btn" onclick="CheckMCAnswer(44,1,this)">?</button>&#160;&#160;15:2</li><li id="Q_44_2"><button class="FuncButton" id="Q_44_2_Btn" onclick="CheckMCAnswer(44,2,this)">?</button>&#160;&#160;20:2</li><li id="Q_44_3"><button class="FuncButton" id="Q_44_3_Btn" onclick="CheckMCAnswer(44,3,this)">?</button>&#160;&#160;30:2</li></ol></li>
+<li class="QuizQuestion" id="Q_45" style="display: none;"><div class="QuestionText">For what age victims is the thumb-encircling technique recommended when 2 or more rescuers present?</div><ol class="MCAnswers"><li id="Q_45_0"><button class="FuncButton" id="Q_45_0_Btn" onclick="CheckMCAnswer(45,0,this)">?</button>&#160;&#160;a child younger than 3 years</li><li id="Q_45_1"><button class="FuncButton" id="Q_45_1_Btn" onclick="CheckMCAnswer(45,1,this)">?</button>&#160;&#160;a child older than 3 years</li><li id="Q_45_2"><button class="FuncButton" id="Q_45_2_Btn" onclick="CheckMCAnswer(45,2,this)">?</button>&#160;&#160;an infant older than 1 year</li><li id="Q_45_3"><button class="FuncButton" id="Q_45_3_Btn" onclick="CheckMCAnswer(45,3,this)">?</button>&#160;&#160;an infant younger than 1 year</li></ol></li>
+<li class="QuizQuestion" id="Q_46" style="display: none;"><div class="QuestionText">What is correct chest compression depth for a child?</div><ol class="MCAnswers"><li id="Q_46_0"><button class="FuncButton" id="Q_46_0_Btn" onclick="CheckMCAnswer(46,0,this)">?</button>&#160;&#160;at least 1/4 of depth, about 1 inch</li><li id="Q_46_1"><button class="FuncButton" id="Q_46_1_Btn" onclick="CheckMCAnswer(46,1,this)">?</button>&#160;&#160;at least 1/3 of depth, about 1.5 inches</li><li id="Q_46_2"><button class="FuncButton" id="Q_46_2_Btn" onclick="CheckMCAnswer(46,2,this)">?</button>&#160;&#160;at least 1/3 of depth, about 2 inches</li><li id="Q_46_3"><button class="FuncButton" id="Q_46_3_Btn" onclick="CheckMCAnswer(46,3,this)">?</button>&#160;&#160;at least 1/2 of depth, about 3 inches</li></ol></li>
+<li class="QuizQuestion" id="Q_47" style="display: none;"><div class="QuestionText">what is correct chest compression depth for an infant?</div><ol class="MCAnswers"><li id="Q_47_0"><button class="FuncButton" id="Q_47_0_Btn" onclick="CheckMCAnswer(47,0,this)">?</button>&#160;&#160;at least 1/4 of depth or 1 inch</li><li id="Q_47_1"><button class="FuncButton" id="Q_47_1_Btn" onclick="CheckMCAnswer(47,1,this)">?</button>&#160;&#160;at least 1/3 of depth or 1.5 inches</li><li id="Q_47_2"><button class="FuncButton" id="Q_47_2_Btn" onclick="CheckMCAnswer(47,2,this)">?</button>&#160;&#160;at least 1/3 of depth or about 2 inches</li><li id="Q_47_3"><button class="FuncButton" id="Q_47_3_Btn" onclick="CheckMCAnswer(47,3,this)">?</button>&#160;&#160;at least 1/2 or at least 2.5 inches</li></ol></li>
+<li class="QuizQuestion" id="Q_48" style="display: none;"><div class="QuestionText">What should you do when using an AED on an infant or a child less than 8 years of age</div><ol class="MCAnswers"><li id="Q_48_0"><button class="FuncButton" id="Q_48_0_Btn" onclick="CheckMCAnswer(48,0,this)">?</button>&#160;&#160;never use adult aed pads</li><li id="Q_48_1"><button class="FuncButton" id="Q_48_1_Btn" onclick="CheckMCAnswer(48,1,this)">?</button>&#160;&#160;use adult aed pads</li><li id="Q_48_2"><button class="FuncButton" id="Q_48_2_Btn" onclick="CheckMCAnswer(48,2,this)">?</button>&#160;&#160;use adult aed pads if aed does not have child pads</li><li id="Q_48_3"><button class="FuncButton" id="Q_48_3_Btn" onclick="CheckMCAnswer(48,3,this)">?</button>&#160;&#160;use adult aed pads but cut in half</li></ol></li>
+<li class="QuizQuestion" id="Q_49" style="display: none;"><div class="QuestionText">If manual defib is not available for infant victim what action should you take?</div><ol class="MCAnswers"><li id="Q_49_0"><button class="FuncButton" id="Q_49_0_Btn" onclick="CheckMCAnswer(49,0,this)">?</button>&#160;&#160;perform high-quality cpr</li><li id="Q_49_1"><button class="FuncButton" id="Q_49_1_Btn" onclick="CheckMCAnswer(49,1,this)">?</button>&#160;&#160;use a aed equipped with pediatric dose attenuator</li><li id="Q_49_2"><button class="FuncButton" id="Q_49_2_Btn" onclick="CheckMCAnswer(49,2,this)">?</button>&#160;&#160;use an aed without a pediatric dose attenuator</li><li id="Q_49_3"><button class="FuncButton" id="Q_49_3_Btn" onclick="CheckMCAnswer(49,3,this)">?</button>&#160;&#160;wait for advanced care to arrive</li></ol></li>
+<li class="QuizQuestion" id="Q_50" style="display: none;"><div class="QuestionText">What is important to remember about placing aed pad on infants?</div><ol class="MCAnswers"><li id="Q_50_0"><button class="FuncButton" id="Q_50_0_Btn" onclick="CheckMCAnswer(50,0,this)">?</button>&#160;&#160;ensure pads overlap</li><li id="Q_50_1"><button class="FuncButton" id="Q_50_1_Btn" onclick="CheckMCAnswer(50,1,this)">?</button>&#160;&#160;place 1 adult pad on the chest</li><li id="Q_50_2"><button class="FuncButton" id="Q_50_2_Btn" onclick="CheckMCAnswer(50,2,this)">?</button>&#160;&#160;place 1 pad on chest and one on back</li><li id="Q_50_3"><button class="FuncButton" id="Q_50_3_Btn" onclick="CheckMCAnswer(50,3,this)">?</button>&#160;&#160;if child pads not available do not use aed</li></ol></li>
+<li class="QuizQuestion" id="Q_51" style="display: none;"><div class="QuestionText">which victim would need only rescue breathing?</div><ol class="MCAnswers"><li id="Q_51_0"><button class="FuncButton" id="Q_51_0_Btn" onclick="CheckMCAnswer(51,0,this)">?</button>&#160;&#160;agonal gasping with no pulse</li><li id="Q_51_1"><button class="FuncButton" id="Q_51_1_Btn" onclick="CheckMCAnswer(51,1,this)">?</button>&#160;&#160;breathing with weak pulse</li><li id="Q_51_2"><button class="FuncButton" id="Q_51_2_Btn" onclick="CheckMCAnswer(51,2,this)">?</button>&#160;&#160;no breathing and a pulse</li><li id="Q_51_3"><button class="FuncButton" id="Q_51_3_Btn" onclick="CheckMCAnswer(51,3,this)">?</button>&#160;&#160;no breathing and no pulse</li></ol></li>
+<li class="QuizQuestion" id="Q_52" style="display: none;"><div class="QuestionText">How often should rescue breaths be given in infants and children when pulse is present?</div><ol class="MCAnswers"><li id="Q_52_0"><button class="FuncButton" id="Q_52_0_Btn" onclick="CheckMCAnswer(52,0,this)">?</button>&#160;&#160;1 breath 2-3 seconds</li><li id="Q_52_1"><button class="FuncButton" id="Q_52_1_Btn" onclick="CheckMCAnswer(52,1,this)">?</button>&#160;&#160;1 breath 3-5 seconds</li><li id="Q_52_2"><button class="FuncButton" id="Q_52_2_Btn" onclick="CheckMCAnswer(52,2,this)">?</button>&#160;&#160;1 breath 5-6 seconds</li><li id="Q_52_3"><button class="FuncButton" id="Q_52_3_Btn" onclick="CheckMCAnswer(52,3,this)">?</button>&#160;&#160;1 breath 8-10 seconds</li></ol></li>
+<li class="QuizQuestion" id="Q_53" style="display: none;"><div class="QuestionText">Which action can rescuers perform to potentially reduce risk of gastric inflation?</div><ol class="MCAnswers"><li id="Q_53_0"><button class="FuncButton" id="Q_53_0_Btn" onclick="CheckMCAnswer(53,0,this)">?</button>&#160;&#160;delivering each breath over 1 second</li><li id="Q_53_1"><button class="FuncButton" id="Q_53_1_Btn" onclick="CheckMCAnswer(53,1,this)">?</button>&#160;&#160;giving rapid, shallow breaths</li><li id="Q_53_2"><button class="FuncButton" id="Q_53_2_Btn" onclick="CheckMCAnswer(53,2,this)">?</button>&#160;&#160;using bvm to deliver ventilation</li><li id="Q_53_3"><button class="FuncButton" id="Q_53_3_Btn" onclick="CheckMCAnswer(53,3,this)">?</button>&#160;&#160;using mouth to mouth breathing</li></ol></li>
+<li class="QuizQuestion" id="Q_54" style="display: none;"><div class="QuestionText">Which is preferred method for giving rescue breaths to infant?</div><ol class="MCAnswers"><li id="Q_54_0"><button class="FuncButton" id="Q_54_0_Btn" onclick="CheckMCAnswer(54,0,this)">?</button>&#160;&#160;mouth to mouth</li><li id="Q_54_1"><button class="FuncButton" id="Q_54_1_Btn" onclick="CheckMCAnswer(54,1,this)">?</button>&#160;&#160;mouth to mouth and nose</li><li id="Q_54_2"><button class="FuncButton" id="Q_54_2_Btn" onclick="CheckMCAnswer(54,2,this)">?</button>&#160;&#160;mouth to nose</li><li id="Q_54_3"><button class="FuncButton" id="Q_54_3_Btn" onclick="CheckMCAnswer(54,3,this)">?</button>&#160;&#160;any method</li></ol></li>
+<li class="QuizQuestion" id="Q_55" style="display: none;"><div class="QuestionText">What is not an example of an opioid?</div><ol class="MCAnswers"><li id="Q_55_0"><button class="FuncButton" id="Q_55_0_Btn" onclick="CheckMCAnswer(55,0,this)">?</button>&#160;&#160;heroin</li><li id="Q_55_1"><button class="FuncButton" id="Q_55_1_Btn" onclick="CheckMCAnswer(55,1,this)">?</button>&#160;&#160;hydrocodone</li><li id="Q_55_2"><button class="FuncButton" id="Q_55_2_Btn" onclick="CheckMCAnswer(55,2,this)">?</button>&#160;&#160;morphine</li><li id="Q_55_3"><button class="FuncButton" id="Q_55_3_Btn" onclick="CheckMCAnswer(55,3,this)">?</button>&#160;&#160;naloxone</li></ol></li>
+<li class="QuizQuestion" id="Q_56" style="display: none;"><div class="QuestionText">your 27-year old roommate uses opiods. You find him unresponsive with no breathing, but a strong pulse. You suspect an opioid associated life threatening emergency. a friend is phoning 9-1-1 and is looking for naloxone autoinjector. what action should you take?</div><ol class="MCAnswers"><li id="Q_56_0"><button class="FuncButton" id="Q_56_0_Btn" onclick="CheckMCAnswer(56,0,this)">?</button>&#160;&#160;remain with your roommate until naloxone arrives and administer it</li><li id="Q_56_1"><button class="FuncButton" id="Q_56_1_Btn" onclick="CheckMCAnswer(56,1,this)">?</button>&#160;&#160;begin cpr, starting with chest compressions</li><li id="Q_56_2"><button class="FuncButton" id="Q_56_2_Btn" onclick="CheckMCAnswer(56,2,this)">?</button>&#160;&#160;provide rescue breathing, 1 breath 5-6 seconds</li><li id="Q_56_3"><button class="FuncButton" id="Q_56_3_Btn" onclick="CheckMCAnswer(56,3,this)">?</button>&#160;&#160;provide rapid defib with an aed</li></ol></li>
+<li class="QuizQuestion" id="Q_57" style="display: none;"><div class="QuestionText">You encounter an unresponsive 56 year old man who has been taking hydrocodone after a surgical procedure. He is not breathing and has no pulse. You notice that his medication bottle is empty and suspect an opiod-associated life threat emergency. A colleague activates the emergency response system and is retriving aed and naloxone. What is most appropriate action?</div><ol class="MCAnswers"><li id="Q_57_0"><button class="FuncButton" id="Q_57_0_Btn" onclick="CheckMCAnswer(57,0,this)">?</button>&#160;&#160;wait for naloxone to arrive</li><li id="Q_57_1"><button class="FuncButton" id="Q_57_1_Btn" onclick="CheckMCAnswer(57,1,this)">?</button>&#160;&#160;begin cpr</li><li id="Q_57_2"><button class="FuncButton" id="Q_57_2_Btn" onclick="CheckMCAnswer(57,2,this)">?</button>&#160;&#160;provide 1 rescue breathe every 5-6 seconds until naloxone arrives</li><li id="Q_57_3"><button class="FuncButton" id="Q_57_3_Btn" onclick="CheckMCAnswer(57,3,this)">?</button>&#160;&#160;provide rapid defib with aed</li></ol></li>
+<li class="QuizQuestion" id="Q_58" style="display: none;"><div class="QuestionText">which is an example of a mild foreign body airway obstruction?</div><ol class="MCAnswers"><li id="Q_58_0"><button class="FuncButton" id="Q_58_0_Btn" onclick="CheckMCAnswer(58,0,this)">?</button>&#160;&#160;cyanosis</li><li id="Q_58_1"><button class="FuncButton" id="Q_58_1_Btn" onclick="CheckMCAnswer(58,1,this)">?</button>&#160;&#160;high-pitched noise while inhaling</li><li id="Q_58_2"><button class="FuncButton" id="Q_58_2_Btn" onclick="CheckMCAnswer(58,2,this)">?</button>&#160;&#160;inability to speak or cry</li><li id="Q_58_3"><button class="FuncButton" id="Q_58_3_Btn" onclick="CheckMCAnswer(58,3,this)">?</button>&#160;&#160;wheezing between coughs</li></ol></li>
+<li class="QuizQuestion" id="Q_59" style="display: none;"><div class="QuestionText">Which victim of a severe airway obstruction should receive abdominal thrusts?</div><ol class="MCAnswers"><li id="Q_59_0"><button class="FuncButton" id="Q_59_0_Btn" onclick="CheckMCAnswer(59,0,this)">?</button>&#160;&#160;average size 27 year old man</li><li id="Q_59_1"><button class="FuncButton" id="Q_59_1_Btn" onclick="CheckMCAnswer(59,1,this)">?</button>&#160;&#160;woman who is pregnant</li><li id="Q_59_2"><button class="FuncButton" id="Q_59_2_Btn" onclick="CheckMCAnswer(59,2,this)">?</button>&#160;&#160;obese 50 year old</li><li id="Q_59_3"><button class="FuncButton" id="Q_59_3_Btn" onclick="CheckMCAnswer(59,3,this)">?</button>&#160;&#160;average size 9 month old infant</li></ol></li>
+<li class="QuizQuestion" id="Q_60" style="display: none;"><div class="QuestionText">You are performing abdominal thrusts on a 9 year old when he suddenly becomes unresponsive. You shout for help, what is most appropriate action?</div><ol class="MCAnswers"><li id="Q_60_0"><button class="FuncButton" id="Q_60_0_Btn" onclick="CheckMCAnswer(60,0,this)">?</button>&#160;&#160;begin cpr with chest compressions</li><li id="Q_60_1"><button class="FuncButton" id="Q_60_1_Btn" onclick="CheckMCAnswer(60,1,this)">?</button>&#160;&#160;check for pulse</li><li id="Q_60_2"><button class="FuncButton" id="Q_60_2_Btn" onclick="CheckMCAnswer(60,2,this)">?</button>&#160;&#160;continue performing abdominal thrusts</li><li id="Q_60_3"><button class="FuncButton" id="Q_60_3_Btn" onclick="CheckMCAnswer(60,3,this)">?</button>&#160;&#160;provide 5 back slaps followed by 5 chest thrusts</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+<div class="NavButtonBar" id="BottomNavBar">
+
+
+
+
+<button class="NavButton" onclick="location='contents.htm'; return false;"> Index </button>
+
+
+
+<button class="NavButton" onclick="location='nextpage.htm'; return false;">=&gt;</button>
+
+
+</div>
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>
