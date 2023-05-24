@@ -2,6 +2,19 @@
 <html>
 <head>
   <title>Canisio Study Guide</title>
+	<script type="text/javascript">
+
+var titleText = document.title;
+
+function titleMarquee() {
+
+ titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
+ document.title = titleText;
+ setTimeout("titleMarquee()", 450);
+ }
+
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background-image: url('https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Image_015.png');
@@ -71,7 +84,7 @@
   </style>
 </head>
 <body>
-  <h1 class="scrolling-title">Sub me if it helps</h1>
+  <h1 class="scrolling-title">Scrolling Title</h1>
 
   <div class="button-container" id="buttonContainer">
   </div>
@@ -102,7 +115,7 @@
       var a = document.createElement('a');
       a.href = button.url;
       a.textContent = button.name;
-      a.addEventListener('mousedown', function() {
+      a.addEventListener('touchstart', function() {
         a.style.animationPlayState = 'running';
       });
       a.addEventListener('animationend', function() {
