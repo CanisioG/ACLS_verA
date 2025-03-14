@@ -1,127 +1,254 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Canisio Study Guide</title>
-	<script type="text/javascript">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Buttons with Dynamic Spacing</title>
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow-x: hidden;
+            background-color: #1a1a1a; /* Dark background */
+            color: #ffffff; /* Light text for dark theme */
+        }
 
-var titleText = document.title;
+        /* Video Background */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.5; /* Lower opacity for dark theme visibility */
+        }
 
-function titleMarquee() {
+        .banner {
+            width: 100%;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+            z-index: 1;
+            padding: 10px 0;
+        }
 
- titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
- document.title = titleText;
- setTimeout("titleMarquee()", 450);
- }
+        .scrolling-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 20s linear infinite;
+            font-size: 72px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
 
-</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background-image: url('https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Image_015.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      position: relative;
-    }
+        .scrolling-text span {
+            display: inline-block;
+        }
 
-    .button-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+        /* Unique rainbow effects with different timing and sequences */
+        .scrolling-text span:nth-child(5n+1) {
+            animation: rainbow1 3s infinite;
+        }
+        .scrolling-text span:nth-child(5n+2) {
+            animation: rainbow2 3.5s infinite;
+        }
+        .scrolling-text span:nth-child(5n+3) {
+            animation: rainbow3 4s infinite;
+        }
+        .scrolling-text span:nth-child(5n+4) {
+            animation: rainbow4 4.5s infinite;
+        }
+        .scrolling-text span:nth-child(5n) {
+            animation: rainbow5 5s infinite;
+        }
 
-    .button-container a {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 25px;
-      font-size: 18px;
-      background-color: #8F3C2C;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      animation-name: bounce;
-      animation-duration: 2s;
-    }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
 
-    .scrolling-title {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      overflow: hidden;
-      animation: marquee 10s linear infinite;
-    }
+        @keyframes rainbow1 {
+            0% { color: #ff0000; }
+            25% { color: #ff00ff; }
+            50% { color: #0000ff; }
+            75% { color: #00ffff; }
+            100% { color: #ff0000; }
+        }
 
-    .additional-buttons {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-    }
+        @keyframes rainbow2 {
+            0% { color: #00ff00; }
+            25% { color: #ff0000; }
+            50% { color: #ff00ff; }
+            75% { color: #0000ff; }
+            100% { color: #00ff00; }
+        }
 
-    .additional-buttons a {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px 15px;
-      text-decoration: none;
-    }
+        @keyframes rainbow3 {
+            0% { color: #0000ff; }
+            25% { color: #00ffff; }
+            50% { color: #00ff00; }
+            75% { color: #ff0000; }
+            100% { color: #0000ff; }
+        }
 
-    @keyframes marquee {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
+        @keyframes rainbow4 {
+            0% { color: #ff00ff; }
+            25% { color: #0000ff; }
+            50% { color: #00ffff; }
+            75% { color: #00ff00; }
+            100% { color: #ff00ff; }
+        }
 
-    @keyframes bounce {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-    }
-  </style>
+        @keyframes rainbow5 {
+            0% { color: #00ffff; }
+            25% { color: #ff00ff; }
+            50% { color: #ff0000; }
+            75% { color: #0000ff; }
+            100% { color: #00ffff; }
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(10px, 2vw, 20px); /* Dynamic spacing based on viewport width */
+            max-width: 300px;
+            width: 100%;
+            margin: 120px auto 20px;
+            z-index: 2; /* Above video */
+        }
+
+        .color-button {
+            display: block;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff3333; /* Darker red for dark theme */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 16px;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+        }
+
+        .color-button:hover {
+            background-color: #33cc33; /* Darker green for dark theme */
+        }
+
+        .follow-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            z-index: 2; /* Above video */
+        }
+
+        .follow-btn {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background-color: #444444; /* Dark gray for dark theme */
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .follow-btn:hover {
+            background-color: #666666; /* Lighter gray on hover */
+        }
+
+        @media (max-width: 768px) {
+            .button-container {
+                margin-top: 80px;
+                gap: clamp(8px, 1.5vw, 15px); /* Smaller dynamic gap on mobile */
+            }
+
+            .scrolling-text {
+                font-size: 36px;
+            }
+
+            .color-button {
+                font-size: 14px;
+                padding: 12px 20px;
+                max-width: 150px;
+            }
+
+            .follow-buttons {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .follow-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1 class="scrolling-title">Sub Me If It Helps Thanks</h1>
-<div class="button-container" id="buttonContainer">
-</div>
+    <!-- Video Background -->
+    <video id="background-video" autoplay muted loop>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-  <div class="additional-buttons">
-    <a href="https://www.instagram.com/canisiology/">
-      <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Instagram_logo_2016.svg.png" alt="Instagram" width="50" height="50">
-    </a>
-    <a href="mailto:canisiogarsuta@gmail.com">
-      <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Emailme.png" alt="Contact Me" width="50" height="50">
-    </a>
-  </div>
+    <div class="banner">
+        <div class="scrolling-text">
+            <span>F</span><span>o</span><span>l</span><span>l</span><span>o</span><span>w</span>
+            <span> </span>
+            <span>M</span><span>e</span>
+            <span> </span>
+            <span>i</span><span>f</span>
+            <span> </span>
+            <span>t</span><span>h</span><span>i</span><span>s</span>
+            <span> </span>
+            <span>H</span><span>e</span><span>l</span><span>p</span><span>!</span>
+        </div>
+    </div>
 
-  <script>
-    // Array of button names and URLs
-    var buttons = [
-      { name: 'BLS Test Sample', url: 'https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Bls.htm' },
-      { name: 'ACLS Test Ver A', url: 'https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/TestA.htm' },
-      { name: 'ACLS Test Ver B', url: 'https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/TestB.htm' },
-      { name: 'Download BLS PDF', url: 'https://raw.githubusercontent.com/canisiome/ACLS_verA/c9e4a97d9e13f6295032d338a06664af25c0deee/aha-bls-exam-aha-bls-exam.pdf' },
-      { name: 'Download ACLS vA PDF', url: 'https://raw.githubusercontent.com/canisiome/ACLS_verA/c9e4a97d9e13f6295032d338a06664af25c0deee/acls-exam-version-a.pdf' },
-      { name: 'Download ACLS vB PDF', url: 'https://raw.githubusercontent.com/canisiome/ACLS_verA/c9e4a97d9e13f6295032d338a06664af25c0deee/acls-exam-version-b.pdf' }
-    ];
+    <div class="button-container">
+        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Test1.htm" class="color-button">Test 1</a>
+        <a href="https://example.com/2" class="color-button">Button 2</a>
+        <a href="https://example.com/3" class="color-button">Button 3</a>
+        <a href="https://example.com/4" class="color-button">Button 4</a>
+        <a href="https://example.com/5" class="color-button">Button 5</a>
+        <a href="https://example.com/6" class="color-button">Button 6</a>
+        <a href="https://example.com/7" class="color-button">Button 7</a>
+        <a href="https://example.com/8" class="color-button">Button 8</a>
+        <a href="https://example.com/9" class="color-button">Button 9</a>
+    </div>
 
-    // Generate the buttons dynamically
-    var buttonContainer = document.getElementById('buttonContainer');
-    buttons.forEach(function(button) {
-      var a = document.createElement('a');
-      a.href = button.url;
-      a.textContent = button.name;
-      a.addEventListener('touchstart', function() {
-        a.style.animationPlayState = 'running';
-      });
-      a.addEventListener('animationend', function() {
-        a.style.animationPlayState = 'paused';
-      });
-      buttonContainer.appendChild(a);
-    });
-  </script>
+    <div class="follow-buttons">
+        <a href="https://twitter.com" target="_blank" class="follow-btn"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank" class="follow-btn"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank" class="follow-btn"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://youtube.com" target="_blank" class="follow-btn"><i class="fab fa-youtube"></i></a>
+    </div>
 </body>
 </html>
