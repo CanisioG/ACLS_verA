@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Buttons with Dynamic Spacing</title>
-    <!-- Font Awesome for social media icons -->
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/all.min.css">
+    <title>Interactive Buttons with GIF Background</title>
     <style>
         body {
             margin: 0;
@@ -21,8 +19,8 @@
             color: #ffffff; /* Light text for dark theme */
         }
 
-        /* Video Background */
-        #background-video {
+        /* GIF Background */
+        #background-gif {
             position: fixed;
             top: 0;
             left: 0;
@@ -127,7 +125,7 @@
             max-width: 300px;
             width: 100%;
             margin: 120px auto 20px;
-            z-index: 2; /* Above video */
+            z-index: 2; /* Above GIF */
         }
 
         .color-button {
@@ -159,7 +157,7 @@
             display: flex;
             flex-direction: row;
             gap: 10px;
-            z-index: 2; /* Above video */
+            z-index: 2; /* Above GIF */
         }
 
         .follow-btn {
@@ -168,14 +166,19 @@
             border: none;
             border-radius: 50%;
             background-color: #444444; /* Dark gray for dark theme */
-            color: #ffffff;
             cursor: pointer;
             transition: background-color 0.3s;
-            font-size: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            overflow: hidden; /* Ensures image fits within circle */
+        }
+
+        .follow-btn img {
+            width: 60%; /* Adjust size of image within button */
+            height: 60%;
+            object-fit: contain;
         }
 
         .follow-btn:hover {
@@ -206,17 +209,18 @@
             .follow-btn {
                 width: 40px;
                 height: 40px;
-                font-size: 20px;
+            }
+
+            .follow-btn img {
+                width: 50%;
+                height: 50%;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Video Background -->
-    <video id="background-video" autoplay muted loop>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <!-- GIF Background -->
+    <img id="background-gif" src="https://media.giphy.com/media/3o7TKTDn976rzVgky4/giphy.gif" alt="Moving Background">
 
     <div class="banner">
         <div class="scrolling-text">
@@ -233,22 +237,30 @@
     </div>
 
     <div class="button-container">
-        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Test1.htm" class="color-button">Test 1</a>
-        <a href="https://example.com/2" class="color-button">Button 2</a>
-        <a href="https://example.com/3" class="color-button">Button 3</a>
-        <a href="https://example.com/4" class="color-button">Button 4</a>
-        <a href="https://example.com/5" class="color-button">Button 5</a>
-        <a href="https://example.com/6" class="color-button">Button 6</a>
-        <a href="https://example.com/7" class="color-button">Button 7</a>
-        <a href="https://example.com/8" class="color-button">Button 8</a>
-        <a href="https://example.com/9" class="color-button">Button 9</a>
+         <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Test1.htm" class="color-button">ACLS Test 1</a>
+        <a href="https://example.com/2" class="color-button">ACLS Test 2</a>
+        <a href="https://example.com/3" class="color-button">ACLS Test 3</a>
+        <a href="https://example.com/4" class="color-button">ACLS Test 4</a>
+        <a href="https://example.com/5" class="color-button">BLS Test</a>
+        <a href="https://example.com/6" class="color-button">BLS PDF</a>
+        <a href="https://example.com/7" class="color-button">ACLS 1 PDF</a>
+        <a href="https://example.com/8" class="color-button">ACLS 2 PDF</a>
+        <a href="https://example.com/9" class="color-button">ACLS 3 PDF</a>
     </div>
 
     <div class="follow-buttons">
-        <a href="https://twitter.com" target="_blank" class="follow-btn"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://instagram.com" target="_blank" class="follow-btn"><i class="fab fa-instagram"></i></a>
-        <a href="https://facebook.com" target="_blank" class="follow-btn"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://youtube.com" target="_blank" class="follow-btn"><i class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com" target="_blank" class="follow-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="X Icon">
+        </a>
+        <a href="https://instagram.com" target="_blank" class="follow-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon">
+        </a>
+        <a href="https://facebook.com" target="_blank" class="follow-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Icon">
+        </a>
+        <a href="https://youtube.com" target="_blank" class="follow-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt="YouTube Icon">
+        </a>
     </div>
 </body>
 </html>
