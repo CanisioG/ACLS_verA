@@ -64,13 +64,19 @@
             100% { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
         }
 
-        .button-container {
+        .content-container {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .custom-button {
@@ -103,6 +109,7 @@
             bottom: 20px;
             left: 20px;
             display: flex;
+            flex-direction: column;
             gap: 15px;
         }
 
@@ -125,10 +132,8 @@
         .youtube { background-image: url('https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Youtube.png'); }
 
         .music-player {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.8);
             padding: 10px;
             border-radius: 5px;
         }
@@ -165,35 +170,36 @@
             <span class="color3">M</span><span class="color1">e</span> 
             <span class="color2">i</span><span class="color3">f</span> 
             <span class="color1">T</span><span class="color2">h</span><span class="color3">i</span><span class="color1">s</span> 
-            <span class="color2">H</span><span class="color3">e</span><span class="color1">l</span><span class="color2">p</span><span class="color3">s</span><span class="color1">!</span> "
+            <span class="color2">H</span><span class="color3">e</span><span class="color1">l</span><span class="color2">p</span><span class="color3">s</span><span class="color1">!</span> 
+            <span class="color2">=</span><span class="color3">=</span> "
         </div>
     </div>
 
-    <div class="button-container">
-        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz1/Quiz1.html" class="custom-button">ACLS Test 1</a>
-        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz2/Quiz2.html" class="custom-button">ACLS Test 2</a>
-        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz3/Quiz3.html" class="custom-button">ACLS Test 3</a>
-        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz4/Quiz4.html" class="custom-button">ACLS Test 4</a>
-        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz5/Quiz5.html" class="custom-button">ACLS Test 5</a>
-        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz6/Quiz6.html" class="custom-button">BLS Test</a>
-        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Algo/Algo.html" class="custom-button">Practice Test 2</a>
-        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Handbook/Handbook.html" class="custom-button">ALGORITHM</a>
-        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/ACLSPage/ACLSPage.html" class="custom-button">>Hand Book</a>
-        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/BLSPage/BLSPage.html" class="custom-button">ACLS Resource</a>
-		<a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/BLSPage/BLSPage.html" class="custom-button">BLS Resource</a>
+    <div class="content-container">
+        <div class="button-container">
+            <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz1/Quiz1.htm" class="custom-button">ACLS Test 1</a>
+            <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz2/Quiz2.html" class="custom-button">ACLS Test 2</a>
+            <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz3/Quiz3.html" class="custom-button">ACLS Test 3</a>
+            <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz4/Quiz4.html" class="custom-button">ACLS Test 4</a>
+            <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz5/Quiz5.html" class="custom-button">ACLS Test 5</a>
+            <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Quiz6/Quiz6.html" class="custom-button">BLS Test</a>
+            <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Algo/Algo.html" class="custom-button">ALGORITHM</a>
+            <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Handbook/Handbook.html" class="custom-button">Hand Book</a>
+            <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/ACLSPage/ACLSPage.html" class="custom-button">ACLS Resource</a>
+            <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/BLSPage/BLSPage.html" class="custom-button">BLS Resource</a>    
+            <div class="music-player">
+                <audio controls autoplay>
+                    <source src="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Daima.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
     </div>
 
     <div class="social-buttons">
-        <a href="https://x.com/canigees" target="_blank"><button class="social-btn twitter"></button></a>
+        <a href="https://x.com/canigee" target="_blank"><button class="social-btn twitter"></button></a>
         <a href="https://www.instagram.com/canisiology/" target="_blank"><button class="social-btn instagram"></button></a>
         <a href="https://www.youtube.com/@canisgee21012" target="_blank"><button class="social-btn youtube"></button></a>
-    </div>
-
-    <div class="music-player">
-        <audio controls autoplay>
-            <source src="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Daima.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
     </div>
 
     <audio id="hoverSound">
