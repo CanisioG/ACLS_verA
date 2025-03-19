@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canisio Study Guide</title>
+    <title>Canisio's ACLS Study Guide<</title>
     <style>
         body {
             margin: 0;
@@ -22,8 +22,8 @@
             overflow: hidden;
             white-space: nowrap;
             padding: 20px 0;
-            background: rgba(0, 0, 0, 0.7);
-            position: relative;
+            background: rgba(26, 0, 0, 0.8);
+            border-bottom: 2px solid #ff3333;
         }
 
         .banner-text {
@@ -74,34 +74,39 @@
         }
 
         .button-container {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 500px;
             align-items: center;
         }
 
         .custom-button {
             width: 200px;
             padding: 15px;
-            margin: 10px;
-            background: red;
-            border: none;
-            color: white;
+            background: #ff3333;
+            border: 2px solid #ff6666;
+            color: #000;
             font-size: 18px;
             cursor: pointer;
             transition: all 0.3s ease;
             border-radius: 5px;
             text-decoration: none;
             text-align: center;
-            display: block;
+            font-weight: bold;
         }
 
         .custom-button:hover {
-            background: blue;
+            background: #0066ff;
+            border-color: #3399ff;
+            color: #fff;
         }
 
         .custom-button:active {
-            background: green;
+            background: #00cc00;
+            border-color: #33ff33;
             transform: scale(1.2);
+            color: #fff;
         }
 
         .social-buttons {
@@ -117,14 +122,15 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            border: none;
+            border: 2px solid #ff3333;
             cursor: pointer;
             background-size: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .social-btn:hover {
             transform: scale(1.1);
+            border-color: #ff6666;
         }
 
         .twitter { background-image: url('https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Twitter.png'); }
@@ -133,14 +139,26 @@
 
         .music-player {
             margin-top: 20px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(26, 0, 0, 0.8);
             padding: 10px;
             border-radius: 5px;
+            border: 2px solid #ff3333;
+            grid-column: 1 / -1; /* Span across both columns */
+            text-align: center;
+        }
+
+        .music-player audio {
+            width: 200px;
         }
 
         @media (max-width: 768px) {
             .banner-text {
                 font-size: 36px;
+            }
+            
+            .button-container {
+                grid-template-columns: 1fr;
+                max-width: 300px;
             }
             
             .custom-button {
@@ -151,6 +169,10 @@
             .social-btn {
                 width: 40px;
                 height: 40px;
+            }
+
+            .music-player audio {
+                width: 150px;
             }
         }
     </style>
