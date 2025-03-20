@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .button-container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .image-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 300px;
+            background-color: #2d2d2d;
+            text-decoration: none;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+        }
+
+        .image-button:hover {
+            background-color: #ff0000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+        }
+
+        .button-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .button-image {
+            width: 100%;
+            max-width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .button-desc {
+            font-size: 14px;
+            text-align: center;
+            color: #cccccc;
+        }
+
+        .home-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #333333;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #ff0000;
+        }
+
+        @media (max-width: 480px) {
+            .image-button {
+                padding: 10px;
+                max-width: 100%;
+            }
+
+            .button-title {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .button-image {
+                max-width: 200px;
+                height: 150px;
+                margin-bottom: 8px;
+            }
+
+            .button-desc {
+                font-size: 12px;
+            }
+
+            .button-container {
+                padding: 10px;
+                gap: 15px;
+            }
+
+            .home-button {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Handbook/HandBook/ACLS.pdf" class="image-button">
+            <span class="button-title">ACLS</span>
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Handbook/HandBook/ACLS1.png" alt="Comic 1" class="button-image">
+            <span class="button-desc">Reviewer version of ACLS</span>
+        </a>
+        
+        <a href="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Handbook/HandBook/BBP.pdf" class="image-button">
+            <span class="button-title">BBB</span>
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Handbook/HandBook/BBP1.png" alt="Comic 2" class="button-image">
+            <span class="button-desc">Directly from ACLS 2020 handbook</span>
+        </a>
+        
+        <a href="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Handbook/HandBook/BLS.pdf" class="image-button">
+            <span class="button-title">BLS </span>
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Handbook/HandBook/BLS1.png" alt="Comic 3" class="button-image">
+            <span class="button-desc">Directly from BLS handbook</span>
+        </a>
+		<a href="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Handbook/HandBook/CPR.pdf" class="image-button">
+            <span class="button-title">CPR</span>
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Handbook/HandBook/CPR1.png" alt="Comic 1" class="button-image">
+            <span class="button-desc">Reviewer version of ACLS</span>
+        </a>
+        
+        <a href="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Handbook/HandBook/PALS.pdf" class="image-button">
+            <span class="button-title">PALS</span>
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Handbook/HandBook/PALS1.png" alt="Comic 2" class="button-image">
+            <span class="button-desc">Directly from ACLS 2020 handbook</span>
+        </a>  
+    </div>
+
+    <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Handbook/Handbook.html" class="home-button">Back</a>
+</body>
+</html>
