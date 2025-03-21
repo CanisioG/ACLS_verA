@@ -28,7 +28,7 @@ const questions = [
 
 let currentQuestion = 0;
 let score = 0;
-let timeLeft = 3600; // 60 minutes in seconds
+let timeLeft = 1800; // 60 minutes in seconds
 let timerInterval;
 let answered = new Array(questions.length).fill(false);
 let isExpanded = false;
