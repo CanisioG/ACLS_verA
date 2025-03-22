@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACLS Questions</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .comic-container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .comic-page {
+            width: 90%;
+            max-width: 700px;
+            margin: 10px 0;
+            background-color: #2d2d2d;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .comic-page img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .page-number {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 3px;
+            display: none;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #333333;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #ff0000;
+        }
+
+        @media (max-width: 600px) {
+            .comic-page {
+                width: 95%;
+            }
+            
+            .nav-button {
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="comic-container">
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_01.png" alt="Page 1">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_02.png" alt="Page 2">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_03.png" alt="Page 3">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_04.png" alt="Page 4">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_05.png" alt="Page 5">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_06.png" alt="Page 6">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_07.png" alt="Page 7">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_08.png" alt="Page 8">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_09.png" alt="Page 9">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_10.png" alt="Page 10">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_11.png" alt="Page 11">
+        </div>	
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_12.png" alt="Page 12">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_13.png" alt="Page 13">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_14.png" alt="Page 14">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_15.png" alt="Page 15">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_16.png" alt="Page 16">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_17.png" alt="Page 17">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_18.png" alt="Page 18">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_19.png" alt="Page 19">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_20.png" alt="Page 20">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_21.png" alt="Page 21">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_22.png" alt="Page 22">
+        </div>	
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_23.png" alt="Page 23">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_24.png" alt="Page 24">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_25.png" alt="Page 25">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_26.png" alt="Page 26">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_27.png" alt="Page 27">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_28.png" alt="Page 28">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_29.png" alt="Page 29">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_30.png" alt="Page 30">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_31.png" alt="Page 31">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_32.png" alt="Page 32">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_33.png" alt="Page 33">
+        </div>	
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_34.png" alt="Page 34">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_35.png" alt="Page 35">
+        </div>
+        <div class="comic-page">
+            <img src="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/ACLS/ACLS1/ACLSAB_Page_36.png" alt="Page 36">
+        </div>
+    </div>
+
+    <div class="page-number" id="pageIndicator">Page 1</div>
+
+    <div class="navigation">
+        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/Main.htm" class="nav-button">Home</a>
+        <a href="https://htmlpreview.github.io/?https://github.com/canisiome/ACLS_verA/blob/main/ACLSPage/ACLSPage.html" class="nav-button">Back</a>
+    </div>
+
+    <script>
+        const pages = document.querySelectorAll('.comic-page');
+        const pageIndicator = document.getElementById('pageIndicator');
+
+        window.addEventListener('scroll', () => {
+            let currentPage = 1;
+            
+            pages.forEach((page, index) => {
+                const rect = page.getBoundingClientRect();
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= 0) {
+                    currentPage = index + 1;
+                }
+            });
+
+            pageIndicator.textContent = `Page ${currentPage}`;
+            pageIndicator.style.display = 'block';
+            
+            clearTimeout(window.scrollTimeout);
+            window.scrollTimeout = setTimeout(() => {
+                pageIndicator.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
