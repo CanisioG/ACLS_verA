@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACLS Quiz 4</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/favicon.png">	
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .timer-btn {
+            padding: 10px 20px;
+            background-color: #6fcb9f;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: default;
+            font-size: 1.2em;
+        }
+        .question-image {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .question {
+            font-size: 1.5em;
+            margin: 20px 0 10px 0;
+        }
+        .follow-up {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .choices {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .choice {
+            padding: 15px;
+            background-color: #2a2a2a;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .choice:hover:not(.selected) {
+            background-color: #3a3a3a;
+        }
+        .choice.selected {
+            background-color: #1e90ff; /* Blue for selected answer */
+        }
+        .choice.locked {
+            cursor: not-allowed;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            position: relative;
+        }
+        .nav-buttons-left {
+            display: flex;
+            gap: 10px;
+        }
+        .nav-buttons-right {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .center-buttons {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #2a2a2a;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff4444;
+        }
+        .question-number {
+            font-size: 1.1em;
+        }
+        .result-page {
+            text-align: center;
+        }
+        .result-page h1 {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .result-page p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            .question {
+                font-size: 1.2em;
+            }
+            .follow-up {
+                font-size: 1em;
+            }
+            button, .timer-btn {
+                padding: 8px 15px;
+                font-size: 1em;
+            }
+            .question-number {
+                font-size: 0.9em;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            .result-page h1 {
+                font-size: 1.5em;
+            }
+            .result-page p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="header">
+            <button class="timer-btn" id="timer">60:00</button>
+        </div>
+        <div id="quiz-content"></div>
+        <div class="navigation">
+            <div class="nav-buttons-left">
+                <button id="homeBtn">Back</button>
+            </div>
+            <div class="center-buttons" id="centerButtons">
+                <button id="backBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+            </div>
+            <div class="nav-buttons-right">
+                <span class="question-number" id="questionNumber">1/50</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+    {
+        question: "You find an unresponsive patient who is not breathing. After activating the emergency response system, you determine that there is no pulse. What is your next action?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Open the airway with a head tilt-chin lift.", "Administer epinephrine at a dose of 1 mg/kg", "Deliver 2 rescue breaths each over 1 second.", "Start chest compressions at a rate of at least 100/min."],
+        correct: 3
+    },
+    {
+        question: "You are evaluating a 58-year-old man with chest pain. The blood pressure is 92/50 mm Hg, the heart rate is 92/min, the nonlabored respiratory rate is 14 breaths/min, and the pulse oximetry reading is 97%. What assessment step is most important now?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["PETCO2", "Chest x-ray", "Laboratory testing", "Obtaining a 12-lead ECG"],
+        correct: 3
+    },
+    {
+        question: "What is the preferred method of access for epinephrine administration during cardiac arrest in most patients?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Intraosseous", "Endotracheal", "Central intravenous", "Peripheral intravenous"],
+        correct: 3
+    },
+    {
+        question: "An activated AED does not promptly analyze the rhythm. What is your next action?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Begin chest compressions", "Discontinue the resuscitation attempt", "Check all AED connections and reanalyze", "Rotate AED electrodes to an alternate position"],
+        correct: 0
+    },
+    {
+        question: "You have completed 2 minutes of CPR. The ECG monitor displays the lead II rhythm below, and the patient has no pulse. Another member of your team resumes chest compressions, and an IV is in place. What management step is your next priority?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Image_003.jpg",
+        followUp: " ",
+        choices: ["Give 0.5 mg of atropine", "Insert an advanced airway", "Administer 1 mg of epinephrine", "Administer a dopamine infusion"],
+        correct: 2
+    },
+    {
+        question: "During a pause in CPR, you see this lead II ECG rhythm on the monitor. The patient has no pulse. What is the next action?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Image_004.jpg",
+        followUp: " ",
+        choices: ["Establish vascular access", "Obtain the patient's history", "Resume chest compressions", "Terminate the resuscitative effort"],
+        correct: 2
+    },
+    {
+        question: "What is a common but sometimes fatal mistake in cardiac arrest management?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Failure to obtain vascular access", "Prolonged periods of no ventilations", "Failure to perform endotracheal intubation", "Prolonged interruptions in chest compressions"],
+        correct: 3
+    },
+    {
+        question: "Which action is a component of high-quality chest compressions?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Allowing complete chest recoil", "Chest compressions without ventilation", "60 to 100 compressions per minute with a 15:2 ratio", "Uninterrupted compressions at a depth of 1½ inches"],
+        correct: 0
+    },
+    {
+        question: "Which action increases the chance of successful conversion of ventricular fibrillation?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Pausing chest compressions immediately after a defibrillation attempt", "Administering 4 quick ventilations immediately before a defibrillation attempt", "Using manual defibrillator paddles with light pressure against the chest", "Providing quality compressions immediately before a defibrillation attempt"],
+        correct: 3
+    },
+    {
+        question: "Which situation BEST describes pulseless electrical activity?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Asystole without a pulse", "Sinus rhythm without a pulse", "Torsades de pointes with a pulse", "Ventricular tachycardia with a pulse"],
+        correct: 1
+    },
+    {
+        question: "What is the BEST strategy for performing high-quality CPR on a patient with an advanced airway in place?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Provide compressions and ventilations with a 15:2 ratio", "Provide compressions and ventilations with a 30:2 ratio", "Provide a single ventilation every 6 seconds during the compression pause", "Provide continuous chest compressions without pauses and 10 ventilations per minute"],
+        correct: 3
+    },
+    {
+        question: "Three minutes after witnessing a cardiac arrest, one member of your team inserts an endotracheal tube while another performs continuous chest compressions. During subsequent ventilation, you notice the presence of a waveform on the capnography screen and a PETCO2 level of 8 mm Hg. What is the significance of this finding?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Chest compressions may not be effective", "The endotracheal tube is no longer in the trachea", "The patient meets the criteria for termination of efforts", "The team is ventilating the patient too often (hyperventilation)"],
+        correct: 0
+    },
+    {
+        question: "The use of quantitative capnography in intubated patients",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["allows for monitoring of CPR quality.", "measures oxygen levels at the alveoli level", "determines inspired carbon dioxide relating to cardiac output", "detects electrolyte abnormalities early in code management"],
+        correct: 0
+    },
+    {
+        question: "For the past 25 minutes, an EMS crew has attempted resuscitation of a patient who originally presented in ventricular fibrillation. After the first shock, the ECG screen displayed asystole, which has persisted despite 2 doses of epinephrine, a fluid bolus, and high-quality CPR. What is your next treatment?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Apply a transcutaneous pacemaker.", "Administer 1 mg of intravenous atropine", "Administer 40 units of intravenous vasopressin", "Consider terminating resuscitative efforts after consulting medical control"],
+        correct: 3
+    },
+    {
+        question: "Which is a safe and effective practice within the defibrillation sequence?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Stop chest compressions as you charge the defibrillator", "Be sure oxygen is not blowing over the patient's chest during the shock", "Assess for the presence of a pulse immediately after the shock", "Commandingly announce 'clear' after you deliver the defibrillation shock"],
+        correct: 1
+    },
+    {
+        question: "During your assessment, your patient suddenly loses consciousness. After calling for help and determining that the patient is not breathing, you are unsure whether the patient has a pulse. What is your next action?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Leave and get an AED", "Begin chest compressions", "Deliver 2 quick ventilations", "Check the patient's mouth for the presence of a foreign body"],
+        correct: 1
+    },
+    {
+        question: "What is an advantage of using hands-free defibrillation pads instead of defibrillation paddles?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Hands-free pads deliver more energy than paddles", "Hands-free pads increase electrical arc", "Hands-free pads allow for a more rapid defibrillation", "Hands-free pads have universal adaptors that can work with any machine"],
+        correct: 2
+    },
+    {
+        question: "What action is recommended to help minimize interruptions in chest compressions during CPR?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Continue CPR while charging the defibrillator", "Perform pulse checks immediately after defibrillation", "Administer IV medications only when delivering breaths", "Continue to use an AED even after the arrival of a manual defibrillator"],
+        correct: 0
+    },
+    {
+        question: "Which action is included in the BLS Survey?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Early defibrillation", "Advanced airway management", "Rapid medication administration", "Preparation for therapeutic hypothermia"],
+        correct: 0
+    },
+    {
+        question: "Which drug and dose are recommended for the management of a patient in refractory ventricular fibrillation?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Atropine 2 mg", "Amiodarone 300 mg", "Vasopressin 1 mg/kg", "Dopamine 2 mg/kg per minute"],
+        correct: 1
+    },
+    {
+        question: "What is the appropriate interval for an interruption in chest compressions?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["10 seconds or less", "10 to 15 seconds", "15 to 20 seconds", "Interruptions are never acceptable"],
+        correct: 0
+    },
+    {
+        question: "Which of the following is a sign of effective CPR?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["PETCO2 ≥ 10 mm Hg", "Measured urine output of 1 ml/kg per hour", "Patient temperature >32°C (89.6°F)", "Diastolic intra-arterial pressure <20 mm Hg"],
+        correct: 0
+    },
+    {
+        question: "What is the primary purpose of a medical emergency team (MET) or rapid response team (RRT)?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Identifying and treating early clinical deterioration", "Rapidly intervening with patients admitted through emergency department triage", "Responding to patients during a disaster or multiple-patient situation", "Responding to patients after activation of the emergency response system"],
+        correct: 0
+    },
+    {
+        question: "Which action improves the quality of chest compressions delivered during a resuscitation attempt?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Observe ECG rhythm to determine depth of compressions", "Do not allow the chest to fully recoil with each compression", "Compress the upper half of the sternum at a rate of 150 compressions per minute", "Switch providers about every 2 minutes or every 5 compression cycles."],
+        correct: 3
+    },
+    {
+        question: "What is the appropriate ventilation strategy for an adult in respiratory arrest with a pulse rate of 80/min?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["1 breath every 3 to 4 seconds", "1 breath every 5 to 6 seconds", "2 breaths every 5 to 6 seconds", "2 breaths every 6 to 8 seconds"],
+        correct: 1
+    },
+    {
+        question: "A patient presents to the emergency department with new onset of dizziness and fatigue. On examination, the patient's heart rate is 35/min, the blood pressure is 70/50 mm Hg, the respiratory rate is 22 breaths/min, and the oxygen saturation is 95%. What is the appropriate first medication?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Atropine 0.5 mg", "Oxygen 12 to 15 L/min", "Epinephrine 0.5 mg", "Aspirin 160 mg chewed"],
+        correct: 0
+    },
+    {
+        question: "A patient presents to the emergency department with dizziness and shortness of breath with a sinus bradycardia of 40/min. The initial atropine dose was ineffective, and your monitor/defibrillator is not equipped with a transcutaneous pacemaker. What is the appropriate dose of dopamine for this patient?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["2 to 10 mg/min", "2 to 10 mcg/kg per minute", "10 to 15 mg/min", "10 to 15 mcg/kg per minute"],
+        correct: 1
+    },
+    {
+        question: "A patient has sudden onset of dizziness. The patient's heart rate is 180/min, blood pressure is 110/70 mm Hg, respiratory rate is 18 breaths/min, and pulse oximetry reading is 98% on room air. The lead II ECG is shown below:",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Image_009.jpg",
+        followUp: "What is the next appropriate intervention?<br><br>",
+        choices: ["Vagal maneuvers", "Metoprolol 5 mg IV", "Adenosine 6 mg IV", "Normal saline 1 L bolus"],
+        correct: 0
+    },
+    {
+        question: "A monitored patient in the ICU developed a sudden onset of narrow-complex tachycardia at a rate of 220/min. The patient's blood pressure is 128/58 mm Hg, the PETCO2 is 38 mm Hg, and the pulse oximetry reading is 98%. There is vascular access at the left internal jugular vein, and the patient has not been given any vasoactive drugs. A 12-lead ECG confirms a supraventricular tachycardia with no evidence of ischemia or infarction. The heart rate has not responded to vagal maneuvers. What is the next recommended intervention?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Adenosine 6 mg IV push", "Amiodarone 300 mg IV push", "Synchronized cardioversion at 50 J", "Synchronized cardioversion at 200 J"],
+        correct: 0
+    },
+    {
+        question: "You are receiving a radio report from an EMS team en route with a patient who may be having an acute stroke. The hospital CT scanner is not working at this time. What should you do in this situation?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Contact the patient's family to see what they would prefer", "Have the EMS crew choose an appropriate patient disposition", "Accept the report and provide care within your present capability", "Divert the patient to a hospital 15 minutes away with CT capabilities"],
+        correct: 3
+    },
+    {
+        question: "Choose an appropriate indication to stop or withhold resuscitative efforts.",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Arrest not witnessed", "Evidence of rigor mortis", "Patient age greater than 85 years", "No return of spontaneous circulation after 10 minutes of CPR"],
+        correct: 1
+    },
+    {
+        question: "A 49-year-old woman arrives in the emergency department with persistent epigastric pain. She had been taking oral antacids for the past 6 hours because she thought she had heartburn. The initial blood pressure is 118/72 mm Hg, the heart rate is 92/min and regular, the nonlabored respiratory rate is 14 breaths/min, and the pulse oximetry reading is 96%. Which is the most appropriate intervention to perform next?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Administer oxygen", "Obtain a 12-lead ECG", "Evaluate for fibrinolytic eligibility", "Administer sublingual nitroglycerin"],
+        correct: 1
+    },
+    {
+        question: "A patient in respiratory failure becomes apneic but continues to have a strong pulse. The heart rate is dropping rapidly and now shows a sinus bradycardia at a rate of 30/min. What intervention has the highest priority?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Atropine IV push", "Epinephrine IV infusion", "Application of a transcutaneous pacemaker", "Simple airway maneuvers and assisted ventilation"],
+        correct: 3
+    },
+    {
+        question: "What is the appropriate procedure for endotracheal tube suctioning after the appropriate catheter is selected?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Suction during insertion but for no longer than 30 seconds", "Suction the mouth and nose for no longer than 30 seconds", "Suction during withdrawal but for no longer than 10 seconds", "Hyperventilate before catheter insertion, and then suction during withdrawal"],
+        correct: 2
+    },
+    {
+        question: "While treating a patient with dizziness, a blood pressure of 68/30 mm Hg, and cool, clammy skin, you see this lead II ECG rhythm:",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/main/Image_012.jpg",
+        followUp: "What is the most appropriate first intervention?<br><br>",
+        choices: ["Aspirin", "Atropine", "Lidocaine", "Nitroglycerin"],
+        correct: 1
+    },
+    {
+        question: "A 68-year-old woman experienced a sudden onset of right arm weakness. EMS personnel measure a blood pressure of 140/90 mm Hg, a heart rate of 78/min, a nonlabored respiratory rate of 14 breaths/min, and a pulse oximetry reading of 97%. The lead II ECG displays sinus rhythm. What is the most appropriate action for the EMS team to perform next?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["12-lead ECG assessment", "Administration of 100% supplementary oxygen", "Cincinnati Prehospital Stroke Scale assessment", "Administration of a low-dose aspirin"],
+        correct: 2
+    },
+    {
+        question: "EMS is transporting a patient with a positive prehospital stroke assessment. Upon arrival in the emergency department, the initial blood pressure is 138/78 mm Hg, the pulse rate is 80/min, the respiratory rate is 12 breaths/min, and the pulse oximetry reading is 95% on room air. The lead II ECG displays sinus rhythm. The blood glucose level is within normal limits. What intervention should you perform next?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Head CT scan", "Transfer to the stroke unit", "Immediate rtPA administration", "Administration of 100% oxygen"],
+        correct: 0
+    },
+    {
+        question: "What is the proper ventilation rate for a patient in cardiac arrest who has an advanced airway in place?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["4 to 6 breaths per minute", "8 to 10 breaths per minute", "12 to 14 breaths per minute", "16 to 18 breaths per minute"],
+        correct: 1
+    },
+    {
+        question: "A 62-year-old man in the emergency department says that his heart is beating fast. He says he has no chest pain or shortness of breath. The blood pressure is 142/98 mm Hg, the pulse is 200/min, the respiratory rate is 14 breaths/min, and pulse oximetry is 95% on room air. What intervention should you perform next?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Obtain a 12-lead ECG", "Give 150 mg of amiodarone", "Administer 160 mg of aspirin", "Administer 6 mg of adenosine"],
+        correct: 0
+    },
+    {
+        question: "You are evaluating a 48-year-old man with crushing substernal chest pain. The patient is pale, diaphoretic, cool to the touch, and slow to respond to your questions. The blood pressure is 58/32 mm Hg, the heart rate is 190/min, the respiratory rate is 18 breaths/min, and the pulse oximeter is unable to obtain a reading because there is no radial pulse. The lead II ECG displays a regular wide-complex tachycardia. What intervention should you perform next?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Procedural sedation", "12-lead ECG", "Amiodarone administration", "Synchronized cardioversion"],
+        correct: 3
+    },
+    {
+        question: "What is the initial priority for an unconscious patient with any tachycardia on the monitor?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Review the patient's home medications", "Evaluate the breath sounds", "Determine whether pulses are present", "Administer sedative drugs"],
+        correct: 2
+    },
+    {
+        question: "Which rhythm requires synchronized cardioversion?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Unstable supraventricular tachycardia", "Atrial fibrillation", "Sinus tachycardia", "NSR on monitor but no pulse"],
+        correct: 0
+    },
+    {
+        question: "What is the recommended second dose of adenosine for patients in refractory but stable narrow-complex tachycardia?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["3 mg", "6 mg", "9 mg", "12 mg"],
+        correct: 3
+    },
+    {
+        question: "What is the usual post-cardiac arrest target range for PETCO2 when ventilating a patient who achieves return of spontaneous circulation (ROSC)?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["30 to 35 mm Hg", "35 to 40 mm Hg", "40 to 45 mm Hg", "45 to 50 mm Hg"],
+        correct: 1
+    },
+    {
+        question: "Which condition is a contraindication to therapeutic hypothermia during the post-cardiac arrest period for patients who achieve return of spontaneous circulation ROSC?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Initial rhythm of asystole", "Responding to verbal commands", "Patient age greater than 60 years", "Desire to provide coronary reperfusion (eg, PCI)"],
+        correct: 1
+    },
+    {
+        question: "What is the potential danger of using ties that pass circumferentially around the patient's neck when securing an advanced airway?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["May interfere with effective ventilation", "Places the patient's cervical spine at risk", "Obstruction of venous return from the brain", "Does not adequately secure the airway device"],
+        correct: 2
+    },
+    {
+        question: "What is the most reliable method of confirming and monitoring correct placement of an endotracheal tube?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["5-point auscultation", "Colorimetric capnography", "Continuous waveform capnography", "Use of esophageal detection devices"],
+        correct: 2
+    },
+    {
+        question: "What is the recommended IV fluid (normal saline or Ringer's lactate) bolus dose for a patient who achieves ROSC but is hypotensive during the post-cardiac arrest period?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["250 to 500 ml", "500 to 1000 ml", "1 to 2 L", "2 to 3 L"],
+        correct: 2
+    },
+    {
+        question: "What is the minimum systolic blood pressure one should attempt to achieve with fluid, inotropic, or vasopressor administration in a hypotensive post-cardiac arrest patient who achieves ROSC?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["90 mm Hg", "85 mm Hg", "80 mm Hg", "75 mm Hg"],
+        correct: 0
+    },
+    {
+        question: "What is the first treatment priority for a patient who achieves ROSC?",
+        image: "https://raw.githubusercontent.com/canisiome/ACLS_verA/refs/heads/main/Image/Icon/Dot2.png",
+        followUp: " ",
+        choices: ["Coronary reperfusion", "Therapeutic hypothermia", "Maintaining blood glucose <185 mg/dl", "Optimizing ventilation and oxygenation"],
+        correct: 3
+    }
+        ];
+
+        let currentQuestion = 0;
+        let answers = new Array(50).fill(null);
+        let timeLeft = 60 * 60;
+        let timerId;
+
+        function startTimer() {
+            timerId = setInterval(() => {
+                timeLeft--;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                document.getElementById('timer').textContent = 
+                    `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+                if (timeLeft <= 0) {
+                    clearInterval(timerId);
+                    showResults();
+                }
+            }, 1000);
+        }
+
+        function updateQuestionNumber() {
+            document.getElementById('questionNumber').textContent = `${currentQuestion + 1}/50`;
+        }
+
+        function renderQuestion() {
+            const q = questions[currentQuestion];
+            const isAnswered = answers[currentQuestion] !== null;
+            const content = `
+                <div class="question">${q.question}</div>
+                <img src="${q.image}" class="question-image" alt="Question ${currentQuestion + 1}">
+                <div class="follow-up">${q.followUp}</div>
+                <div class="choices">
+                    ${q.choices.map((choice, i) => `
+                        <div class="choice ${answers[currentQuestion] === i ? 'selected' : ''} ${isAnswered ? 'locked' : ''}" 
+                             onclick="${isAnswered ? '' : `selectAnswer(${i})`}">${choice}</div>
+                    `).join('')}
+                </div>
+            `;
+            document.getElementById('quiz-content').innerHTML = content;
+            document.getElementById('backBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').textContent = currentQuestion === 49 ? 'Submit' : 'Next';
+            document.getElementById('centerButtons').style.display = 'flex';
+            document.querySelector('.navigation').style.display = 'flex';
+            updateQuestionNumber();
+        }
+
+        function showResults() {
+            clearInterval(timerId);
+            const correctCount = answers.reduce((count, answer, i) => 
+                count + (answer === questions[i].correct ? 1 : 0), 0);
+            const percentage = (correctCount / 50) * 100;
+            const passed = percentage >= 80;
+            const content = `
+                <div class="result-page">
+                    <h1>${passed ? 'Congrats! You Pass!' : 'You Fail'}</h1>
+                    <p>You got ${correctCount} out of 50 correct (${percentage.toFixed(2)}%)</p>
+                    <button id="retakeBtn">Retake</button>
+                </div>
+            `;
+            document.getElementById('quiz-content').innerHTML = content;
+            document.getElementById('centerButtons').style.display = 'none';
+            document.querySelector('.navigation').style.display = 'flex';
+            document.getElementById('timer').textContent = 'Time’s Up!';
+            document.getElementById('questionNumber').textContent = '50/50';
+            document.getElementById('retakeBtn').addEventListener('click', resetQuiz);
+        }
+
+        function selectAnswer(index) {
+            if (answers[currentQuestion] === null) {
+                answers[currentQuestion] = index;
+                renderQuestion();
+            }
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            answers = new Array(50).fill(null);
+            timeLeft = 60 * 60;
+            clearInterval(timerId);
+            document.getElementById('timer').textContent = '60:00';
+            startTimer();
+            renderQuestion();
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (answers[currentQuestion] === null) {
+                alert('Please select your answer');
+            } else if (currentQuestion < 50) {
+                currentQuestion++;
+                renderQuestion();
+            } else {
+                showResults();
+            }
+        });
+
+        document.getElementById('backBtn').addEventListener('click', () => {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        });
+
+        document.getElementById('homeBtn').addEventListener('click', () => {
+            resetQuiz();
+        });
+
+        startTimer();
+        renderQuestion();
+    </script>
+</body>
+</html>
