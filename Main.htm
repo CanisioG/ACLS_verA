@@ -10,6 +10,11 @@
             padding: 0;
             height: 100%;
             overflow: hidden;
+            /* Disable text selection and highlighting */
+            -webkit-user-select: none; /* Safari */
+            user-select: none; /* Standard */
+            /* Disable touch callouts (e.g., copy/paste menu) on Safari */
+            -webkit-touch-callout: none; /* Safari */
         }
         iframe {
             width: 100%;
